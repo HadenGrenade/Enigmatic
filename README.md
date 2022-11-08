@@ -39,11 +39,5 @@ For those who are unfamiliar with the license, here is a summary of its main poi
 
 
 ## Contact
-Feel free to contact me on Discord: Cr7mbl3#0262
+Feel free to contact me on Discord: handgrenade#5025
 
-## Credits
-- [RandoInjector by martinjanas](https://github.com/martinjanas/RandoInjector) - the injector used in this project
-- [README-Template by othneildrew](https://github.com/othneildrew/Best-README-Template) - a very nice README template I used
-- [ManualMap by Zer0Mem0ry](https://github.com/Zer0Mem0ry/ManualMap/) - for the manual map injection method
-- [Osiris by danielkrupinski](https://github.com/danielkrupinski/Osiris) - for providing an awesome Open Source cheat with lots of features
-- [CSGOSimple by sprithack](https://github.com/spirthack/CSGOSimple) - for providing a clean base

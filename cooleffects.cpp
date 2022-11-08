@@ -79,6 +79,8 @@ void gui::FxTestBed() noexcept
             FX2(draw_list, p0, p1, size, mouse_data, (float)ImGui::GetTime()); break;
         case 3:
             FX3(draw_list, p0, p1, size, (float)ImGui::GetTime()); break;
+        case 4:
+            FX4(draw_list, p0, p1, size, mouse_data, (float)ImGui::GetTime()); break;
 
     }
 		

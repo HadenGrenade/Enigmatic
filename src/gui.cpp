@@ -493,7 +493,7 @@ void gui::Render() noexcept
 		ImGui::BeginChild(2, { (avail.x - 8) * 0.5f, (avail.y - 8) * 0.72f }, true);
 		ImGui::Text("Background Effects");
 		ImGui::Separator();
-		static constexpr const char* names[]{ "Eyes", "Circles", "Rain"};
+		static constexpr const char* names[]{ "Eyes", "Circles", "Rain", "Wave thingy"};
 		for (int i = 0; i < IM_ARRAYSIZE(names); i++) {
 
 			if (ImGui::Selectable(names[i])) {
@@ -501,6 +501,7 @@ void gui::Render() noexcept
 				case 0: v::memes.effect = 1; break;
 				case 1: v::memes.effect = 2; break;
 				case 2: v::memes.effect = 3; break;
+				case 3: v::memes.effect = 4; break;
 				}
 			}
 		}

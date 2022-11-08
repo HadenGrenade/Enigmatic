@@ -21,6 +21,7 @@ LRESULT CALLBACK WindowProcess(
 	LPARAM longParam
 );
 
+
 bool gui::SetupWindowClass(const char* windowClassName) noexcept
 {
 	// populate window class
@@ -314,6 +315,10 @@ void gui::Render() noexcept
 	ImGui_ImplDX9_NewFrame();
 	ImGui_ImplWin32_NewFrame();
 	ImGui::NewFrame();
+
+	//cool fx shit
+	gui::FxTestBed();
+
 	const auto offset = 195.f;
 
 	ImGuiStyle* style = &ImGui::GetStyle();
@@ -324,26 +329,18 @@ void gui::Render() noexcept
 	static auto tab = 0;
 	const auto avail = ImGui::GetContentRegionAvail();
 	const auto tabSize = ImVec2(90, 40);
-	if (ImGui::Button("Credits", tabSize)) { tab = 0; }
+	if (ImGui::Button("Rage", tabSize)) { tab = 0; }
 	ImGui::SameLine();
-	if (ImGui::Button("Rage", tabSize)) { tab = 1; }
+	if (ImGui::Button("Legit", tabSize)) { tab = 1; }
 	ImGui::SameLine();
-	if (ImGui::Button("Legit", tabSize)) { tab = 2; }
+	if (ImGui::Button("Visuals", tabSize)) { tab = 2; }
 	ImGui::SameLine();
-	if (ImGui::Button("Visuals", tabSize)) { tab = 3; }
+	if (ImGui::Button("Misc", tabSize)) { tab = 3; }
 	ImGui::SameLine();
-	if (ImGui::Button("Misc", tabSize)) { tab = 4; }
+	if (ImGui::Button("Memes", tabSize)) { tab = 4; }
 	switch (tab)
 	{
 	case 0:
-	{
-		ImGui::BeginChild(1, { }, true);
-		ImGui::Text("Made by handgrenade#5025");
-		HelpMarker("Ill give pysik credit once he actually codes something");
-		ImGui::EndChild();
-	}
-	break;
-	case 1:
 		ImGui::BeginGroup();
 		ImGui::BeginChild(1, { (avail.x - 8) * 0.5f, avail.y * 0.65f }, true);
 		ImGui::Text("Coming soon...");
@@ -367,7 +364,7 @@ void gui::Render() noexcept
 		ImGui::EndChild();
 		ImGui::EndGroup();
 		break;
-	case 2:
+	case 1:
 
 		ImGui::BeginGroup();
 		ImGui::BeginChild(1, { (avail.x - 8) * 0.5f, (avail.y * 0.4f) }, true);
@@ -423,7 +420,7 @@ void gui::Render() noexcept
 		ImGui::EndChild();
 		ImGui::EndGroup();
 		break;
-	case 3:
+	case 2:
 	{
 		ImGui::BeginGroup();
 		ImGui::BeginChild(1, { (avail.x - 8) * 0.5f, avail.y }, true);
@@ -453,14 +450,14 @@ void gui::Render() noexcept
 		ImGui::EndGroup();
 	} break;
 
-	case 4:
+	case 3:
 	{
 		ImGui::BeginGroup();
 		ImGui::BeginChild(1, { (avail.x - 8) * 0.5f, avail.y }, true);
 		ImGui::Text("Movement");
 		ImGui::Separator();
 		ImGui::Checkbox("BunnyHop", &v::misc.bunnyHop);
-	//,	ImGui::Checkbox("AutoStrafe", &v::misc.autoStrafe);
+		ImGui::Checkbox("AutoStrafe", &v::misc.autoStrafe);
 		ImGui::EndChild();
 		ImGui::EndGroup();
 
@@ -481,6 +478,16 @@ void gui::Render() noexcept
 		ImGui::EndChild();
 		ImGui::EndGroup();
 	}break;
+	case 4:
+	{
+		ImGui::BeginGroup();
+		ImGui::BeginChild(1, { (avail.x - 8) * 0.5f, avail.y }, true);
+		ImGui::Text("Memes:");
+		ImGui::Checkbox("Don't click me (seriously)", &v::memes.dontclickme);
+
+		ImGui::EndChild();
+		ImGui::EndGroup();
+	} break;
 	}
 		
 

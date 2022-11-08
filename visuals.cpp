@@ -17,8 +17,6 @@ static bool WorldToScreen(const CVector& point, CVector& screen) noexcept
 	if (w < 0.001f)
 		return false;
 
-
-
 	screen.x = (matrix.data[0][0] * point.x + matrix.data[0][1] * point.y + matrix.data[0][2] * point.z + matrix.data[0][3]) * inverse;
 	screen.y = (matrix.data[1][0] * point.x + matrix.data[1][1] * point.y + matrix.data[1][2] * point.z + matrix.data[1][3]) * inverse;
 
@@ -183,8 +181,6 @@ void Visuals::esp(std::uintptr_t vguiPanel, bool forceRepaint, bool allowForce) 
 				}
 			}
 		}
-
-
 
 	}
 }

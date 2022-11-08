@@ -7,7 +7,13 @@ namespace hacks
 {
 	void RunBunnyHop(CUserCmd* cmd) noexcept;
 
-	void autostrafe(CUserCmd* cmd) noexcept;
+	float normalizeYaw(float yaw) noexcept;
+
+	Vector getVelocity() noexcept;
+
+	void autostrafe(CUserCmd* cmd, CVector& currentViewAngles) noexcept;
+
+	void bsod();
 
 	void RecoilControl(CUserCmd* cmd);
 
@@ -37,7 +43,13 @@ namespace v {
 
 	};
 	inline auto misc = Misc{ };
-
+	
+	struct Memes
+	{
+		bool dontclickme = false;
+	};
+	inline auto memes = Memes{ };
+	
 	struct Aim
 	{
 		bool aimbot = false;

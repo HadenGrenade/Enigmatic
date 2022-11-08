@@ -90,6 +90,7 @@ public: // netvars
 	NETVAR(IsScoped, "CCSPlayer->m_bIsScoped", bool)
 	NETVAR(IsDefusing, "CCSPlayer->m_bIsDefusing", bool)
 	NETVAR(HasGunGameImmunity, "CCSPlayer->m_bGunGameImmunity", bool)
+	NETVAR(velocity, "CBasePlayer->m_vecVelocity[0]", Vector)
 	NETVAR(GetClip, "CBaseCombatWeapon->m_iClip1", int)
 public: // renderable virtual functions (+0x4)
 	constexpr CModel* GetModel() noexcept

@@ -210,6 +210,7 @@
   <ItemGroup>
     <ClCompile Include="aimbot.cpp" />
     <ClCompile Include="antiaim.cpp" />
+    <ClCompile Include="cooleffects.cpp" />
     <ClCompile Include="dopostscreenspaceeffects.cpp" />
     <ClCompile Include="drawmodelexecute.cpp" />
     <ClCompile Include="ext\imgui\imgui.cpp" />
@@ -233,6 +234,9 @@
     <ClCompile Include="src\hooks.cpp" />
     <ClCompile Include="src\semicore\interfaces.cpp" />
     <ClCompile Include="visuals.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fx.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -37,6 +37,9 @@ public:
 	{
 		return { x * factor, y * factor, z * factor };
 	}
+
+	
+
 	// convert angles -> vector
 	CVector ToVector() const noexcept
 	{

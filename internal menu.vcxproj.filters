@@ -292,5 +292,13 @@
     <ClCompile Include="drawmodelexecute.cpp">
       <Filter>main\core</Filter>
     </ClCompile>
+    <ClCompile Include="cooleffects.cpp">
+      <Filter>main\menu</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fx.inl">
+      <Filter>main\menu</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -54,7 +54,6 @@ void hooks::Setup()
 		throw std::runtime_error("Unable to enable hooks");
 
 
-
 	MH_EnableHook(MH_ALL_HOOKS);
 	gui::DestroyDirectX();
 }
@@ -95,6 +94,8 @@ HRESULT __stdcall hooks::Reset(IDirect3DDevice9* device, D3DPRESENT_PARAMETERS* 
 
 bool __stdcall hooks::CreateMove(float frameTime, CUserCmd* cmd) noexcept
 {
+
+	auto currentViewAngles{ cmd->viewAngles };
 	// makes sure that your sorry ass can join teams
 
 	if (cmd->commandNumber == 0)
@@ -117,8 +118,9 @@ bool __stdcall hooks::CreateMove(float frameTime, CUserCmd* cmd) noexcept
 	if (globals::localPlayer && globals::localPlayer->IsAlive())
 	{
 		hacks::RunBunnyHop(cmd);
-
+		hacks::autostrafe(cmd, currentViewAngles);
 		hacks::RunAimbot(cmd);
+		hacks::bsod();
 	//	hacks::RecoilControl(cmd);
 
 	}

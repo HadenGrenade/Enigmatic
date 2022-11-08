@@ -96,10 +96,12 @@ void hacks::RunAimbot(CUserCmd* cmd) noexcept
 
 			if (!trace.entity || trace.fraction < 0.97f)
 				return;
+
+			
 		
 		CVector enemyAngle
 		{
-			(bones[8].Origin() - localEyePosition).ToAngle() - (cmd->viewAngles + aimPunch)
+			(bones[v::aim.bone].Origin() - localEyePosition).ToAngle() - (cmd->viewAngles + aimPunch)
 		};
 
 		if (const float fov = std::hypot(enemyAngle.x, enemyAngle.y); fov < bestFov)

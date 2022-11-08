@@ -4,7 +4,9 @@
 class Visuals
 {
 public:
-	 
+
 	void Glow();
-	
+
+	void esp(std::uintptr_t vguiPanel, bool forceRepaint, bool allowForce);
+
 };

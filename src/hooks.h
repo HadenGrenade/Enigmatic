@@ -2,7 +2,8 @@
 #include "gui.h"
 #include "valve/cusercmd.h"
 #include "../iclientmodeshared.h"
-
+#include "../ivpanel.h"
+#include "../clientmode.h"
 namespace hooks
 {
 	void Setup();
@@ -26,9 +27,14 @@ namespace hooks
 	using CreateMoveFunction = bool(__thiscall*)(void*, float, CUserCmd*) noexcept;
 	inline CreateMoveFunction CreateMoveOriginal = nullptr;
 	bool __stdcall CreateMove(float frameTime, CUserCmd* cmd) noexcept;
+	// PaintTraverse hook stuff
+	using PaintTraverseFn = void(__thiscall*)(IVPanel*, std::uintptr_t, bool, bool) noexcept;
+	inline PaintTraverseFn PaintTraverseOriginal = nullptr;
+	void __stdcall PaintTraverse(std::uintptr_t vguiPanel, bool forceRepaint, bool allowForce) noexcept;
 
-// hook for glow
-	using DoPostScreenSpaceEffectsFn = void(__thiscall*)(IClientModeShared*, const void*) noexcept;
-	inline DoPostScreenSpaceEffectsFn DoPostScreenSpaceEffectsOriginal = nullptr;
-	void __stdcall DoPostScreenSpaceEffects(const void* viewSetup) noexcept;
+	using DoPostScreenSpaceEffectsFn = int(__thiscall*)(void*, const ViewSetup*);
+	inline DoPostScreenSpaceEffectsFn DoPostScreenSpaceEffectsOriginal = { nullptr };
+	int __stdcall DoPostScreenSpaceEffects(const ViewSetup* view);
+
+
 }

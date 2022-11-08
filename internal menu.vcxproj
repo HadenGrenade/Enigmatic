@@ -148,6 +148,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="aimbot.h" />
+    <ClInclude Include="antiaim.h" />
+    <ClInclude Include="appsystem.h" />
     <ClInclude Include="cclientclass.h" />
     <ClInclude Include="ccolor.h" />
     <ClInclude Include="ckeyvalues.h" />
@@ -188,6 +191,7 @@
     <ClInclude Include="ivmodelinfo.h" />
     <ClInclude Include="ivpanel.h" />
     <ClInclude Include="misc.h" />
+    <ClInclude Include="modelinfo.h" />
     <ClInclude Include="netvars.h" />
     <ClInclude Include="src\gui.h" />
     <ClInclude Include="src\hooks.h" />
@@ -200,10 +204,14 @@
     <ClInclude Include="src\valve\icliententitylist.h" />
     <ClInclude Include="src\valve\ivengineclient.h" />
     <ClInclude Include="src\valve\ienginetraceclient.h" />
+    <ClInclude Include="texture.h" />
     <ClInclude Include="visuals.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="aimbot.cpp" />
+    <ClCompile Include="antiaim.cpp" />
     <ClCompile Include="dopostscreenspaceeffects.cpp" />
+    <ClCompile Include="drawmodelexecute.cpp" />
     <ClCompile Include="ext\imgui\imgui.cpp" />
     <ClCompile Include="ext\imgui\imgui_demo.cpp" />
     <ClCompile Include="ext\imgui\imgui_draw.cpp" />

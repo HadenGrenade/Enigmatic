@@ -12,6 +12,8 @@ void memory::Setup() noexcept
     keyValuesFromString = PatternScan("client.dll", "E8 ? ? ? ? 8B 0D ? ? ? ? 83 C4 04 8B F8 8B 11") + 1;
 
     glowObjectManager = PatternScan("client.dll", "0F 11 05 ? ? ? ? 83 C8 01") + 3;  //
+  //  glowObjectManager = *(std::uint8_t**)(clientbase + 0x5356910);   this is incase that sig ever changes, which it does prretty often so
+
 
 }
 

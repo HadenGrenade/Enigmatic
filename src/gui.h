@@ -1,8 +1,10 @@
 #pragma once
 #include <d3d9.h>
-
+struct ImFont;
 namespace gui
 {
+	inline ImFont* segoe = nullptr;
+
 	// show menu?
 	inline bool open = true;
 

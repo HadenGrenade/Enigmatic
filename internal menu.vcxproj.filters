@@ -36,6 +36,9 @@
     <Filter Include="main\core\stupid">
       <UniqueIdentifier>{4885b5f9-26eb-418c-8c8e-a3bb63ea56a5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="main\core\features">
+      <UniqueIdentifier>{661cbb42-9065-4f68-9cb1-0ec762770b00}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\semicore\globals.h">
@@ -197,6 +200,21 @@
     <ClInclude Include="features.h">
       <Filter>main\core</Filter>
     </ClInclude>
+    <ClInclude Include="aimbot.h">
+      <Filter>main\core</Filter>
+    </ClInclude>
+    <ClInclude Include="antiaim.h">
+      <Filter>main\core\features</Filter>
+    </ClInclude>
+    <ClInclude Include="modelinfo.h">
+      <Filter>misc\valve</Filter>
+    </ClInclude>
+    <ClInclude Include="texture.h">
+      <Filter>misc\valve</Filter>
+    </ClInclude>
+    <ClInclude Include="appsystem.h">
+      <Filter>misc\valve</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -256,14 +274,23 @@
     <ClCompile Include="netvars.cpp">
       <Filter>main\core\stupid</Filter>
     </ClCompile>
-    <ClCompile Include="misc.cpp">
-      <Filter>main\core</Filter>
-    </ClCompile>
-    <ClCompile Include="visuals.cpp">
-      <Filter>main\core</Filter>
-    </ClCompile>
     <ClCompile Include="dopostscreenspaceeffects.cpp">
       <Filter>main\core\stupid</Filter>
+    </ClCompile>
+    <ClCompile Include="visuals.cpp">
+      <Filter>main\core\features</Filter>
+    </ClCompile>
+    <ClCompile Include="misc.cpp">
+      <Filter>main\core\features</Filter>
+    </ClCompile>
+    <ClCompile Include="aimbot.cpp">
+      <Filter>main\core\features</Filter>
+    </ClCompile>
+    <ClCompile Include="antiaim.cpp">
+      <Filter>main\core\features</Filter>
+    </ClCompile>
+    <ClCompile Include="drawmodelexecute.cpp">
+      <Filter>main\core</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -2,10 +2,16 @@
 #include <numbers>
 #include <cstdint>
 #include <cmath>
+constexpr float Deg2Rad(const float deg) noexcept
+{
+	return deg * (std::numbers::pi_v<float> / 180.f);
+}
 
 class CVector
 {
 public:
+
+
 	constexpr CVector operator+(const CVector& other) const noexcept
 	{
 		return { x + other.x, y + other.y, z + other.z };
@@ -30,6 +36,15 @@ public:
 	constexpr CVector Scale(float factor) const noexcept
 	{
 		return { x * factor, y * factor, z * factor };
+	}
+	// convert angles -> vector
+	CVector ToVector() const noexcept
+	{
+		return {
+			std::cos(Deg2Rad(x)) * std::cos(Deg2Rad(y)),
+			std::cos(Deg2Rad(x)) * std::sin(Deg2Rad(y)),
+			-std::sin(Deg2Rad(x))
+		};
 	}
 
 	inline CVector ToAngle() const noexcept
@@ -335,3 +350,104 @@ public:
 	float x, y, z;
 };
 
+class Vector4D
+{
+public:
+	constexpr Vector4D(float x = 0.f, float y = 0.f, float z = 0.f, float w = 0.f) :
+		x(x), y(y), z(z), w(w) { }
+
+public:
+	float x, y, z, w;
+};
+using Matrix3x3 = float[3][3];
+struct Matrix3x4
+{
+	Matrix3x4() = default;
+
+	constexpr Matrix3x4(
+		const float m00, const float m01, const float m02, const float m03,
+		const float m10, const float m11, const float m12, const float m13,
+		const float m20, const float m21, const float m22, const float m23)
+	{
+		data[0][0] = m00; data[0][1] = m01; data[0][2] = m02; data[0][3] = m03;
+		data[1][0] = m10; data[1][1] = m11; data[1][2] = m12; data[1][3] = m13;
+		data[2][0] = m20; data[2][1] = m21; data[2][2] = m22; data[2][3] = m23;
+	}
+
+	constexpr Matrix3x4(const Vector& x, const Vector& y, const Vector& z, const Vector& origin)
+	{
+		Init(x, y, z, origin);
+	}
+
+	constexpr void Init(const Vector& forward, const Vector& left, const Vector& up, const Vector& origin)
+	{
+		SetForward(forward);
+		SetLeft(left);
+		SetUp(up);
+		SetOrigin(origin);
+	}
+
+	constexpr void SetForward(const Vector& forward)
+	{
+		this->data[0][0] = forward.x;
+		this->data[1][0] = forward.y;
+		this->data[2][0] = forward.z;
+	}
+
+	constexpr void SetLeft(const Vector& left)
+	{
+		this->data[0][1] = left.x;
+		this->data[1][1] = left.y;
+		this->data[2][1] = left.z;
+	}
+
+	constexpr void SetUp(const Vector& up)
+	{
+		this->data[0][2] = up.x;
+		this->data[1][2] = up.y;
+		this->data[2][2] = up.z;
+	}
+
+	constexpr void SetOrigin(const Vector& origin)
+	{
+		this->data[0][3] = origin.x;
+		this->data[1][3] = origin.y;
+		this->data[2][3] = origin.z;
+	}
+
+	constexpr void Invalidate()
+	{
+		for (auto& subData : data)
+		{
+			for (auto& number : subData)
+				number = std::numeric_limits<float>::infinity();
+		}
+	}
+
+	float* operator[](const int index)
+	{
+		return data[index];
+	}
+
+	const float* operator[](const int index) const
+	{
+		return data[index];
+	}
+
+	[[nodiscard]] constexpr Vector at(const int index) const
+	{
+		return Vector(data[0][index], data[1][index], data[2][index]);
+	}
+
+	float* Base()
+	{
+		return &data[0][0];
+	}
+
+	[[nodiscard]] const float* Base() const
+	{
+		return &data[0][0];
+	}
+
+	float data[3][4] = { };
+};

@@ -4,6 +4,7 @@
 #include "src/valve/cvector.h"
 #include "src/valve/cusercmd.h"
 #include "ivpanel.h"
+#include "src/valve/centity.h"
 
 class ViewSetup
 {
@@ -93,10 +94,8 @@ public:
 	virtual void	Layout(bool bForce = false) = 0;
 
 	// Gets at the viewport, if there is one...
-	virtual Panel* GetViewport() = 0;
 
 	// Gets a panel hierarchically below the viewport by name like so "ASWHudInventoryMode/SuitAbilityPanel/ItemPanel1"...
-	virtual Panel* GetPanelFromViewport(const char* pchNamePath) = 0;
 
 	// Gets at the viewports vgui panel animation controller, if there is one...
 	virtual AnimationController* GetViewportAnimationController() = 0;
@@ -107,8 +106,8 @@ public:
 
 	// The mode can choose to draw/not draw entities.
 	virtual bool	ShouldDrawDetailObjects() = 0;
-	virtual bool	ShouldDrawEntity(BaseEntity* pEnt) = 0;
-	virtual bool	ShouldDrawLocalPlayer(BasePlayer* pPlayer) = 0;
+	virtual bool	ShouldDrawEntity(CEntity* pEnt) = 0;
+	virtual bool	ShouldDrawLocalPlayer(CEntity* pPlayer) = 0;
 	virtual bool	ShouldDrawParticles() = 0;
 
 	// The mode can choose to not draw fog
@@ -118,7 +117,6 @@ public:
 	virtual void	OverrideAudioState(AudioState* pAudioState) = 0;
 	virtual int		KeyInput(int down, ButtonCode keynum, const char* pszCurrentBinding) = 0;
 	virtual void	StartMessageMode(int iMessageModeType) = 0;
-	virtual Panel* GetMessagePanel() = 0;
 	virtual void	OverrideMouseInput(float* x, float* y) = 0;
 	virtual bool	CreateMove(float flInputSampleTime, CUserCmd* cmd) = 0;
 
@@ -140,7 +138,6 @@ public:
 
 	virtual void	PostRenderVGui() = 0;
 
-	virtual void	ActivateInGameVGuiContext(Panel* pPanel) = 0;
 	virtual void	DeactivateInGameVGuiContext() = 0;
 	virtual float	GetViewModelFOV(void) = 0;
 

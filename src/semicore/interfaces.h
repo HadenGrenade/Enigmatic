@@ -17,7 +17,6 @@
 #include "../../iclientmodeshared.h"
 #include "../../ibaseclientdll.h"
 
-
 // learn more about interfaces -> https://www.youtube.com/watch?v=C0wGdwnaArA
 namespace interfaces
 {
@@ -30,7 +29,7 @@ namespace interfaces
 
 	// interface pointers
 	inline IBaseClientDLL* client = nullptr;
-	inline IClientEntityList* entityList = nullptr;
+	inline ClientEntityList* entityList = nullptr;
 	inline IClientModeShared* clientMode = nullptr;
 	inline IEngineTrace* engineTrace = nullptr;
 	inline IEngineVGui* engineVGui = nullptr;

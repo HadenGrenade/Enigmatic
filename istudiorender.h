@@ -1,6 +1,8 @@
 #pragma once
 #include "src/util/memory.h"
 
+
+
 // https://gitlab.com/KittenPopo/csgo-2018-source/-/blob/main/public/istudiorender.h#L201
 class CStudioHdr;
 class IClientRenderable;

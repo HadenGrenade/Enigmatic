@@ -7,4 +7,5 @@ namespace f
 {
 	//inline auto misc = Misc{ };
 	inline auto visuals = Visuals{ };
+	
 }

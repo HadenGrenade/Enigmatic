@@ -1,6 +1,5 @@
 #pragma once
 #include <cstdint>
-#include "src/valve/cvector.h"
 
 // https://gitlab.com/KittenPopo/csgo-2018-source/-/blob/main/game/client/clientleafsystem.cpp#L223
 enum ERenderFlags

@@ -25,7 +25,6 @@ class ClientNetworkable;
 class ClientRenderable;
 class ClientThinkable;
 class ClientUnknown;
-class ClientEntity;
 class HandleEntity;
 
 class BaseEntity;
@@ -39,7 +38,6 @@ class CSPlayer;
 struct bf_read;
 struct bf_write;
 
-class Material;
 
 using VPANEL = unsigned long;
 using HFont = unsigned long;

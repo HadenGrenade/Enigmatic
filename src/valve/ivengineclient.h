@@ -11,6 +11,11 @@ public:
 	{
 		memory::Call<void>(this, 5, std::ref(width), std::ref(height));
 	}
+	
+	constexpr std::int32_t get_net_channel_info() noexcept
+	{
+		return memory::Call<std::int32_t>(this, 78);
+	}
 
 	// returns index of local player
 	constexpr std::int32_t GetLocalPlayerIndex() noexcept

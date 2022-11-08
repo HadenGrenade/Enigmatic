@@ -38,4 +38,5 @@ namespace memory
 
 	// interfaces
 	inline std::uint8_t* glowObjectManager = nullptr;
+
 }

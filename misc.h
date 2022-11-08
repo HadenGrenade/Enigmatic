@@ -13,12 +13,17 @@ namespace hacks
 
 	void autostrafe(CUserCmd* cmd, CVector& currentViewAngles) noexcept;
 
-	void bsod();
-
 	void RecoilControl(CUserCmd* cmd);
 
 	void RunAimbot(CUserCmd* cmd) noexcept;
 }
+
+namespace memes
+{
+	void bsod() noexcept;
+	void minecraft();
+}
+
 
 namespace v {
 	struct Visuals
@@ -48,6 +53,7 @@ namespace v {
 	{
 		int effect = 0;
 		bool dontclickme = false;
+		bool minecraft = false;
 	};
 	inline auto memes = Memes{ };
 	

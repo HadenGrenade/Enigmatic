@@ -38,6 +38,15 @@ public:
 		return { x * factor, y * factor, z * factor };
 	}
 
+	constexpr auto notNull() const noexcept
+	{
+		return x || y || z;
+	}
+
+	constexpr auto null() const noexcept
+	{
+		return !notNull();
+	}
 	
 
 	// convert angles -> vector
@@ -121,6 +130,7 @@ public:
 	{
 		return reinterpret_cast<float*>(const_cast<Vector*>(this));
 	}
+
 
 	float& operator[](const std::size_t i)
 	{

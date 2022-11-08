@@ -43,4 +43,10 @@ public:
 	{
 		return memory::Call<ISpacialQuery*>(this, 43);
 	}
+
+	constexpr void ExecuteClientCmd(const char* command) noexcept
+	{
+		memory::Call<void, const char*>(this, 108, command);
+	}
+
 };

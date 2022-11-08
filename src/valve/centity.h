@@ -172,6 +172,7 @@ public: // entity virtual functions
 	{
 		return memory::Call<int>(this, 455);
 	}
+
 };
 /*
 class BaseAnimating : public CEntity

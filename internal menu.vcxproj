@@ -205,6 +205,8 @@
     <ClInclude Include="src\valve\ivengineclient.h" />
     <ClInclude Include="src\valve\ienginetraceclient.h" />
     <ClInclude Include="texture.h" />
+    <ClInclude Include="Vector3d.h" />
+    <ClInclude Include="Vector3d.hpp" />
     <ClInclude Include="visuals.h" />
   </ItemGroup>
   <ItemGroup>
@@ -226,6 +228,7 @@
     <ClCompile Include="ext\minhook\hook.c" />
     <ClCompile Include="ext\minhook\trampoline.c" />
     <ClCompile Include="globals.cpp" />
+    <ClCompile Include="memes.cpp" />
     <ClCompile Include="memory.cpp" />
     <ClCompile Include="misc.cpp" />
     <ClCompile Include="netvars.cpp" />

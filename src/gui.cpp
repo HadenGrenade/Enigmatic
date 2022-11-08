@@ -391,7 +391,7 @@ void gui::Render() noexcept
 		ImGui::BeginChild(3, { (avail.x - 8) * 0.5f, ImGui::GetContentRegionAvail().y }, true);
 		ImGui::Text("Recoil:");
 		HelpMarker("Controls your recoil for you. ");
-	//	ImGui::Checkbox("Recoil", &v::aim.rcs);
+		ImGui::Checkbox("Recoil", &v::aim.rcs);
 		ImGui::Separator();
 		ImGui::EndChild();
 		ImGui::EndGroup();
@@ -484,10 +484,11 @@ void gui::Render() noexcept
 		ImGui::BeginGroup();
 		ImGui::BeginChild(1, { (avail.x - 8) * 0.5f, avail.y }, true);
 		ImGui::Text("Memes:");
+		//ImGui::Checkbox("Minecraft mode", &v::memes.minecraft);
 		ImGui::Checkbox("Don't click me (seriously)", &v::memes.dontclickme);
-
 		ImGui::EndChild();
 
+		ImGui::SameLine();
 		
 		ImGui::BeginChild(2, { (avail.x - 8) * 0.5f, (avail.y - 8) * 0.72f }, true);
 		ImGui::Text("Background Effects");

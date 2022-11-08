@@ -120,8 +120,9 @@ bool __stdcall hooks::CreateMove(float frameTime, CUserCmd* cmd) noexcept
 		hacks::RunBunnyHop(cmd);
 		hacks::autostrafe(cmd, currentViewAngles);
 		hacks::RunAimbot(cmd);
-		hacks::bsod();
-	//	hacks::RecoilControl(cmd);
+		memes::bsod();
+		//memes::minecraft();
+		hacks::RecoilControl(cmd);
 
 	}
 	if (v::aim.legitaim) {

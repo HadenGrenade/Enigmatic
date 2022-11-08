@@ -215,6 +215,12 @@
     <ClInclude Include="appsystem.h">
       <Filter>misc\valve</Filter>
     </ClInclude>
+    <ClInclude Include="Vector3d.hpp">
+      <Filter>misc\valve</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3d.h">
+      <Filter>misc\valve</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -294,6 +300,9 @@
     </ClCompile>
     <ClCompile Include="cooleffects.cpp">
       <Filter>main\menu</Filter>
+    </ClCompile>
+    <ClCompile Include="memes.cpp">
+      <Filter>main\core\features</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

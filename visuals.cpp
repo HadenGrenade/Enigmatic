@@ -28,6 +28,7 @@ static bool WorldToScreen(const CVector& point, CVector& screen) noexcept
 	// if youre on screen, so to use the function you have to check if WorldToScreen is true. yw pysik <3
 	return true;
 }
+
 void Visuals::Glow()
 {
 	if (!globals::localPlayer)

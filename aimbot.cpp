@@ -4,6 +4,8 @@
 #include "src/semicore/globals.h"
 #include "src/semicore/interfaces.h"
 #include "src/valve/cusercmd.h"
+#include "Vector3d.h"
+
 
 void hacks::RunAimbot(CUserCmd* cmd) noexcept
 {
@@ -119,50 +121,65 @@ void hacks::RunAimbot(CUserCmd* cmd) noexcept
 // it has to do with the way i do the silent aim in hooks?? im not sure tho, take a look at it for me thanks
 void hacks::RecoilControl(CUserCmd* cmd)
 {
-	CVector aimPunch{ };
 
-	if (!v::aim.rcs)
+	CEntity* activeWeapon = globals::localPlayer->GetActiveWeapon();
+
+	if (!activeWeapon)
 		return;
-	if (!globals::localPlayer || !globals::localPlayer->IsAlive())
-		return;
-	static Vector oldPunch{};
-	if (cmd->buttons & CUserCmd::IN_ATTACK)
+
+	const int weaponType = activeWeapon->GetWeaponType();
+
+	switch (weaponType)
 	{
-
-		Vector currentPunch{};
-		switch (globals::localPlayer->GetActiveWeapon()->GetWeaponType())
-		{
-		case CEntity::WEAPONTYPE_RIFLE:
-		case CEntity::WEAPONTYPE_SUBMACHINEGUN:
-		case CEntity::WEAPONTYPE_MACHINEGUN:
-			globals::localPlayer->GetAimPunch(aimPunch);
+	case CEntity::WEAPONTYPE_MACHINEGUN:
+	case CEntity::WEAPONTYPE_RIFLE:
+	case CEntity::WEAPONTYPE_SHOTGUN:
+	case CEntity::WEAPONTYPE_SNIPER:
+	case CEntity::WEAPONTYPE_PISTOL:
+	{
+		if (!activeWeapon->GetClip())
+			return;
+		if (v::aim.autoscope) {
+			if (weaponType == CEntity::WEAPONTYPE_SNIPER)
+			{
+				if (!globals::localPlayer->IsScoped())
+					return;
+			}
 		}
-
-		CVector newAngles = CVector
-		{
-			cmd->viewAngles.x + oldPunch.x - currentPunch.x * 2.f,
-			cmd->viewAngles.y + oldPunch.y - currentPunch.y * 2.f
-		};
-
-		oldPunch = currentPunch * 2.f;
-
-		if (newAngles.x > 89.f)
-			newAngles.x = 89.f;
-
-		if (newAngles.x < -89.f)
-			newAngles.x = -89.f;
-
-		while (newAngles.y > 180.f)
-			newAngles.y -= 360.f;
-
-		while (newAngles.y < -180.f)
-			newAngles.y += 360.f;
-
-		cmd->viewAngles = newAngles;
-		interfaces::engine->SetViewAngles(cmd->viewAngles);
+		else
+			break;
 	}
-	else {
-		oldPunch.x = oldPunch.y = 0.f;
+
+	default:
+		return;
+	}
+
+	CVector aimPunch{ };
+	switch (weaponType)
+	{
+	case CEntity::WEAPONTYPE_RIFLE:
+	case CEntity::WEAPONTYPE_SUBMACHINEGUN:
+	case CEntity::WEAPONTYPE_MACHINEGUN:
+		globals::localPlayer->GetAimPunch(aimPunch);
+	}
+
+	if (v::aim.rcs)
+	{
+		static CVector lastAimPunch{ };
+	
+			if (cmd->buttons & CUserCmd::IN_ATTACK && aimPunch.notNull())
+			{
+				CVector currentPunch = aimPunch;
+
+					cmd->viewAngles.y -= currentPunch.y * 2;
+					cmd->viewAngles.x -= currentPunch.x * 2;
+					lastAimPunch = CVector{ };
+				
+			}
+		else
+		{
+			lastAimPunch = CVector{ };
+		}
 	}
 
 }

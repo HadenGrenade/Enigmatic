@@ -480,12 +480,32 @@ void gui::Render() noexcept
 	}break;
 	case 4:
 	{
+
 		ImGui::BeginGroup();
 		ImGui::BeginChild(1, { (avail.x - 8) * 0.5f, avail.y }, true);
 		ImGui::Text("Memes:");
 		ImGui::Checkbox("Don't click me (seriously)", &v::memes.dontclickme);
 
 		ImGui::EndChild();
+
+		
+		ImGui::BeginChild(2, { (avail.x - 8) * 0.5f, (avail.y - 8) * 0.72f }, true);
+		ImGui::Text("Background Effects");
+		ImGui::Separator();
+		static constexpr const char* names[]{ "Eyes", "whatever", "cool effect boss nigger"};
+		for (int i = 0; i < IM_ARRAYSIZE(names); i++) {
+
+			if (ImGui::Selectable(names[i])) {
+				switch (i) {
+				case 0: v::memes.effect = 1; break;
+				case 1: v::memes.effect = 2; break;
+				case 2: v::memes.effect = 3; break;
+				}
+			}
+		}
+
+		ImGui::EndChild();
+
 		ImGui::EndGroup();
 	} break;
 	}

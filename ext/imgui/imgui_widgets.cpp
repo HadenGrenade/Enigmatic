@@ -6326,7 +6326,7 @@ bool ImGui::Selectable(const char* label, bool selected, ImGuiSelectableFlags fl
     return pressed; //-V1020
 }
 
-bool ImGui::Selectable(const char* label, bool* p_selected, ImGuiSelectableFlags flags, const ImVec2& size_arg)
+bool ImGui::Selectable1(const char* label, bool* p_selected, ImGuiSelectableFlags flags, const ImVec2& size_arg)
 {
     if (Selectable(label, *p_selected, flags, size_arg))
     {

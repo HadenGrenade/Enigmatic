@@ -46,6 +46,7 @@ namespace v {
 	
 	struct Memes
 	{
+		int effect = 0;
 		bool dontclickme = false;
 	};
 	inline auto memes = Memes{ };

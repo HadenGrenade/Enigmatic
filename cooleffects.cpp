@@ -19,12 +19,13 @@
 // 0.22 - use InvisibleButton instead of Dummy to capture inputs
 // 0.21 - fix mouse y position
 // 0.20 - added mouse buttons, added math operators
-
+#include "src/semicore/interfaces.h"
 #include "src/gui.h"
 #include <math.h>
 #include "ext/imgui/imgui.h"
 #define IMGUI_DEFINE_MATH_OPERATORS // Access to math operators
 #include "ext/imgui/imgui_internal.h"
+#include "misc.h"
 
 // Function signature:
 //  void FX(ImDrawList* d, ImVec2 a, ImVec2 b, ImVec2 sz, ImVec4 mouse, float t);
@@ -41,12 +42,23 @@
 // This is the file which size we are measuring, and should be kept <1024 bytes
 #include "fx.inl" // <--- your effect
 
+
+
 // Shared testbed
 void gui::FxTestBed() noexcept
 {
+    int x, y;
+
+    interfaces::engine->GetScreenSize(x, y);
+
     ImGuiIO& io = ImGui::GetIO();
-    ImGui::Begin("FX", NULL, ImGuiWindowFlags_AlwaysAutoResize);
-    ImVec2 size(320.0f, 180.0f);
+
+    constexpr auto windowFlags = ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize
+        | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoScrollWithMouse | ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoBackground;
+	
+	ImGui::SetNextWindowPos(ImVec2(x / 2, y / 2), ImGuiCond_Always, ImVec2(0.5f, 0.5f));
+    ImGui::Begin("", NULL, windowFlags);
+    ImVec2 size(x , y);
     ImGui::InvisibleButton("canvas", size);
     ImVec2 p0 = ImGui::GetItemRectMin();
     ImVec2 p1 = ImGui::GetItemRectMax();
@@ -59,7 +71,15 @@ void gui::FxTestBed() noexcept
     mouse_data.z = io.MouseDownDuration[0];
     mouse_data.w = io.MouseDownDuration[1];
 
-    FX(draw_list, p0, p1, size, mouse_data, (float)ImGui::GetTime());
+    switch (v::memes.effect)
+    {
+        case 1:
+            FX(draw_list, p0, p1, size, mouse_data, (float)ImGui::GetTime()); break;
+        case 2:
+            FX2(draw_list, p0, p1, size, mouse_data, (float)ImGui::GetTime()); break;
+
+    }
+		
     draw_list->PopClipRect();
     ImGui::End();
 }

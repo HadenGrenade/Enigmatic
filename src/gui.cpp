@@ -493,7 +493,7 @@ void gui::Render() noexcept
 		ImGui::BeginChild(2, { (avail.x - 8) * 0.5f, (avail.y - 8) * 0.72f }, true);
 		ImGui::Text("Background Effects");
 		ImGui::Separator();
-		static constexpr const char* names[]{ "Eyes", "whatever", "cool effect boss nigger"};
+		static constexpr const char* names[]{ "Eyes", "Circles", "Rain"};
 		for (int i = 0; i < IM_ARRAYSIZE(names); i++) {
 
 			if (ImGui::Selectable(names[i])) {

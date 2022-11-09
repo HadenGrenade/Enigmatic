@@ -176,6 +176,7 @@
     <ClInclude Include="ext\minhook\minhook.h" />
     <ClInclude Include="ext\minhook\trampoline.h" />
     <ClInclude Include="features.h" />
+    <ClInclude Include="fnv.hpp" />
     <ClInclude Include="hash.h" />
     <ClInclude Include="ibaseclientdll.h" />
     <ClInclude Include="iclientmodeshared.h" />
@@ -190,6 +191,8 @@
     <ClInclude Include="ivdebugoverlay.h" />
     <ClInclude Include="ivmodelinfo.h" />
     <ClInclude Include="ivpanel.h" />
+    <ClInclude Include="i_input.hpp" />
+    <ClInclude Include="i_player_movement.hpp" />
     <ClInclude Include="misc.h" />
     <ClInclude Include="modelinfo.h" />
     <ClInclude Include="netvars.h" />
@@ -211,10 +214,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="aimbot.cpp" />
+    <ClCompile Include="animations.cpp" />
     <ClCompile Include="antiaim.cpp" />
     <ClCompile Include="cooleffects.cpp" />
     <ClCompile Include="dopostscreenspaceeffects.cpp" />
     <ClCompile Include="drawmodelexecute.cpp" />
+    <ClCompile Include="engine_prediction.cpp" />
     <ClCompile Include="ext\imgui\imgui.cpp" />
     <ClCompile Include="ext\imgui\imgui_demo.cpp" />
     <ClCompile Include="ext\imgui\imgui_draw.cpp" />

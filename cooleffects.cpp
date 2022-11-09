@@ -57,7 +57,7 @@ void gui::FxTestBed() noexcept
         | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoScrollWithMouse | ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoBackground;
 	
 	ImGui::SetNextWindowPos(ImVec2(x / 2, y / 2), ImGuiCond_Always, ImVec2(0.5f, 0.5f));
-    ImGui::Begin("", NULL, windowFlags);
+    ImGui::Begin("dumbass", NULL, windowFlags);
     ImVec2 size(x , y);
     ImGui::InvisibleButton("canvas", size);
     ImVec2 p0 = ImGui::GetItemRectMin();

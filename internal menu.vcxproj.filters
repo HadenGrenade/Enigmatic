@@ -221,6 +221,15 @@
     <ClInclude Include="Vector3d.h">
       <Filter>misc\valve</Filter>
     </ClInclude>
+    <ClInclude Include="i_input.hpp">
+      <Filter>misc\valve</Filter>
+    </ClInclude>
+    <ClInclude Include="fnv.hpp">
+      <Filter>misc\valve</Filter>
+    </ClInclude>
+    <ClInclude Include="i_player_movement.hpp">
+      <Filter>misc\valve</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -303,6 +312,12 @@
     </ClCompile>
     <ClCompile Include="memes.cpp">
       <Filter>main\core\features</Filter>
+    </ClCompile>
+    <ClCompile Include="animations.cpp">
+      <Filter>main\core\features</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_prediction.cpp">
+      <Filter>main\core\stupid</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

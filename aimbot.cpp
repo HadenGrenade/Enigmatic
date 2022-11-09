@@ -4,7 +4,6 @@
 #include "src/semicore/globals.h"
 #include "src/semicore/interfaces.h"
 #include "src/valve/cusercmd.h"
-#include "Vector3d.h"
 
 
 void hacks::RunAimbot(CUserCmd* cmd) noexcept

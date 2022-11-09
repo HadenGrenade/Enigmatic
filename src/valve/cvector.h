@@ -2,6 +2,13 @@
 #include <numbers>
 #include <cstdint>
 #include <cmath>
+#include <cstdint>
+#include <algorithm>
+#include <iostream>
+#include <iomanip>
+#include <random>
+
+#include "../../Vector3d.hpp"
 constexpr float Deg2Rad(const float deg) noexcept
 {
 	return deg * (std::numbers::pi_v<float> / 180.f);
@@ -48,7 +55,20 @@ public:
 		return !notNull();
 	}
 	
+	inline CVector clamp(void) {
+		return{
+		x = std::clamp(x, -89.0f, 89.0f),
+		y = std::clamp(std::remainder(y, 360.0f), -180.0f, 180.0f),
+		z = std::clamp(z, -50.0f, 50.0f),
+		};
+	}
+	inline CVector normalize() {
+		return{
+		x = std::isfinite(x) ? std::remainderf(x, 360.0f) : 0.0f,
+		y = std::isfinite(y) ? std::remainderf(y, 360.0f) : 0.0f,
 
+		};
+	}
 	// convert angles -> vector
 	CVector ToVector() const noexcept
 	{

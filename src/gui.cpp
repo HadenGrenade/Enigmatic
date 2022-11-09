@@ -343,8 +343,15 @@ void gui::Render() noexcept
 	case 0:
 		ImGui::BeginGroup();
 		ImGui::BeginChild(1, { (avail.x - 8) * 0.5f, avail.y * 0.65f }, true);
-		ImGui::Text("Coming soon...");
-		HelpMarker("Hit P on Some Nigga's");
+		ImGui::Text("AntiAim");
+		HelpMarker("Missed due to resolver - Every Cheat $$");
+		ImGui::Checkbox("AntiAim", &v::antiaim.antiaim);
+		ImGui::SliderFloat("Pitch", &v::antiaim.pitch, -89.f, 89.f, "%1f pitch");
+		ImGui::SliderFloat("Yaw", &v::antiaim.yaw, -180.f, 180.f, "%1f yaw");
+		ImGui::Checkbox("Spinbot", &v::antiaim.spinbot);
+		ImGui::SliderFloat("Spinbot speed", &v::antiaim.spinbot_speed, 0.f, 100.f, "%1f speed");
+		ImGui::SliderInt("Desync", &v::antiaim.desync, 0, 58, "%1f desync");
+		ImGui::Checkbox("Flip AA ( Beta ) ", &v::antiaim.peek_aa);
 		ImGui::Separator();
 		ImGui::Spacing();
 
@@ -354,8 +361,8 @@ void gui::Render() noexcept
 
 
 		ImGui::BeginChild(2, { (avail.x - 8) * 0.5f, ImGui::GetContentRegionAvail().y }, true);
-		ImGui::Text("AntiAim");
-		HelpMarker("Missed due to resolver - Every Cheat $$");
+		ImGui::Text("Comming Soon");
+		HelpMarker("Coming Soon ");
 		ImGui::Separator();
 		ImGui::Spacing();
 
@@ -382,16 +389,16 @@ void gui::Render() noexcept
 		ImGui::EndChild();
 
 		ImGui::BeginChild(2, { (avail.x - 8) * 0.5f, (avail.y * 0.33f) }, true);
-		ImGui::Text("Legit AA:");
-		HelpMarker("Confuse some niggas");
+		ImGui::Text("Recoil");
+		ImGui::Checkbox("Recoil", &v::aim.rcs);
+		HelpMarker("Controls your recoil for you.");
 		ImGui::Separator();
 
 		ImGui::EndChild();
 
 		ImGui::BeginChild(3, { (avail.x - 8) * 0.5f, ImGui::GetContentRegionAvail().y }, true);
-		ImGui::Text("Recoil:");
-		HelpMarker("Controls your recoil for you. ");
-		ImGui::Checkbox("Recoil", &v::aim.rcs);
+		ImGui::Text("Coming Soon");
+		HelpMarker(" Will be added later ");
 		ImGui::Separator();
 		ImGui::EndChild();
 		ImGui::EndGroup();
@@ -432,6 +439,8 @@ void gui::Render() noexcept
 		VISUALS_COLOR_BOOL(grenade);
 		VISUALS_COLOR_BOOL(bomb);
 		VISUALS_COLOR_BOOL(chicken);
+	//	ImGui::Checkbox("Chams", &v::visuals.chams);
+		//ImGui::Checkbox("ZType", &v::visuals.chams1);
 
 		ImGui::EndChild();
 		ImGui::EndGroup();

@@ -35,4 +35,5 @@ void netvars::Dump(const std::string_view base, CRecvTable* table, const std::ui
 		// place offset in netvar map
 		data[hash::RunTime(std::format("{}->{}", base, prop->name).c_str())] = offset + prop->offset;
 	}
+	
 }

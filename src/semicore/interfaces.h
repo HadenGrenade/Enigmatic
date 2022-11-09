@@ -16,6 +16,8 @@
 #include "../../ienginetrace.h"
 #include "../../iclientmodeshared.h"
 #include "../../ibaseclientdll.h"
+#include "../../i_input.hpp"
+#include "../../i_player_movement.hpp"
 
 // learn more about interfaces -> https://www.youtube.com/watch?v=C0wGdwnaArA
 namespace interfaces
@@ -28,6 +30,7 @@ namespace interfaces
 	Interface* Capture(const char* moduleName, const char* interfaceName) noexcept;
 
 	// interface pointers
+	inline i_input* input;
 	inline IBaseClientDLL* client = nullptr;
 	inline ClientEntityList* entityList = nullptr;
 	inline IClientModeShared* clientMode = nullptr;
@@ -42,6 +45,7 @@ namespace interfaces
 	inline IVEngineClient* engine = nullptr;
 	inline IVModelInfo* modelInfo = nullptr;
 	inline IVPanel* panel = nullptr;
+	inline player_prediction* prediction;
 
 	// other
 	inline void* keyValuesSystem = nullptr;

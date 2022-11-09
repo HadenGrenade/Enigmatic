@@ -6,10 +6,13 @@ class CUserCmd;
 namespace hacks
 {
 	void RunBunnyHop(CUserCmd* cmd) noexcept;
+	void run_local_animations();
 
 	float normalizeYaw(float yaw) noexcept;
 
 	Vector getVelocity() noexcept;
+	
+	void runAntiaim(CUserCmd* cmd, bool& send_packet);
 
 	void autostrafe(CUserCmd* cmd, CVector& currentViewAngles) noexcept;
 
@@ -38,6 +41,10 @@ namespace v {
 		bool box = false;
 		bool health = false;
 
+
+		bool chams = false;
+		bool chams1 = false;
+		int chams2 = false;
 	};
 	inline auto visuals = Visuals{ };	
 	
@@ -56,7 +63,21 @@ namespace v {
 		bool minecraft = false;
 	};
 	inline auto memes = Memes{ };
-	
+
+	struct AntiAim
+	{
+		bool antiaim = false;
+		float yaw = 0.f;
+		float pitch = 0.f;
+		bool spinbot = false;
+		float spinbot_speed = 0.f;
+		bool peek_aa = false;
+		bool temp = false;
+		int desync = 28;
+
+	};
+	inline auto antiaim = AntiAim{ };
+
 	struct Aim
 	{
 		bool aimbot = false;

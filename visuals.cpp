@@ -3,6 +3,7 @@
 #include "src/hooks.h"
 #include "misc.h"
 #include <string>
+#include "src/hooks.h"
 int x, y;
 
 static bool WorldToScreen(const CVector& point, CVector& screen) noexcept
@@ -177,11 +178,60 @@ void Visuals::esp(std::uintptr_t vguiPanel, bool forceRepaint, bool allowForce) 
 
 					// set the color of the health bar to a split between red / green
 					interfaces::surface->DrawSetColor((1.f - healthFrac) * 255, 255 * healthFrac, 0, 255);
-					if(v::visuals.health)
-					interfaces::surface->DrawFilledRect(left - 5, bottom.y - (h * healthFrac), left - 4, bottom.y);
+					if (v::visuals.health)
+						interfaces::surface->DrawFilledRect(left - 5, bottom.y - (h * healthFrac), left - 4, bottom.y);
 				}
 			}
 		}
 
 	}
-}
+}/*
+void Visuals::chams(void* results, const CDrawModelInfo& info, CMatrix3x4* bones, float* flexWeights, float* flexDelayedWeights, const CVector& modelOrigin, const std::int32_t flags) noexcept {
+	if(!v::visuals.chams)
+	return;
+	if (globals::localPlayer && info.renderable)
+	{
+		// get the base entity
+		CEntity* entity = info.renderable->GetIClientUnknown()->GetBaseEntity();
+
+		// make sure they are a valid enemy player
+		if (entity && entity->IsPlayer() && entity->GetTeam() != globals::localPlayer->GetTeam())
+		{
+			// create our custom material
+			static IMaterial* material = interfaces::materialSystem->CreateMaterial(
+				"pearlescent",
+				CKeyValues::FromString(
+					"VertexLitGeneric",
+					"$phong 1 "
+					"$basemapalphaphongmask 1 "
+					"$pearlescent 2" 
+				)
+			);
+		//	static IMaterial* material = interfaces::materialSystem->FindMaterial("debug/debugambientcube");
+
+			// float arrays to hold our chams colors
+			// put these in globals:: to modify with a menu
+			constexpr float hidden[3] = { 0.f, 1.f, 0.f };
+			constexpr float visible[3] = { 1.f, 0.f, 1.f };
+
+			// alpha modulate (once in my case)
+			interfaces::studioRender->SetAlphaModulation(1.f);
+
+			// show through walls
+			material->SetMaterialVarFlag(IMaterial::IGNOREZ, true);
+			interfaces::studioRender->SetColorModulation(hidden);
+			interfaces::studioRender->ForcedMaterialOverride(material);
+			hooks::DrawModelOriginal(interfaces::studioRender, results, info, bones, flexWeights, flexDelayedWeights, modelOrigin, flags);
+			if (v::visuals.chams1) {
+				// do not show through walls
+				material->SetMaterialVarFlag(IMaterial::IGNOREZ, false);
+				interfaces::studioRender->SetColorModulation(visible);
+				interfaces::studioRender->ForcedMaterialOverride(material);
+				hooks::DrawModelOriginal(interfaces::studioRender, results, info, bones, flexWeights, flexDelayedWeights, modelOrigin, flags);
+			}
+			// reset the material override + return from hook
+			return interfaces::studioRender->ForcedMaterialOverride(nullptr);
+		}
+	}
+
+}*/

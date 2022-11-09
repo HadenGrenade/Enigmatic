@@ -19,6 +19,8 @@ namespace hacks
 	void RecoilControl(CUserCmd* cmd);
 
 	void RunAimbot(CUserCmd* cmd) noexcept;
+
+	void run_fl(bool& send_packet) noexcept;
 }
 
 namespace memes
@@ -75,6 +77,9 @@ namespace v {
 		bool temp = false;
 		int desync = 28;
 
+		bool fakelag = false;
+		int limit = 1;
+
 	};
 	inline auto antiaim = AntiAim{ };
 
@@ -82,6 +87,7 @@ namespace v {
 	{
 		bool aimbot = false;
 		float fov = 5.f;
+		bool drawfov = true;
 		bool silent = false;
 		float scale = 0.5;
 		bool autoscope = false;

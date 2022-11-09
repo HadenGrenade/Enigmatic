@@ -361,7 +361,9 @@ void gui::Render() noexcept
 
 
 		ImGui::BeginChild(2, { (avail.x - 8) * 0.5f, ImGui::GetContentRegionAvail().y }, true);
-		ImGui::Text("Comming Soon");
+		ImGui::Text("Fakelag");
+		ImGui::Checkbox("Fakelag", &v::antiaim.fakelag);
+		ImGui::SliderInt("Limit", &v::antiaim.limit, 1, 16, "%d");
 		HelpMarker("Coming Soon ");
 		ImGui::Separator();
 		ImGui::Spacing();
@@ -379,7 +381,7 @@ void gui::Render() noexcept
 		HelpMarker("Faceit Protected $$");
 		ImGui::Checkbox("Legitbot", &v::aim.aimbot);
 		if (v::aim.aimbot) {
-			ImGui::Checkbox("Legit Aim", &v::aim.legitaim);
+			ImGui::Checkbox("Legit Aim", &v::aim.legitaim); 
 			HelpMarker("Please only have one of these active at a time, as it can cause errors ");
 			ImGui::Checkbox("Silent Aim", &v::aim.silent);
 			HelpMarker("Enemys still can see the flick, however you cannot. ");
@@ -423,6 +425,7 @@ void gui::Render() noexcept
 			HelpMarker("Changes the time it will take for your crosshair to reach their head ");
 			ImGui::SliderFloat("FOV", &v::aim.fov, 0.1f, 180.0f, "%1f fov");
 			HelpMarker("Changes the distance your crosshair has to be from the player for the cheat to recognize them. ");
+			ImGui::Checkbox("Draw FOV", &v::aim.drawfov);
 		}
 		ImGui::EndChild();
 		ImGui::EndGroup();

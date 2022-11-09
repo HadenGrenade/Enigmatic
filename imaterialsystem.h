@@ -29,4 +29,6 @@ public:
 	{
 		return memory::Call<IMaterial*>(this, 84, name, nullptr, true, nullptr);
 	}
+
+
 };

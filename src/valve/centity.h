@@ -242,6 +242,8 @@ public: // entity virtual functions
 
 	//	NETVAR(GetVelocity, "CBaseEntity->m_iTeamNum", int)
 
+	
+
 	constexpr std::int32_t GetHealth() noexcept
 	{
 		return memory::Call<std::int32_t>(this, 122);
@@ -251,6 +253,7 @@ public: // entity virtual functions
 	{
 		return memory::Call<bool>(this, 156);
 	}
+	
 
 	constexpr bool IsPlayer() noexcept
 	{
@@ -286,6 +289,93 @@ public: // entity virtual functions
 	{
 		return memory::Call<int>(this, 455);
 	}
+
+	constexpr int GetWeaponID() noexcept
+	{
+		return memory::Call<int>(this, 456);
+	}
+
+	constexpr int GetWeaponAmmo() noexcept
+	{
+		return memory::Call<int>(this, 457);
+	}
+
+	constexpr int GetWeaponClip() noexcept
+	{
+		return memory::Call<int>(this, 458);
+	}	
+
+	constexpr int GetWeaponNextPrimaryAttack() noexcept
+	{
+		return memory::Call<int>(this, 459);
+	}
+
+	constexpr int GetWeaponNextSecondaryAttack() noexcept
+	{
+		return memory::Call<int>(this, 460);
+	}
+
+	constexpr int GetWeaponInReload() noexcept
+	{
+		return memory::Call<int>(this, 461);
+	}
+
+	constexpr int GetWeaponAccuracyPenalty() noexcept
+	{
+		return memory::Call<int>(this, 462);
+	}
+
+	constexpr int GetWeaponState() noexcept
+	{
+		return memory::Call<int>(this, 463);
+	}
+
+	constexpr int GetWeaponZoomLevel() noexcept
+	{
+		return memory::Call<int>(this, 464);
+	}
+
+	constexpr int GetWeaponOwner() noexcept
+	{
+		return memory::Call<int>(this, 465);
+	}
+
+	constexpr int GetWeaponHasSilencer() noexcept
+	{
+		return memory::Call<int>(this, 466);
+	}
+
+	constexpr int GetWeaponInZoom() noexcept
+	{
+		return memory::Call<int>(this, 467);
+	}
+
+	constexpr int GetWeaponPrimaryReserveAmmoCount() noexcept
+	{
+		return memory::Call<int>(this, 468);
+	}
+
+	constexpr int GetWeaponSecondaryReserveAmmoCount() noexcept
+	{
+		return memory::Call<int>(this, 469);
+	}
+
+	constexpr int GetWeaponThrowTime() noexcept
+	{
+		return memory::Call<int>(this, 471);
+	}
+
+	constexpr int GetWeaponPostponeFireReadyTime() noexcept
+	{
+		return memory::Call<int>(this, 472);
+	}
+
+	constexpr int GetWeaponLastShotTime() noexcept
+	{
+		return memory::Call<int>(this, 473);
+	}
+
+	
 
 };
 /*

@@ -42,4 +42,90 @@ public:
 	{
 		memory::Call<void>(this, 18, x, y, xx, yy);
 	}
+
+	constexpr void DrawLine(int x, int y, int xx, int yy) noexcept
+	{
+		memory::Call<void>(this, 19, x, y, xx, yy);
+	}
+
+	constexpr void DrawSetTextFont(unsigned long font) noexcept
+	{
+		memory::Call<void>(this, 23, font);
+	}
+
+	constexpr void DrawSetTextColor(int r, int g, int b, int a = 255) noexcept
+	{
+		memory::Call<void>(this, 25, r, g, b, a);
+	}
+
+	constexpr void DrawSetTextPos(int x, int y) noexcept
+	{
+		memory::Call<void>(this, 26, x, y);
+	}
+
+	constexpr void DrawPrintText(const wchar_t* text, int textLen, EFontDrawType drawType = FONT_DRAW_DEFAULT) noexcept
+	{
+		memory::Call<void>(this, 28, text, textLen, drawType);
+	}
+
+	constexpr void DrawSetTextureRGBA(int id, const unsigned char* rgba, int wide, int tall) noexcept
+	{
+		memory::Call<void>(this, 37, id, rgba, wide, tall);
+	}
+
+	constexpr void DrawSetTexture(int id) noexcept
+	{
+		memory::Call<void>(this, 38, id);
+	}
+
+	constexpr void DrawTexturedRect(int x, int y, int xx, int yy) noexcept
+	{
+		memory::Call<void>(this, 41, x, y, xx, yy);
+	}
+
+	constexpr void UnlockCursor() noexcept
+	{
+		memory::Call<void>(this, 66);
+	}
+
+	constexpr void LockCursor() noexcept
+	{
+		memory::Call<void>(this, 67);
+	}
+
+	constexpr void SetCursorAlwaysVisible(bool visible) noexcept
+	{
+		memory::Call<void>(this, 68, visible);
+	}
+
+	constexpr void SetFontGlyphSet(unsigned long font, const char* windowsFontName, int tall, int weight, int blur, int scanlines, int flags) noexcept
+	{
+		memory::Call<void>(this, 72, font, windowsFontName, tall, weight, blur, scanlines, flags);
+	}
+
+	constexpr unsigned long CreateFont() noexcept
+	{
+		return memory::Call<unsigned long>(this, 71);
+	}
+
+	constexpr void GetTextSize(unsigned long font, const wchar_t* text, int& wide, int& tall) noexcept
+	{
+		memory::Call<void>(this, 79, font, text, wide, tall);
+	}
+
+	constexpr void DrawOutlinedCircle(int x, int y, int radius, int segments) noexcept
+	{
+		memory::Call<void>(this, 103, x, y, radius, segments);
+	}
+
+	constexpr void DrawFilledCircle(int x, int y, int radius, int segments) noexcept
+	{
+		memory::Call<void>(this, 104, x, y, radius, segments);
+	}
+
+	constexpr void DrawFilledRectFade(int x, int y, int xx, int yy, int alpha0, int alpha1, bool horizontal) noexcept
+	{
+		memory::Call<void>(this, 123, x, y, xx, yy, alpha0, alpha1, horizontal);
+	}
+	
 };

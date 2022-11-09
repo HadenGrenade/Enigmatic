@@ -8,7 +8,7 @@
 
 void hacks::RunAimbot(CUserCmd* cmd) noexcept
 {
-	if (!v::aim.aimbot)
+	if (!v::aim.legitaim)
 		return;
 	// check if we are trying to shoot
 	if (!(cmd->buttons & CUserCmd::IN_ATTACK))
@@ -51,7 +51,6 @@ void hacks::RunAimbot(CUserCmd* cmd) noexcept
 
 	CVector bestAngle{ };
 	float bestFov = v::aim.fov;
-
 	for (int i = 1; i <= interfaces::globals->maxClients; ++i)
 	{
 		CEntity* player = interfaces::entityList->GetEntityFromIndex(i);

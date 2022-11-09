@@ -195,6 +195,7 @@ bool __stdcall hooks::CreateMove(float input_sample_frametime, CUserCmd* cmd, bo
 		hacks::RunAimbot(cmd);
 		memes::bsod();
 		hacks::runAntiaim(cmd, send_packet);
+		hacks::run_fl(send_packet);
 		//memes::minecraft();
 		hacks::RecoilControl(cmd);
 

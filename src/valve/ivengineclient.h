@@ -34,6 +34,31 @@ public:
 		return memory::Call<bool>(this, 26);
 	}
 
+	constexpr bool IsConnected() noexcept
+	{
+		return memory::Call<bool>(this, 27);
+	}
+
+	constexpr bool IsDrawingLoadingImage() noexcept
+	{
+		return memory::Call<bool>(this, 28);
+	}
+
+	constexpr void GetViewAngles(CVector& viewAngles) noexcept
+	{
+		memory::Call<void>(this, 18, std::ref(viewAngles));
+	}
+
+	constexpr void GetPlayerInfo(std::int32_t playerIndex, void* playerInfo) noexcept
+	{
+		memory::Call<void>(this, 8, playerIndex, playerInfo);
+	}
+
+	constexpr void GetScreenAspectRatio(std::int32_t& width, std::int32_t& height) noexcept
+	{
+		memory::Call<void>(this, 101, std::ref(width), std::ref(height));
+	}
+
 	constexpr const CMatrix4x4& WorldToScreenMatrix() noexcept
 	{
 		return memory::Call<const CMatrix4x4&>(this, 37);
@@ -47,6 +72,11 @@ public:
 	constexpr void ExecuteClientCmd(const char* command) noexcept
 	{
 		memory::Call<void, const char*>(this, 108, command);
+	}
+
+	constexpr void ClientCmd_Unrestricted(const char* command) noexcept
+	{
+		memory::Call<void, const char*>(this, 114, command);
 	}
 
 };

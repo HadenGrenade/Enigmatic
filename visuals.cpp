@@ -180,6 +180,17 @@ void Visuals::esp(std::uintptr_t vguiPanel, bool forceRepaint, bool allowForce) 
 					interfaces::surface->DrawSetColor((1.f - healthFrac) * 255, 255 * healthFrac, 0, 255);
 					if (v::visuals.health)
 						interfaces::surface->DrawFilledRect(left - 5, bottom.y - (h * healthFrac), left - 4, bottom.y);
+
+					int x, y;
+					interfaces::engine->GetScreenSize(x, y);
+					const auto radius = std::tan(Deg2Rad((v::aim.fov))); //huh
+					if (v::aim.drawfov)
+					{
+						interfaces::surface->DrawSetColor(0, 0, 0, 255);
+						interfaces::surface->DrawOutlinedCircle(x / 2, y / 2, radius, 20);
+					}
+
+
 				}
 			}
 		}

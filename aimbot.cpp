@@ -10,6 +10,10 @@ void hacks::RunAimbot(CUserCmd* cmd) noexcept
 {
 	if (!v::aim.legitaim)
 		return;
+
+	if (!v::aim.aimbot)
+		return;
+	
 	// check if we are trying to shoot
 	if (!(cmd->buttons & CUserCmd::IN_ATTACK))
 		return;
@@ -108,7 +112,10 @@ void hacks::RunAimbot(CUserCmd* cmd) noexcept
 		{
 			bestFov = fov;
 			bestAngle = enemyAngle;
+
 		}
+
+
 	}
 
 	cmd->viewAngles = cmd->viewAngles + bestAngle.Scale(v::aim.scale);

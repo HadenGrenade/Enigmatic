@@ -1,54 +1,20 @@
-﻿  aimbot.cpp
-  animations.cpp
-  antiaim.cpp
-  cooleffects.cpp
-C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\fx.inl(55,1): warning C4005: 'min': macro redefinition
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\minwindef.h(197): message : see previous definition of 'min'
-C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\cooleffects.cpp(59,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\cooleffects.cpp(59,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\cooleffects.cpp(61,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\cooleffects.cpp(61,17): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  dopostscreenspaceeffects.cpp
-  drawmodelexecute.cpp
-  engine_prediction.cpp
-  imgui.cpp
-  imgui_demo.cpp
-  imgui_draw.cpp
-  imgui_impl_dx9.cpp
-  imgui_impl_win32.cpp
-  imgui_tables.cpp
-  imgui_widgets.cpp
-  globals.cpp
-  memes.cpp
-  memory.cpp
-  misc.cpp
-  netvars.cpp
-  main.cpp
-  Generating Code...
-  Compiling...
-  gui.cpp
-  hooks.cpp
-C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\hooks.cpp(51,50): warning C4390: ';': empty controlled statement found; is this the intent?
-  interfaces.cpp
-  visuals.cpp
-C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(166,71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(166,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(171,86): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(171,61): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(172,86): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(172,61): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(174,85): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(174,61): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(180,70): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(180,59): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(182,98): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(182,62): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  Generating Code...
-  buffer.c
-  hde32.c
-  hde64.c
-  hook.c
-  trampoline.c
-  Generating Code...
-  LINK : C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\build\grenadeware.dll not found or not built by the last incremental link; performing full link
-  internal menu.vcxproj -> C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\build\grenadeware.dll
+﻿  visuals.cpp
+C:\Users\Pysik\Desktop\enigmatic\visuals.cpp(166,71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Pysik\Desktop\enigmatic\visuals.cpp(166,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Pysik\Desktop\enigmatic\visuals.cpp(171,86): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Pysik\Desktop\enigmatic\visuals.cpp(171,61): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Pysik\Desktop\enigmatic\visuals.cpp(172,86): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Pysik\Desktop\enigmatic\visuals.cpp(172,61): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Pysik\Desktop\enigmatic\visuals.cpp(183,85): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Pysik\Desktop\enigmatic\visuals.cpp(183,61): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Pysik\Desktop\enigmatic\visuals.cpp(185,71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Pysik\Desktop\enigmatic\visuals.cpp(185,60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Pysik\Desktop\enigmatic\visuals.cpp(186,98): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Pysik\Desktop\enigmatic\visuals.cpp(186,62): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Pysik\Desktop\enigmatic\visuals.cpp(203,61): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+  Generating code
+  2 of 2703 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    26 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  internal menu.vcxproj -> C:\Users\Pysik\Desktop\enigmatic\build\grenadeware.dll

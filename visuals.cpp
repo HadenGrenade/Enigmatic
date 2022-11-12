@@ -171,28 +171,40 @@ void Visuals::esp(std::uintptr_t vguiPanel, bool forceRepaint, bool allowForce) 
 						interfaces::surface->DrawOutlinedRect(left - 1, top.y - 1, right + 1, bottom.y + 1);
 						interfaces::surface->DrawOutlinedRect(left + 1, top.y + 1, right - 1, bottom.y - 1);
 
-						interfaces::surface->DrawOutlinedRect(left - 6, top.y - 1, left - 3, bottom.y + 1);
+						
 					}
 
 					const float healthFrac = player->GetHealth() * 0.01f;
 
 					// set the color of the health bar to a split between red / green
-					interfaces::surface->DrawSetColor((1.f - healthFrac) * 255, 255 * healthFrac, 0, 255);
+					
 					if (v::visuals.health)
-						interfaces::surface->DrawFilledRect(left - 5, bottom.y - (h * healthFrac), left - 4, bottom.y);
-
-					int x, y;
-					interfaces::engine->GetScreenSize(x, y);
-					const auto radius = std::tan(Deg2Rad((v::aim.fov))); //huh
-					if (v::aim.drawfov)
 					{
-						interfaces::surface->DrawSetColor(0, 0, 0, 255);
-						interfaces::surface->DrawOutlinedCircle(x / 2, y / 2, radius, 20);
+						interfaces::surface->DrawOutlinedRect(left - 6, top.y - 1, left - 3, bottom.y + 1);
+						// set the color of the health bar to a split between red / green
+						interfaces::surface->DrawSetColor((1.f - healthFrac) * 255, 255 * healthFrac, 0, 255);
+						interfaces::surface->DrawFilledRect(left - 5, bottom.y - (h * healthFrac), left - 4, bottom.y);
 					}
 
 
 				}
+				if (v::aim.legitaim)
+				{
+
+					if (!v::aim.aimbot)
+						return;
+
+						int x, y;
+					interfaces::engine->GetScreenSize(x, y);
+					const auto radius(v::aim.fov * 10); //make this the actual fov, I had issues with painttraverse doing it tho 
+					if (v::aim.drawfov)
+					{
+						interfaces::surface->DrawSetColor(255, 255, 255, 255);
+						interfaces::surface->DrawOutlinedCircle(x / 2, y / 2, radius, 50);
+					}
+				}
 			}
+
 		}
 
 	}

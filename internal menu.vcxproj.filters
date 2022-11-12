@@ -319,6 +319,9 @@
     <ClCompile Include="engine_prediction.cpp">
       <Filter>main\core\stupid</Filter>
     </ClCompile>
+    <ClCompile Include="fakelag.cpp">
+      <Filter>main\core\features</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="fx.inl">

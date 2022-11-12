@@ -16,6 +16,8 @@ namespace hacks
 
 	void autostrafe(CUserCmd* cmd, CVector& currentViewAngles) noexcept;
 
+	void watermark() noexcept;
+
 	void RecoilControl(CUserCmd* cmd);
 
 	void RunAimbot(CUserCmd* cmd) noexcept;
@@ -54,6 +56,8 @@ namespace v {
 	{
 		bool bunnyHop = false;
 		bool autoStrafe = false;
+
+		bool watermark = true;
 
 	};
 	inline auto misc = Misc{ };

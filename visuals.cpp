@@ -194,7 +194,7 @@ void Visuals::esp(std::uintptr_t vguiPanel, bool forceRepaint, bool allowForce) 
 					if (!v::aim.aimbot)
 						return;
 
-						int x, y;
+					int x, y;
 					interfaces::engine->GetScreenSize(x, y);
 					const auto radius(v::aim.fov * 10); //make this the actual fov, I had issues with painttraverse doing it tho 
 					if (v::aim.drawfov)

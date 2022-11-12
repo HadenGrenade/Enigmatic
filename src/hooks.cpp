@@ -115,6 +115,7 @@ int __stdcall hooks::ListLeavesInBox(const CVector& mins, const CVector& maxs, s
 	// return with maximum bounds
 	return ListLeavesInBoxOriginal(interfaces::engine->GetBSPTreeQuery(), min, max, list, listMax);
 }*/
+
 long __stdcall hooks::EndScene(IDirect3DDevice9* device) noexcept
 {
 	static const auto returnAddress = _ReturnAddress();
@@ -130,6 +131,7 @@ long __stdcall hooks::EndScene(IDirect3DDevice9* device) noexcept
 
 	if (gui::open)
 		gui::Render();
+
 
 	return result;
 }
@@ -229,6 +231,7 @@ void __stdcall hooks::PaintTraverse(std::uintptr_t vguiPanel, bool forceRepaint,
 {
 
 	f::visuals.esp(vguiPanel, forceRepaint, allowForce);
+	 //hacks::watermark(); 
 	// call original function
 
 	return	hooks::PaintTraverseOriginal(interfaces::panel, vguiPanel, forceRepaint, allowForce);

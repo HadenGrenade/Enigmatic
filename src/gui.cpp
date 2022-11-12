@@ -312,12 +312,14 @@ ImGui::ColorEdit4(#name, v::visuals.name.second.data())
 
 void gui::Render() noexcept
 {
+
 	ImGui_ImplDX9_NewFrame();
 	ImGui_ImplWin32_NewFrame();
 	ImGui::NewFrame();
 
 	//cool fx shit
 	gui::FxTestBed();
+	hacks::watermark();
 
 	const auto offset = 195.f;
 
@@ -477,10 +479,9 @@ void gui::Render() noexcept
 
 		ImGui::BeginGroup();
 		ImGui::BeginChild(2, { (avail.x - 8) * 0.5f, (avail.y - 8) * 0.72f }, true);
-		ImGui::Text("Selected:");
-
+		ImGui::Text("Miscellaneous:");
 		ImGui::Separator();
-
+		ImGui::Checkbox("Watermark", &v::misc.watermark);
 
 		ImGui::EndChild();
 

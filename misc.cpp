@@ -1,4 +1,6 @@
 #include "misc.h"
+#include "ext/imgui/imgui.h"
+#include "ext/imgui/imgui_internal.h"
 // access global variables
 
 // access interfaces
@@ -96,4 +98,29 @@ void hacks::autostrafe(CUserCmd* cmd, CVector& currentViewAngles) noexcept
 	currentViewAngles.y = normalizeYaw(currentViewAngles.y - delta);
 
  }
+
+void hacks::watermark() noexcept
+{
+	if (!v::misc.watermark)
+		return;
+
+	int x, y;
+	ImGuiWindowFlags windowFlags = ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_AlwaysAutoResize;
+
+	interfaces::engine->GetScreenSize(x, y);
+	
+	ImGui::SetNextWindowPos(ImVec2(x - 80, 30), ImGuiCond_Always, ImVec2(0.5f, 0.5f));
+
+	ImGui::SetNextWindowBgAlpha(0.3f);
+	ImGui::Begin("Watermark", NULL, windowFlags);
+	ImGuiStyle& style = ImGui::GetStyle();
+	style.WindowRounding = 5.0f;
+	style.WindowBorderSize = 1.0f;
+
+	static auto frameRate = 1.0f;
+	frameRate = 0.9f * frameRate + 0.1f * interfaces::globals->absFrameTime;
+
+	ImGui::Text("enigmatic | %d fps ", frameRate != 0.0f ? static_cast<int>(1 / frameRate) : 0);
+	ImGui::End();
+}
 

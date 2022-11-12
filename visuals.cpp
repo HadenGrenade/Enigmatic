@@ -208,7 +208,8 @@ void Visuals::esp(std::uintptr_t vguiPanel, bool forceRepaint, bool allowForce) 
 		}
 
 	}
-}/*
+}
+
 void Visuals::chams(void* results, const CDrawModelInfo& info, CMatrix3x4* bones, float* flexWeights, float* flexDelayedWeights, const CVector& modelOrigin, const std::int32_t flags) noexcept {
 	if(!v::visuals.chams)
 	return;
@@ -257,4 +258,4 @@ void Visuals::chams(void* results, const CDrawModelInfo& info, CMatrix3x4* bones
 		}
 	}
 
-}*/
+}

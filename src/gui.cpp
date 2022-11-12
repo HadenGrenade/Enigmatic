@@ -444,8 +444,8 @@ void gui::Render() noexcept
 		VISUALS_COLOR_BOOL(grenade);
 		VISUALS_COLOR_BOOL(bomb);
 		VISUALS_COLOR_BOOL(chicken);
-	//	ImGui::Checkbox("Chams", &v::visuals.chams);
-		//ImGui::Checkbox("ZType", &v::visuals.chams1);
+		ImGui::Checkbox("Chams", &v::visuals.chams);
+		ImGui::Checkbox("ZType", &v::visuals.chams1);
 
 		ImGui::EndChild();
 		ImGui::EndGroup();

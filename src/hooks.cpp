@@ -14,6 +14,9 @@
 #include "../misc.h"
 #include "../features.h"
 
+#include "../istudiorender.h"
+#include "../ispatialquery.h"
+
 void hooks::Setup()
 {
 
@@ -31,20 +34,20 @@ void hooks::Setup()
 		&Reset,
 		reinterpret_cast<void**>(&ResetOriginal)
 	)) throw std::runtime_error("Unable to hook Reset()");
-	/*
+	
 	MH_CreateHook(
 		memory::Get(interfaces::engine->GetBSPTreeQuery(), 6),
 		&ListLeavesInBox,
 		reinterpret_cast<void**>(&ListLeavesInBoxOriginal)
-	);*/
-	/*
+	);
+	
 	// DrawModel hook
 	if(MH_CreateHook(
 		memory::Get(interfaces::studioRender, 29),
 		&DrawModel,
 		reinterpret_cast<void**>(&DrawModelOriginal))
 	);
-	*/
+	
 	if (MH_CreateHook(
 		memory::Get(interfaces::clientMode, 24), // CreateMove is index 24
 		&proxy,
@@ -76,7 +79,7 @@ void hooks::Destroy() noexcept
 	MH_DisableHook(MH_ALL_HOOKS);
 	MH_RemoveHook(MH_ALL_HOOKS);
 	MH_Uninitialize();
-}/*
+}
 int __stdcall hooks::ListLeavesInBox(const CVector& mins, const CVector& maxs, std::uint16_t* list, int listMax) noexcept
 {
 	static const auto insertIntoTree = reinterpret_cast<std::uintptr_t>(memory::insertIntoTree);
@@ -114,7 +117,7 @@ int __stdcall hooks::ListLeavesInBox(const CVector& mins, const CVector& maxs, s
 
 	// return with maximum bounds
 	return ListLeavesInBoxOriginal(interfaces::engine->GetBSPTreeQuery(), min, max, list, listMax);
-}*/
+}
 
 long __stdcall hooks::EndScene(IDirect3DDevice9* device) noexcept
 {
@@ -236,7 +239,7 @@ void __stdcall hooks::PaintTraverse(std::uintptr_t vguiPanel, bool forceRepaint,
 
 	return	hooks::PaintTraverseOriginal(interfaces::panel, vguiPanel, forceRepaint, allowForce);
 }
-/*
+
 void __stdcall hooks::DrawModel(
 	void* results,
 	const CDrawModelInfo& info,
@@ -252,4 +255,3 @@ void __stdcall hooks::DrawModel(
 }
 
 
-*/

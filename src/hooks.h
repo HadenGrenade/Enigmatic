@@ -4,6 +4,10 @@
 #include "../iclientmodeshared.h"
 #include "../ivpanel.h"
 #include "../clientmode.h"
+
+#include "../istudiorender.h"
+#include "../ispatialquery.h"
+
 namespace hooks
 {
 	void Setup();
@@ -29,18 +33,18 @@ namespace hooks
 	inline CreateMoveFunction CreateMoveOriginal = nullptr;
 	bool __stdcall CreateMove(float frameTime, CUserCmd* cmd, bool& send_packet) noexcept;
 	// PaintTraverse hook stuff
-	/*
+	
 		// ListLeavesInBox hook
 	using ListLeavesInBoxFn = int(__thiscall*)(ISpacialQuery*, const CVector&, const CVector&, std::uint16_t*, int) noexcept;
 	inline ListLeavesInBoxFn ListLeavesInBoxOriginal = nullptr;
 	int __stdcall ListLeavesInBox(const CVector& mins, const CVector& maxs, std::uint16_t* list, int listMax) noexcept;
 
 
-	*/
+	
 	using PaintTraverseFn = void(__thiscall*)(IVPanel*, std::uintptr_t, bool, bool) noexcept;
 	inline PaintTraverseFn PaintTraverseOriginal = nullptr;
 	void __stdcall PaintTraverse(std::uintptr_t vguiPanel, bool forceRepaint, bool allowForce) noexcept;
-/*
+
 	using DrawModelFn = void(__thiscall*)(
 		void*,
 		void*,
@@ -60,7 +64,7 @@ namespace hooks
 		float* flexDelayedWeights,
 		const CVector& modelOrigin,
 		const std::int32_t flags
-	);*/
+	) noexcept;
 
 	using DoPostScreenSpaceEffectsFn = int(__thiscall*)(void*, const ViewSetup*);
 	inline DoPostScreenSpaceEffectsFn DoPostScreenSpaceEffectsOriginal = { nullptr };

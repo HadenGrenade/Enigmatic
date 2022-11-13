@@ -79,4 +79,10 @@ public:
 		memory::Call<void, const char*>(this, 114, command);
 	}
 
+	constexpr bool ConIsVisible() noexcept
+	{
+		return memory::Call<bool>(this, 11);
+	}
+	
+
 };

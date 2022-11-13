@@ -36,11 +36,12 @@ namespace v {
 	struct Visuals
 	{
 
-		std::pair<bool, std::array<float, 4U>> player{ false, {1.f, 0.f, 1.f, 0.7f} };
-		std::pair<bool, std::array<float, 4U>> weapon{ false, {1.f, 1.f, 1.f, 0.7f} };
-		std::pair<bool, std::array<float, 4U>> grenade{ false, {1.f, 0.5f, 0.5f, 0.7f} };
-		std::pair<bool, std::array<float, 4U>> bomb{ false, {1.f, 0.f, 0.f, 1.f} };
-		std::pair<bool, std::array<float, 4U>> chicken{ false, {1.f, 1.f, 0.f, 0.7f} };
+		std::pair<bool, std::array<float, 4U>> Player{ false, {1.f, 0.f, 1.f, 0.7f} };
+		std::pair<bool, std::array<float, 4U>> Weapon{ false, {1.f, 1.f, 1.f, 0.7f} };
+		std::pair<bool, std::array<float, 4U>> Grenade{ false, {1.f, 0.5f, 0.5f, 0.7f} };
+		std::pair<bool, std::array<float, 4U>> Bomb{ false, {1.f, 0.f, 0.f, 1.f} };
+		std::pair<bool, std::array<float, 4U>> Chicken{ false, {1.f, 1.f, 0.f, 0.7f} };
+		std::pair<bool, std::array<float, 4U>> Console{ false, {1.f, 0.f, 1.f, 0.7f} };
 
 		bool box = false;
 		bool health = false;
@@ -58,6 +59,7 @@ namespace v {
 		bool autoStrafe = false;
 
 		bool watermark = true;
+		bool console_col = false;
 
 	};
 	inline auto misc = Misc{ };

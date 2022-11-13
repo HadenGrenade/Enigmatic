@@ -17,6 +17,8 @@
 #include "../istudiorender.h"
 #include "../ispatialquery.h"
 
+
+
 void hooks::Setup()
 {
 
@@ -169,6 +171,7 @@ void __declspec(naked) hooks::proxy() {
 		ret 0x8				// thiscall stack cleanup
 	}
 }
+
 bool __stdcall hooks::CreateMove(float input_sample_frametime, CUserCmd* cmd, bool& send_packet) noexcept {
 
 	auto currentViewAngles{ cmd->viewAngles };
@@ -229,12 +232,67 @@ int __stdcall hooks::DoPostScreenSpaceEffects(const ViewSetup* view)
 }
 
 
+void ConsolePaint(VPANEL panel) {
+	static VPANEL tools{ }, zoom{ };
+
+	float r = v::visuals.Console.second.data()[0]; //ghetto fix by pysik coder bo$$ :>)
+	float g = v::visuals.Console.second.data()[1];
+	float b = v::visuals.Console.second.data()[2];
+	float a = v::visuals.Console.second.data()[3];
+
+	// cache tools panel once.
+	if (!tools && panel == interfaces::engineVGui->GetPanel(PANEL_TOOLS))
+		tools = panel;
+
+	static bool bShouldRecolorConsole;
+	static IMaterial* cMaterial[5];
+	if (!cMaterial[0] || !cMaterial[1] || !cMaterial[2] || !cMaterial[3] || !cMaterial[4]) { //we haven't found any materials...
+		for (uint16_t i{ interfaces::materialSystem->FirstMaterial() }; i != interfaces::materialSystem->InvalidMaterial(); i = interfaces::materialSystem->NextMaterial(i)) { //loop through all materials
+			auto pMaterial = interfaces::materialSystem->GetMaterial(i);
+			if (!pMaterial) continue;
+
+			if (strstr(pMaterial->getname(), "vgui_white")) //check the mats, if found move on!
+				cMaterial[0] = pMaterial;
+			else if (strstr(pMaterial->getname(), "800corner1"))
+				cMaterial[1] = pMaterial;
+			else if (strstr(pMaterial->getname(), "800corner2"))
+				cMaterial[2] = pMaterial;
+			else if (strstr(pMaterial->getname(), "800corner3"))
+				cMaterial[3] = pMaterial;
+			else if (strstr(pMaterial->getname(), "800corner4"))
+				cMaterial[4] = pMaterial;
+		}
+	} // Couldn't use find material because for some reason "vgui_white" doesn't exist...
+	else {
+		// You should check for some other panels name that shouldn't be recolored. Not bother fixing it for all.
+		if (panel != tools && (v::visuals.Console.first)) {
+			if (interfaces::engine->ConIsVisible()) {
+				bShouldRecolorConsole = true;
+				if (bShouldRecolorConsole) {
+					for (int num = 0; num < 5; num++) {
+						cMaterial[num]->ColorModulate(r, g, b);
+						cMaterial[num]->AlphaModulate(a);
+					}
+				}
+			}
+		}
+		else if (bShouldRecolorConsole) { //if disabled set console to default
+			for (int num = 0; num < 5; num++) {
+				cMaterial[num]->ColorModulate(1.f, 1.f, 1.f);
+				cMaterial[num]->AlphaModulate(1.f);
+			}
+			bShouldRecolorConsole = false;
+		}
+	}
+}
 
 void __stdcall hooks::PaintTraverse(std::uintptr_t vguiPanel, bool forceRepaint, bool allowForce) noexcept
 {
 
 	f::visuals.esp(vguiPanel, forceRepaint, allowForce);
-	 //hacks::watermark(); 
+	ConsolePaint(vguiPanel); //call modualte console function
+	
+	// hacks::watermark(vguiPanel);
 	// call original function
 
 	return	hooks::PaintTraverseOriginal(interfaces::panel, vguiPanel, forceRepaint, allowForce);

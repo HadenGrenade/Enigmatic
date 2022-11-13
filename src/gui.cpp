@@ -319,6 +319,7 @@ void gui::Render() noexcept
 
 	//cool fx shit
 	gui::FxTestBed();
+
 	hacks::watermark();
 
 	const auto offset = 195.f;
@@ -439,11 +440,11 @@ void gui::Render() noexcept
 		ImGui::Text("Visuals:");
 		HelpMarker("See the opps b4 they c u $");
 		ImGui::Separator();
-		VISUALS_COLOR_BOOL(player);
-		VISUALS_COLOR_BOOL(weapon);
-		VISUALS_COLOR_BOOL(grenade);
-		VISUALS_COLOR_BOOL(bomb);
-		VISUALS_COLOR_BOOL(chicken);
+		VISUALS_COLOR_BOOL(Player);
+		VISUALS_COLOR_BOOL(Weapon);
+		VISUALS_COLOR_BOOL(Grenade);
+		VISUALS_COLOR_BOOL(Bomb);
+		VISUALS_COLOR_BOOL(Chicken);
 		ImGui::Checkbox("Chams", &v::visuals.chams);
 		ImGui::Checkbox("ZType", &v::visuals.chams1);
 
@@ -482,6 +483,8 @@ void gui::Render() noexcept
 		ImGui::Text("Miscellaneous:");
 		ImGui::Separator();
 		ImGui::Checkbox("Watermark", &v::misc.watermark);
+		VISUALS_COLOR_BOOL(Console);
+
 
 		ImGui::EndChild();
 

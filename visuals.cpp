@@ -54,7 +54,7 @@ void Visuals::Glow()
 		{
 		case CClientClass::CCSPlayer:
 		{
-			if (!v::visuals.player.first)
+			if (!v::visuals.Player.first)
 				break;
 				///cplayer
 			const auto player = static_cast<CEntity*>(glow.entity);
@@ -64,23 +64,23 @@ void Visuals::Glow()
 			if (!player->IsAlive())
 				break;
 
-			glow.SetColor(v::visuals.player.second.data());
+			glow.SetColor(v::visuals.Player.second.data());
 			break;
 		}
 
 		case CClientClass::CChicken:
-			if (!v::visuals.chicken.first)
+			if (!v::visuals.Chicken.first)
 				break;
 
-			glow.SetColor(v::visuals.chicken.second.data());
+			glow.SetColor(v::visuals.Chicken.second.data());
 			break;
 
 		case CClientClass::CC4:
 		case CClientClass::CPlantedC4:
-			if (!v::visuals.bomb.first)
+			if (!v::visuals.Bomb.first)
 				break;
 
-			glow.SetColor(v::visuals.bomb.second.data());
+			glow.SetColor(v::visuals.Bomb.second.data());
 			break;
 
 		case CClientClass::CBaseCSGrenadeProjectile:
@@ -90,20 +90,20 @@ void Visuals::Glow()
 		case CClientClass::CMolotovProjectile:
 		case CClientClass::CSensorGrenadeProjectile:
 		case CClientClass::CSmokeGrenadeProjectile:
-			if (!v::visuals.grenade.first)
+			if (!v::visuals.Grenade.first)
 				break;
 
-			glow.SetColor(v::visuals.grenade.second.data());
+			glow.SetColor(v::visuals.Grenade.second.data());
 			break;
 
 		default:
-			if (!v::visuals.weapon.first)
+			if (!v::visuals.Weapon.first)
 				break;
 
 			if (!glow.entity->IsWeapon())
 				break;
 
-			glow.SetColor(v::visuals.weapon.second.data());
+			glow.SetColor(v::visuals.Weapon.second.data());
 			break;
 		}
 	}
@@ -212,7 +212,7 @@ void Visuals::esp(std::uintptr_t vguiPanel, bool forceRepaint, bool allowForce) 
 
 void Visuals::chams(void* results, const CDrawModelInfo& info, CMatrix3x4* bones, float* flexWeights, float* flexDelayedWeights, const CVector& modelOrigin, const std::int32_t flags) noexcept {
 	if(!v::visuals.chams)
-	return;
+		return;
 	if (globals::localPlayer && info.renderable)
 	{
 		// get the base entity

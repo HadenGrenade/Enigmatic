@@ -16,7 +16,15 @@ namespace hacks
 
 	void autostrafe(CUserCmd* cmd, CVector& currentViewAngles) noexcept;
 
+	void fastStop(CUserCmd* cmd) noexcept;
+
 	void watermark() noexcept;
+
+	void world_stuff() noexcept;
+
+	void revealranks(CUserCmd* cmd) noexcept;
+
+	void HiddenCvars() noexcept;
 
 	void RecoilControl(CUserCmd* cmd);
 
@@ -50,6 +58,11 @@ namespace v {
 		bool chams = false;
 		bool chams1 = false;
 		int chams2 = false;
+
+		bool fullbright = false;
+		float aspectratio = 0;
+		bool postpros = false;
+		bool remove_scope = false;
 	};
 	inline auto visuals = Visuals{ };	
 	
@@ -57,9 +70,12 @@ namespace v {
 	{
 		bool bunnyHop = false;
 		bool autoStrafe = false;
+		bool faststop = false;
 
 		bool watermark = true;
 		bool console_col = false;
+		bool removeblur = false;
+		bool reveal = false;
 
 	};
 	inline auto misc = Misc{ };
@@ -69,6 +85,7 @@ namespace v {
 		int effect = 0;
 		bool dontclickme = false;
 		bool minecraft = false;
+		bool ragdollgrav = false;
 	};
 	inline auto memes = Memes{ };
 

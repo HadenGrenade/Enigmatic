@@ -18,9 +18,6 @@ void FX(ImDrawList* d, ImVec2 a, ImVec2 b, ImVec2 sz, ImVec4 m, float) {
 }
 
 
-
-
-
 #define V2 ImVec2
 #define F float
 F k;
@@ -51,7 +48,6 @@ void FX2(ImDrawList* d, V2 o, V2 b, V2 sz, ImVec4, F t)
 }
 
 
-
 #define min(x,y) ((x)<(y)?x:y)
 #define wh(a) ImColor(1.f,1.f,1.f,a)
 void FX3(ImDrawList* d, ImVec2 a, ImVec2 b, ImVec2 sz, float t)
@@ -77,7 +73,6 @@ void FX3(ImDrawList* d, ImVec2 a, ImVec2 b, ImVec2 sz, float t)
             d->AddCircle({ a.x + tx, a.y + ty }, (f - 1) * 10 + h % 5, wh(1 - (f - 1) * 5.f));
     }
 }
-
 
 #define V2 ImVec2
 void FX4(ImDrawList* d, V2 a, V2 b, V2 sz, ImVec4, float t0)

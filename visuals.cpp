@@ -259,3 +259,74 @@ void Visuals::chams(void* results, const CDrawModelInfo& info, CMatrix3x4* bones
 	}
 
 }
+
+void Visuals::SpreadCrosshair() {
+
+
+	// get active weapon.
+	CEntity* activeWeapon = globals::localPlayer->GetActiveWeapon();
+	if (!activeWeapon)
+		return;
+
+	const int weaponType = activeWeapon->GetWeaponType();
+	if (!weaponType)
+		return;
+
+	// do not do this on: bomb, knife and nades.
+	if (weaponType == WEAPON_KNIFE || weaponType == WEAPON_C4 || weaponType == WEAPON_FRAG_GRENADE || weaponType == WEAPON_FIREBOMB || weaponType == WEAPON_MOLOTOV || weaponType == WEAPON_SMOKEGRENADE)
+		return;
+
+	// moneybot spread circle... change later to normal cuz fps drops if it on or just get_random_float less
+	if (activeWeapon) {
+		int screen_w, screen_h;
+		interfaces::engine->GetScreenSize(screen_w, screen_h);
+		int cross_x = screen_w / 2, cross_y = screen_h / 2;
+
+		float recoil_step = screen_h / 90.f;
+
+		CVector aimPunch{ };
+		globals::localPlayer->GetAimPunch(aimPunch);
+		CVector currentPunch = aimPunch;
+		cross_x -= (int)(currentPunch.y * recoil_step);
+		cross_y += (int)(currentPunch.x * recoil_step);
+
+		activeWeapon->UpdateAccuracyPenalty();
+		float inaccuracy = activeWeapon->GetInaccuracy();
+		float spread = activeWeapon->GetSpread();
+
+		float cone = inaccuracy * spread;
+		cone *= screen_h * 0.7f;
+		cone *= 90.f / 90.f;
+
+		//generate a random float function
+		auto random_float = [](float min, float max) -> float
+		{
+			using random_float_t = float(__cdecl*)(float, float);
+			static random_float_t random_float_fn = reinterpret_cast<random_float_t>(GetProcAddress(GetModuleHandleA("vstdlib.dll"), "RandomFloat"));
+			return random_float_fn(min, max);
+		};
+		
+
+		for (int seed{ }; seed < 256; ++seed) { //draw 256 dot things
+			//render::set_random_seed(math::random_number(0, 255) + 1);
+			float rand_a = random_float(0.f, 1.0f);
+			float pi_rand_a = random_float(0.f, 2.0f * M_PI);
+			float rand_b = random_float(0.0f, 1.0f);
+			float pi_rand_b = random_float(0.f, 2.f * M_PI);
+
+			float spread_x = cos(pi_rand_a) * (rand_a * inaccuracy) + cos(pi_rand_b) * (rand_b * spread);
+			float spread_y = sin(pi_rand_a) * (rand_a * inaccuracy) + sin(pi_rand_b) * (rand_b * spread);
+
+			float max_x = cos(pi_rand_a) * cone + cos(pi_rand_b) * cone;
+			float max_y = sin(pi_rand_a) * cone + sin(pi_rand_b) * cone;
+
+			float step = screen_h /90.f * 90.f;
+			int screen_spread_x = (int)(spread_x * step * 0.7f);
+			int screen_spread_y = (int)(spread_y * step * 0.7f);
+
+			float percentage = (rand_a * inaccuracy + rand_b * spread) / (inaccuracy + spread);
+
+			interfaces::surface->DrawFilledRect(cross_x + screen_spread_x, cross_y + screen_spread_y, 1, 1);
+		}
+	}
+}

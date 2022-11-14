@@ -17,7 +17,7 @@
 #include "../istudiorender.h"
 #include "../ispatialquery.h"
 
-
+bool message = false;
 
 void hooks::Setup()
 {
@@ -104,7 +104,7 @@ int __stdcall hooks::ListLeavesInBox(const CVector& mins, const CVector& maxs, s
 		return ListLeavesInBoxOriginal(interfaces::engine->GetBSPTreeQuery(), mins, maxs, list, listMax);
 
 	// no need to reorder for teammates
-	if (entity->GetTeam() == globals::localPlayer->GetTeam())
+	if (entity->GetTeam() == globals::localPlayer->GetTeam()) //crash
 		return ListLeavesInBoxOriginal(interfaces::engine->GetBSPTreeQuery(), mins, maxs, list, listMax);
 
 	// set the flags
@@ -174,6 +174,7 @@ void __declspec(naked) hooks::proxy() {
 
 bool __stdcall hooks::CreateMove(float input_sample_frametime, CUserCmd* cmd, bool& send_packet) noexcept {
 
+
 	auto currentViewAngles{ cmd->viewAngles };
 	// makes sure that your sorry ass can join teams
 
@@ -182,14 +183,7 @@ bool __stdcall hooks::CreateMove(float input_sample_frametime, CUserCmd* cmd, bo
 
 	if (!cmd->commandNumber)
 		return CreateMoveOriginal(interfaces::clientMode, input_sample_frametime, cmd);
-
-	if (v::aim.silent) {
-		// this would be done anyway by returning true
-		if (CreateMoveOriginal(interfaces::clientMode, input_sample_frametime, cmd))
-			interfaces::engine->SetViewAngles(cmd->viewAngles);
-		v::aim.scale = 1.0;
-
-	}
+	
 	auto old_viewangles = cmd->viewAngles;
 	auto old_forwardmove = cmd->forwardMove;
 	auto old_sidemove = cmd->sideMove;
@@ -206,6 +200,22 @@ bool __stdcall hooks::CreateMove(float input_sample_frametime, CUserCmd* cmd, bo
 		hacks::run_fl(send_packet);
 		//memes::minecraft();
 		hacks::RecoilControl(cmd);
+		hacks::world_stuff();
+		hacks::fastStop(cmd);
+
+		if (!message)
+		{ // this is just to make sure it only prints once
+			interfaces::clientMode->getHudChat()->printf(0, " \x0C [enigmatic] \x01initialized succefully"); //pysik best coder :yawn:
+			message = true;
+		}
+
+		if (v::aim.silent) {
+			// this would be done anyway by returning true
+			if (CreateMoveOriginal(interfaces::clientMode, input_sample_frametime, cmd))
+				interfaces::engine->SetViewAngles(cmd->viewAngles);
+			v::aim.scale = 1.0;
+
+		}
 
 	}
 	if (v::aim.legitaim) {
@@ -230,7 +240,6 @@ int __stdcall hooks::DoPostScreenSpaceEffects(const ViewSetup* view)
 
 	return hooks::DoPostScreenSpaceEffectsOriginal(interfaces::clientMode, view);
 }
-
 
 void ConsolePaint(VPANEL panel) {
 	static VPANEL tools{ }, zoom{ };
@@ -288,13 +297,51 @@ void ConsolePaint(VPANEL panel) {
 
 void __stdcall hooks::PaintTraverse(std::uintptr_t vguiPanel, bool forceRepaint, bool allowForce) noexcept
 {
-
+	
 	f::visuals.esp(vguiPanel, forceRepaint, allowForce);
 	ConsolePaint(vguiPanel); //call modualte console function
 	
 	// hacks::watermark(vguiPanel);
 	// call original function
 
+	if (v::visuals.remove_scope)
+	{
+		if (!strcmp("HudZoom", interfaces::panel->GetName(vguiPanel)))
+			return;
+
+		int x, y;
+
+		interfaces::engine->GetScreenSize(x, y);
+
+		int w = x / 2;
+		int h = y / 2;
+		int size = 1;
+
+		// Here We Use The Euclidean distance To Get The Polar-Rectangular Conversion Formula.
+		if (size > 1) {
+			x -= (size / 2);
+			y -= (size / 2);
+		}
+
+		CEntity* activeWeapon = globals::localPlayer->GetActiveWeapon();
+
+		if (!activeWeapon)
+			return;
+
+		const int weaponType = activeWeapon->GetWeaponType();
+
+		//chat print inacc
+		//interfaces::clientMode->getHudChat()->printf(0, " \x0C [enigmatic] \x01inacc: %f", inacc);
+
+		if (weaponType == CEntity::WEAPONTYPE_SNIPER && globals::localPlayer->IsScoped())
+		{
+			interfaces::surface->DrawSetColor(0, 0, 0, 255);
+			interfaces::surface->DrawLine(x / 2, y, w, size);
+			interfaces::surface->DrawLine(x, y / 2, size, h);
+		}
+
+	}
+	
 	return	hooks::PaintTraverseOriginal(interfaces::panel, vguiPanel, forceRepaint, allowForce);
 }
 

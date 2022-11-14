@@ -136,6 +136,7 @@ public:
 		return std::isfinite(this->x) && std::isfinite(this->y) && std::isfinite(this->z);
 	}
 
+
 	constexpr void Invalidate()
 	{
 		this->x = this->y = this->z = std::numeric_limits<float>::infinity();

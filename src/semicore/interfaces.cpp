@@ -23,6 +23,7 @@ void interfaces::Setup() noexcept
 	panel		            = Capture<IVPanel>("vgui2.dll", "VGUI_Panel009");
 	input				    =*reinterpret_cast<i_input**>(memory::PatternScan("client.dll", sig_input) + 1);
 	prediction				= Capture<player_prediction>("client.dll", "VClientPrediction001");
+	cvar					= Capture<Cvar>("vstdlib.dll", "VEngineCvar007");
 
 	// get the exported KeyValuesSystem function
 	if (const HINSTANCE handle = GetModuleHandle("vstdlib.dll"))

@@ -6,6 +6,11 @@
 // access interfaces
 #include "src/semicore/interfaces.h"
 #include "src/semicore/globals.h"
+
+
+#include "convar.h"
+#include <string>
+
 void hacks::RunBunnyHop(CUserCmd* cmd) noexcept
 {
 	if (!v::misc.bunnyHop)
@@ -99,6 +104,34 @@ void hacks::autostrafe(CUserCmd* cmd, CVector& currentViewAngles) noexcept
 
  }
 
+void hacks::fastStop(CUserCmd* cmd) noexcept
+{
+	if (!v::misc.faststop)
+		return;
+
+	if (cmd->buttons & CUserCmd::IN_JUMP)
+		return;
+
+	//check if on ground
+	if (!((globals::localPlayer->GetFlags()) & 1))
+		return;
+
+	if (cmd->buttons & (CUserCmd::IN_MOVELEFT | CUserCmd::IN_MOVERIGHT | CUserCmd::IN_FORWARD | CUserCmd::IN_BACK))
+		return;
+
+	const auto velocity = globals::localPlayer->velocity();
+	const auto speed = velocity.Length2D();
+	if (speed < 15.0f)
+		return;
+
+	Vector direction = velocity.ToAngle();
+	direction.y = cmd->viewAngles.y - direction.y;
+
+	const auto negatedDirection = Vector::FromAngle(direction) * -speed;
+	cmd->forwardMove = negatedDirection.x;
+	cmd->sideMove = negatedDirection.y;
+}
+
 void hacks::watermark() noexcept
 {
 	if (!v::misc.watermark)
@@ -123,4 +156,48 @@ void hacks::watermark() noexcept
 	ImGui::Text("enigmatic | %d fps ", frameRate != 0.0f ? static_cast<int>(1 / frameRate) : 0);
 	ImGui::End();
 }
+
+void hacks::world_stuff() noexcept
+{
+	
+	static auto cheats = interfaces::cvar->FindVar("sv_cheats");
+	cheats->setvalue(1);
+
+	static auto bright = interfaces::cvar->FindVar("mat_fullbright");
+	bright->setvalue(v::visuals.fullbright);
+	
+	static auto aspect = interfaces::cvar->FindVar("r_aspectratio");
+	aspect->setvalue(v::visuals.aspectratio);
+	
+	static auto blur = interfaces::cvar->FindVar("@panorama_disable_blur");
+	blur->setvalue(v::misc.removeblur);
+
+	static auto ragdollgrav = interfaces::cvar->FindVar("cl_ragdoll_gravity");
+	ragdollgrav->setvalue(v::memes.ragdollgrav ? -600 : 600);
+
+	static auto minecraft = interfaces::cvar->FindVar("mat_showlowresimage");
+	minecraft->setvalue(v::memes.minecraft);
+
+	static auto post_proc = interfaces::cvar->FindVar("mat_postprocess_enable");
+	post_proc->setvalue(v::visuals.postpros ? 0 : 1);
+	
+}
+
+void hacks::revealranks(CUserCmd* cmd) noexcept
+{
+	if (v::misc.reveal && cmd->buttons & CUserCmd::IN_SCORE)
+		interfaces::client->dispatchUserMessage(50, 0, 0, nullptr);
+}
+
+void hacks::HiddenCvars() noexcept //https://chng.it/MQbQhn44Jk
+{
+	auto iterator = **reinterpret_cast<conCommandBase***>(interfaces::cvar + 0x34);
+	for (auto c = iterator->next; c != nullptr; c = c->next)
+	{
+		conCommandBase* cmd = c;
+		cmd->flags &= ~(1 << 1);
+		cmd->flags &= ~(1 << 4);
+	}
+}
+
 

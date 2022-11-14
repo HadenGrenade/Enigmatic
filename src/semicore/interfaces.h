@@ -12,6 +12,7 @@
 #include "../../ivdebugoverlay.h"
 #include "../../iglowmanger.h"
 #include "../../iglobalvars.h"
+#include "../../cvar.h"
 #include "../../ienginevgui.h"
 #include "../../ienginetrace.h"
 #include "../../iclientmodeshared.h"
@@ -46,6 +47,7 @@ namespace interfaces
 	inline IVModelInfo* modelInfo = nullptr;
 	inline IVPanel* panel = nullptr;
 	inline player_prediction* prediction;
+	inline Cvar* cvar;
 
 	// other
 	inline void* keyValuesSystem = nullptr;

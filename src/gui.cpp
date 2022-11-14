@@ -164,9 +164,6 @@ void gui::Setup()
 
 void gui::SetupMenu(LPDIRECT3DDEVICE9 device) noexcept
 {
-
-
-
 	auto params = D3DDEVICE_CREATION_PARAMETERS{ };
 	device->GetCreationParameters(&params);
 
@@ -179,21 +176,19 @@ void gui::SetupMenu(LPDIRECT3DDEVICE9 device) noexcept
 	ImGui::CreateContext();
 	ImGui::StyleColorsDark();
 	ImGuiIO& io = ImGui::GetIO();
-	io.ConfigFlags = ImGuiConfigFlags_NoMouseCursorChange;
+	//io.ConfigFlags = ImGuiConfigFlags_NoMouseCursorChange;
 	ImGuiStyle* style = &ImGui::GetStyle();
-
-	style->WindowPadding = { 15, 15 };
-	style->WindowRounding = 0.f;
-	style->WindowTitleAlign = { 0.5f, 0.5f };
-	style->WindowBorderSize = 1;
-
-	style->FrameRounding = 0.f;
-	style->FramePadding = { 20, 7 };
-	style->FrameBorderSize = 1;
+	
+	style->WindowRounding = 5.5;
+	style->WindowBorderSize = 2.5;
+	style->DisplayWindowPadding = ImVec2(2.5, 2.5);
+	style->WindowPadding = ImVec2(11, 11);
+	style->ChildRounding = 5.5;
+	style->FrameBorderSize = 1.5; // buttons
 
 	style->ChildRounding = 0.f;
 
-	style->ScrollbarSize = 3.f;
+	style->ScrollbarSize = 2.f;
 	style->ScrollbarRounding = 1.f;
 
 	style->ItemSpacing = { 8, 8 };
@@ -206,8 +201,8 @@ void gui::SetupMenu(LPDIRECT3DDEVICE9 device) noexcept
 	colors[ImGuiCol_WindowBg] = ImVec4(0.06f, 0.06f, 0.06f, 0.96f);
 	colors[ImGuiCol_ChildBg] = ImVec4(0.11f, 0.11f, 0.14f, 1.00f);
 	colors[ImGuiCol_PopupBg] = ImVec4(0.09f, 0.09f, 0.09f, 1.00f);
-	colors[ImGuiCol_Border] = ImVec4(0.32f, 0.32f, 0.58f, 0.30f);
-	colors[ImGuiCol_BorderShadow] = ImVec4(0.17f, 0.00f, 0.52f, 0.26f);
+	colors[ImGuiCol_Border] = ImVec4(0.29f, 0.37f, 0.62f, 0.60f);
+	colors[ImGuiCol_BorderShadow] = ImVec4(0.27f, 0.00f, 0.52f, 0.46f);
 	colors[ImGuiCol_FrameBg] = ImVec4(0.24f, 0.27f, 0.38f, 0.54f);
 	colors[ImGuiCol_FrameBgHovered] = ImVec4(0.29f, 0.37f, 0.62f, 0.54f);
 	colors[ImGuiCol_FrameBgActive] = ImVec4(0.33f, 0.33f, 0.67f, 1.00f);
@@ -219,7 +214,7 @@ void gui::SetupMenu(LPDIRECT3DDEVICE9 device) noexcept
 	colors[ImGuiCol_ScrollbarGrab] = ImVec4(0.31f, 0.31f, 0.31f, 1.00f);
 	colors[ImGuiCol_ScrollbarGrabHovered] = ImVec4(0.41f, 0.41f, 0.41f, 1.00f);
 	colors[ImGuiCol_ScrollbarGrabActive] = ImVec4(0.51f, 0.51f, 0.51f, 1.00f);
-	colors[ImGuiCol_CheckMark] = ImVec4(0.81f, 0.66f, 1.00f, 1.00f);
+	colors[ImGuiCol_CheckMark] = ImVec4(0.29f, 0.37f, 0.62f, 1.0f);
 	colors[ImGuiCol_SliderGrab] = ImVec4(0.24f, 0.52f, 0.88f, 1.00f);
 	colors[ImGuiCol_SliderGrabActive] = ImVec4(0.26f, 0.59f, 0.98f, 1.00f);
 	colors[ImGuiCol_Button] = ImVec4(0.35f, 0.37f, 0.48f, 0.40f);
@@ -228,7 +223,7 @@ void gui::SetupMenu(LPDIRECT3DDEVICE9 device) noexcept
 	colors[ImGuiCol_Header] = ImVec4(0.42f, 0.32f, 0.67f, 1.00f);
 	colors[ImGuiCol_HeaderHovered] = ImVec4(0.50f, 0.41f, 0.73f, 1.00f);
 	colors[ImGuiCol_HeaderActive] = ImVec4(0.33f, 0.33f, 0.67f, 1.00f);
-	colors[ImGuiCol_Separator] = ImVec4(0.43f, 0.43f, 0.50f, 0.50f);
+	colors[ImGuiCol_Separator] = ImVec4(0.29f, 0.37f, 0.62f, 0.50f);
 	colors[ImGuiCol_SeparatorHovered] = ImVec4(0.10f, 0.40f, 0.75f, 0.78f);
 	colors[ImGuiCol_SeparatorActive] = ImVec4(0.10f, 0.40f, 0.75f, 1.00f);
 	colors[ImGuiCol_ResizeGrip] = ImVec4(0.26f, 0.59f, 0.98f, 0.20f);
@@ -261,7 +256,8 @@ void gui::SetupMenu(LPDIRECT3DDEVICE9 device) noexcept
 		| ImGuiColorEditFlags_AlphaBar);
 	ImGui_ImplWin32_Init(window);
 	ImGui_ImplDX9_Init(device);
-	segoe = io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\segoeui.ttf", 15.f);
+	segoe = io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\segoeui.ttf", 14.f);
+	name = io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\cascadiamono.ttf", 23.f);
 
 	setup = true;
 }
@@ -283,12 +279,11 @@ void gui::Destroy() noexcept
 static bool toggle = false;
 
 static auto Name = "GrenadeV1";
-static auto Flags = ImGuiWindowFlags_NoTitleBar
-//| ImGuiWindowFlags_NoResize
-//| ImGuiWindowFlags_NoCollapse
+static auto Flags = ImGuiWindowFlags_NoResize 
+| ImGuiWindowFlags_NoCollapse 
 | ImGuiWindowFlags_NoSavedSettings
-//| ImGuiWindowFlags_NoScrollbar
-| ImGuiWindowFlags_NoScrollWithMouse;
+| ImGuiWindowFlags_NoScrollWithMouse
+| ImGuiWindowFlags_NoTitleBar;
 
 void HelpMarker(const char* desc)
 {
@@ -326,12 +321,21 @@ void gui::Render() noexcept
 
 	ImGuiStyle* style = &ImGui::GetStyle();
 
-	ImGui::PushFont(segoe);
-	ImGui::SetNextWindowSize({ 512, 500 });
-	ImGui::Begin("enigmatic", &open);
+	ImGui::PushFont(name);
+	ImGui::SetNextWindowSize({ 512, 550 });
+	ImGui::Begin("enigmatic", &open, Flags);
 	static auto tab = 0;
 	const auto avail = ImGui::GetContentRegionAvail();
-	const auto tabSize = ImVec2(90, 40);
+	const auto tabSize = ImVec2(92, 23);
+
+	ImGui::Text("enigmatic");
+	ImGui::PopFont();
+	ImGui::PushFont(segoe);
+	ImGui::SameLine(0, 10);
+	ImGui::TextColored(ImVec4(0.29f, 0.37f, 0.62f, 1.0f), "                                                                                                               [BETA]"); //lol who uses spacing B)
+	ImGui::SameLine(NULL, 4);
+	ImGui::Text("v1.3");
+	ImGui::Separator();
 	if (ImGui::Button("Rage", tabSize)) { tab = 0; }
 	ImGui::SameLine();
 	if (ImGui::Button("Legit", tabSize)) { tab = 1; }
@@ -340,7 +344,7 @@ void gui::Render() noexcept
 	ImGui::SameLine();
 	if (ImGui::Button("Misc", tabSize)) { tab = 3; }
 	ImGui::SameLine();
-	if (ImGui::Button("Memes", tabSize)) { tab = 4; }
+	if (ImGui::Button("Memes", ImVec2(tabSize.x - 2, tabSize.y))) { tab = 4; }
 	switch (tab)
 	{
 	case 0:
@@ -348,14 +352,17 @@ void gui::Render() noexcept
 		ImGui::BeginChild(1, { (avail.x - 8) * 0.5f, avail.y * 0.65f }, true);
 		ImGui::Text("AntiAim");
 		HelpMarker("Missed due to resolver - Every Cheat $$");
-		ImGui::Checkbox("AntiAim", &v::antiaim.antiaim);
-		ImGui::SliderFloat("Pitch", &v::antiaim.pitch, -89.f, 89.f, "%1f pitch");
-		ImGui::SliderFloat("Yaw", &v::antiaim.yaw, -180.f, 180.f, "%1f yaw");
-		ImGui::Checkbox("Spinbot", &v::antiaim.spinbot);
-		ImGui::SliderFloat("Spinbot speed", &v::antiaim.spinbot_speed, 0.f, 100.f, "%1f speed");
-		ImGui::SliderInt("Desync", &v::antiaim.desync, 0, 58, "%1f desync");
-		ImGui::Checkbox("Flip AA ( Beta ) ", &v::antiaim.peek_aa);
 		ImGui::Separator();
+		ImGui::Checkbox("AntiAim", &v::antiaim.antiaim);
+		if (v::antiaim.antiaim)
+		{
+			ImGui::SliderFloat("Pitch", &v::antiaim.pitch, -89.f, 89.f, "%1f pitch");
+			ImGui::SliderFloat("Yaw", &v::antiaim.yaw, -180.f, 180.f, "%1f yaw");
+			ImGui::Checkbox("Spinbot", &v::antiaim.spinbot);
+			ImGui::SliderFloat("Spinbot speed", &v::antiaim.spinbot_speed, 0.f, 100.f, "%1f speed");
+			ImGui::SliderInt("Desync", &v::antiaim.desync, 0, 58, "%1f desync");
+			ImGui::Checkbox("Flip AA ( Beta ) ", &v::antiaim.peek_aa);
+		}
 		ImGui::Spacing();
 
 		//insert your p code pysik
@@ -365,10 +372,10 @@ void gui::Render() noexcept
 
 		ImGui::BeginChild(2, { (avail.x - 8) * 0.5f, ImGui::GetContentRegionAvail().y }, true);
 		ImGui::Text("Fakelag");
-		ImGui::Checkbox("Fakelag", &v::antiaim.fakelag);
-		ImGui::SliderInt("Limit", &v::antiaim.limit, 1, 16, "%d");
 		HelpMarker("Coming Soon ");
 		ImGui::Separator();
+		ImGui::Checkbox("Fakelag", &v::antiaim.fakelag);
+		ImGui::SliderInt("Limit", &v::antiaim.limit, 1, 16, "%d");
 		ImGui::Spacing();
 
 		//insert your p code pysik
@@ -382,7 +389,8 @@ void gui::Render() noexcept
 		ImGui::BeginChild(1, { (avail.x - 8) * 0.5f, (avail.y * 0.4f) }, true);
 		ImGui::Text("LegitBot:");
 		HelpMarker("Faceit Protected $$");
-		ImGui::Checkbox("Legitbot", &v::aim.aimbot);
+		ImGui::Separator();
+		ImGui::Checkbox("Enable", &v::aim.aimbot);
 		if (v::aim.aimbot) {
 			ImGui::Checkbox("Legit Aim", &v::aim.legitaim); 
 			HelpMarker("Please only have one of these active at a time, as it can cause errors ");
@@ -395,9 +403,10 @@ void gui::Render() noexcept
 
 		ImGui::BeginChild(2, { (avail.x - 8) * 0.5f, (avail.y * 0.33f) }, true);
 		ImGui::Text("Recoil");
-		ImGui::Checkbox("Recoil", &v::aim.rcs);
 		HelpMarker("Controls your recoil for you.");
 		ImGui::Separator();
+		ImGui::Checkbox("Recoil", &v::aim.rcs);
+
 
 		ImGui::EndChild();
 
@@ -414,12 +423,12 @@ void gui::Render() noexcept
 		ImGui::BeginChild(4, { (avail.x - 8) * 0.5f, 0.3f }, true);
 		ImGui::Text("Super Legit");
 		HelpMarker(" Modifications to make you look less like a cheater ! ");
+		ImGui::Separator();
 		if (v::aim.aimbot) {
 			ImGui::SliderInt("Bone Selection", &v::aim.bone, 1, 8, "%1f bone");
 			HelpMarker(" Based on the number you select, it will choose that bone. 8 being head and 1 being feet. ");
 
 
-			ImGui::Separator();
 			if (!v::aim.silent)
 			{
 				ImGui::SliderFloat("Smoothness", &v::aim.scale, 0.0f, 1.0f, "%.1f smoothness");
@@ -436,7 +445,7 @@ void gui::Render() noexcept
 	case 2:
 	{
 		ImGui::BeginGroup();
-		ImGui::BeginChild(1, { (avail.x - 8) * 0.5f, avail.y }, true);
+		ImGui::BeginChild(1, { (avail.x - 8) * 0.5f, 0.3f }, true);
 		ImGui::Text("Visuals:");
 		HelpMarker("See the opps b4 they c u $");
 		ImGui::Separator();
@@ -454,7 +463,7 @@ void gui::Render() noexcept
 		ImGui::SameLine();
 
 		ImGui::BeginGroup();
-		ImGui::BeginChild(2, { (avail.x - 8) * 0.5f, avail.y }, true);
+		ImGui::BeginChild(2, { (avail.x - 8) * 0.5f, (avail.y - 8) * 0.5f }, true);
 		ImGui::Text("Surface ESP:");
 		HelpMarker("Gives information about an enemy using a Directx9 hook");
 		ImGui::Separator();
@@ -462,52 +471,74 @@ void gui::Render() noexcept
 		ImGui::Checkbox("Health ESP", &v::visuals.health);
 
 		ImGui::EndChild();
+
+
+		ImGui::BeginChild(3, {  }, true);
+		ImGui::Text("World:"); //ezpz
+		HelpMarker("Gives information about an enemy using a Directx9 hook");
+		ImGui::Separator();
+		ImGui::Checkbox("Remove scope", &v::visuals.remove_scope);
+		ImGui::Checkbox("Fullbright", &v::visuals.fullbright);
+		ImGui::Checkbox("Disable post processing", &v::visuals.postpros);
+		ImGui::SliderFloat("Aspect ratio", &v::visuals.aspectratio, 0.0f, 5.0f, "%.2f");
+		ImGui::EndChild();
 		ImGui::EndGroup();
+
 	} break;
 
 	case 3:
 	{
 		ImGui::BeginGroup();
-		ImGui::BeginChild(1, { (avail.x - 8) * 0.5f, avail.y }, true);
+		ImGui::BeginChild(1, { (avail.x - 8) * 0.5f, 0.3f }, true);
 		ImGui::Text("Movement");
+		HelpMarker("Make u go fast $$$");
 		ImGui::Separator();
-		ImGui::Checkbox("BunnyHop", &v::misc.bunnyHop);
+		ImGui::Checkbox("Bhop", &v::misc.bunnyHop);
 		ImGui::Checkbox("AutoStrafe", &v::misc.autoStrafe);
+		ImGui::Checkbox("Fast stop", &v::misc.faststop);
 		ImGui::EndChild();
 		ImGui::EndGroup();
 
 		ImGui::SameLine();
 
 		ImGui::BeginGroup();
-		ImGui::BeginChild(2, { (avail.x - 8) * 0.5f, (avail.y - 8) * 0.72f }, true);
+		ImGui::BeginChild(2, { (avail.x - 8) * 0.5f, 0.3f }, true);
 		ImGui::Text("Miscellaneous:");
+		HelpMarker("Stuff");
 		ImGui::Separator();
+		ImGui::Checkbox("Remove panorama blur", &v::misc.removeblur);
 		ImGui::Checkbox("Watermark", &v::misc.watermark);
+		ImGui::Checkbox("Reveal ranks", &v::misc.reveal);
 		VISUALS_COLOR_BOOL(Console);
-
-
-		ImGui::EndChild();
-
-		ImGui::BeginChild(3, { }, true);
-
+		if (ImGui::Button("Unlock hidden cvars"))
+			hacks::HiddenCvars();
+		
 
 		ImGui::EndChild();
+
+	
 		ImGui::EndGroup();
 	}break;
 	case 4:
 	{
 
 		ImGui::BeginGroup();
-		ImGui::BeginChild(1, { (avail.x - 8) * 0.5f, avail.y }, true);
+		ImGui::BeginChild(1, { (avail.x - 8) * 0.5f, 0.3f }, true);
 		ImGui::Text("Memes:");
-		//ImGui::Checkbox("Minecraft mode", &v::memes.minecraft);
+		HelpMarker("Funni");
+		ImGui::Separator();
+		
 		ImGui::Checkbox("Don't click me (seriously)", &v::memes.dontclickme);
+		
+		ImGui::Checkbox("Inverse ragdoll gravity", &v::memes.ragdollgrav);
+		ImGui::Checkbox("Minecraft mode", &v::memes.minecraft);
 		ImGui::EndChild();
 
 		ImGui::SameLine();
 		
-		ImGui::BeginChild(2, { (avail.x - 8) * 0.5f, (avail.y - 8) * 0.72f }, true);
+		ImGui::BeginChild(2, { (avail.x - 8) * 0.5f, 0.3f }, true);
 		ImGui::Text("Background Effects");
+		HelpMarker("Cool background effect shit");
 		ImGui::Separator();
 		static constexpr const char* names[]{ "Eyes", "Circles", "Rain", "Wave thingy"};
 		for (int i = 0; i < IM_ARRAYSIZE(names); i++) {
@@ -526,7 +557,7 @@ void gui::Render() noexcept
 
 		ImGui::EndGroup();
 	} break;
-	}
+}
 		
 
 

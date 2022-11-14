@@ -4,7 +4,7 @@ struct ImFont;
 namespace gui
 {
 	inline ImFont* segoe = nullptr;
-
+	inline ImFont* name = nullptr;
 	// show menu?
 	inline bool open = true;
 

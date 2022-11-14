@@ -69,6 +69,8 @@ namespace hooks
 	using DoPostScreenSpaceEffectsFn = int(__thiscall*)(void*, const ViewSetup*);
 	inline DoPostScreenSpaceEffectsFn DoPostScreenSpaceEffectsOriginal = { nullptr };
 	int __stdcall DoPostScreenSpaceEffects(const ViewSetup* view);
+
+
 }
 
 

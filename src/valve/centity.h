@@ -375,7 +375,25 @@ public: // entity virtual functions
 		return memory::Call<int>(this, 473);
 	}
 
-	
+	constexpr float GetInaccuracy() noexcept
+	{
+		return memory::Call<float>(this, 483);
+	}
+
+	constexpr float GetFlashDuration() noexcept
+	{
+		return memory::Call<float>(this, 377);
+	}
+
+	constexpr void UpdateAccuracyPenalty() noexcept
+	{
+		memory::Call<void>(this, 484);
+	}
+
+	constexpr float GetSpread() noexcept
+	{
+		return memory::Call<float>(this, 453);
+	}
 
 };
 /*

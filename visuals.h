@@ -11,4 +11,6 @@ public:
 
 	void chams(void* results, const CDrawModelInfo& info, CMatrix3x4* bones, float* flexWeights, float* flexDelayedWeights, const CVector& modelOrigin, const std::int32_t flags) noexcept;
 
+	void SpreadCrosshair();
+
 };

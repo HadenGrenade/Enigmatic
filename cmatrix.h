@@ -8,10 +8,16 @@ public:
 		return data[index];
 	}
 
-	 vec3_t Origin1() noexcept
+	 CVector Origin1() noexcept
 	{
 		return { data[0][3], data[1][3], data[2][3] };
 	}
+
+
+	 vec3_t Origin2() noexcept
+	 {
+		 return { data[0][3], data[1][3], data[2][3] };
+	 }
 
 	float data[3][4];
 };

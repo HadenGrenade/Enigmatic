@@ -1,5 +1,8 @@
 #pragma once
 #include "../../misc.h"
+#include "cvector.h"
+#include "../../Vector3d.h"
+
 class CUserCmd
 {
 public:

@@ -5,9 +5,23 @@
 #include "src/semicore/globals.h"
 #include "src/semicore/interfaces.h"
 #include "src/valve/cusercmd.h"
+#include "Vector3d.h"
 
+constexpr auto vec3_t::Scale(float factor) const noexcept
+{
+	float x{ }, y{ }, z{ };
+	return  x * factor, y* factor, z* factor;
+}
 
-void hacks::RunAimbot(CUserCmd* cmd) noexcept
+constexpr auto vec3_t::notNull() const noexcept
+{
+	float x{ }, y{ }, z{ };
+
+	return x || y || z;
+
+}
+
+void hacks1::RunAimbot(CUserCmd* cmd) noexcept
 {
 	if (!v::aim.legitaim)
 		return;
@@ -110,7 +124,7 @@ void hacks::RunAimbot(CUserCmd* cmd) noexcept
 		
 		vec3_t enemyAngle
 		{
-			(bones[v::aim.bone].Origin1() - localEyePosition).to_angle() - (cmd->viewAngles + aimPunch)
+			(bones[v::aim.bone].Origin2() - localEyePosition).to_angle() - (cmd->viewAngles + aimPunch)
 		};
 
 		if (const float fov = std::hypot(enemyAngle.x, enemyAngle.y); fov < bestFov)
@@ -123,13 +137,13 @@ void hacks::RunAimbot(CUserCmd* cmd) noexcept
 
 	}
 
-	cmd->viewAngles = cmd->viewAngles + bestAngle.Scale(v::aim.scale);
+	//cmd->viewAngles = cmd->viewAngles + bestAngle.Scale(v::aim.scale);
 }
 
 
 // this curerently does not work im p sure, i have 0 clue why. i already debuged it and it makes it through the whole loop & everything so... im pretty lost lmfao. i'm thinking maybe 
 // it has to do with the way i do the silent aim in hooks?? im not sure tho, take a look at it for me thanks
-void hacks::RecoilControl(CUserCmd* cmd)
+void hacks1::RecoilControl(CUserCmd* cmd)
 {
 
 	CEntity* activeWeapon = globals::localPlayer->GetActiveWeapon();

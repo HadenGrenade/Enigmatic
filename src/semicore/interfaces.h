@@ -19,7 +19,7 @@
 #include "../../iclientmodeshared.h"
 #include "../../ibaseclientdll.h"
 #include "../../i_input.h"
-#include "../../i_player_movement.hpp"
+#include "../../i_player_movement.h"
 #include "../../i_weapon_system.hpp"
 
 // learn more about interfaces -> https://www.youtube.com/watch?v=C0wGdwnaArA

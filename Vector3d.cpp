@@ -15,18 +15,7 @@ vec3_t::vec3_t(float _x, float _y, float _z) {
     y = _y;
     z = _z;
 }
-constexpr auto vec3_t::Scale(float factor) const noexcept
-{
-    float x{ }, y{ }, z{ };
-    return  x * factor, y * factor, z * factor;
-}
-constexpr auto vec3_t::notNull() const noexcept
-{
-    float x{ }, y{ }, z{ };
 
-    return x || y || z;
-
-}
 vec3_t::~vec3_t(void) {};
 
 void vec3_t::init(float _x, float _y, float _z) {

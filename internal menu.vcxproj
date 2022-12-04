@@ -198,7 +198,7 @@
     <ClInclude Include="ivpanel.h" />
     <ClInclude Include="i_input.h" />
     <ClInclude Include="i_physics_surface_props.hpp" />
-    <ClInclude Include="i_player_movement.hpp" />
+    <ClInclude Include="i_player_movement.h" />
     <ClInclude Include="i_weapon_system.hpp" />
     <ClInclude Include="misc.h" />
     <ClInclude Include="modelinfo.h" />

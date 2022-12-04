@@ -2,13 +2,14 @@
 #include "../util/memory.h"
 #include "../../netvars.h"
 #include "../../models.h"
-#include "../semicore/interfaces.h"
 #include "../../cclientclass.h"
 #include "cvector.h"
 #include "../../cmatrix.h"
 #include "../../studio.h" 
 #include "../../ienginetrace.h"
 #include "../../misc.h"
+#include "../semicore/interfaces.h"
+
 class CSPlayer;
 class CEntity;
 class IClientUnknown
@@ -298,7 +299,6 @@ public: // entity virtual functions
 		return memory::Call<CEntity*>(this, 268);
 	}
 		
-	
 	bool setup_bones_fixed(matrix_t* out, int max_bones, int mask, float time) {
 		if (!this) return false;
 		using original_fn = bool(__thiscall*)(void*, matrix_t*, int, int, float);
@@ -310,9 +310,10 @@ public: // entity virtual functions
 		vec3_t actual_abs_origin = abs_origin();
 
 		*render = 0;
-
+		
 		using abs_fn = void(__thiscall*)(CEntity*, const vec3_t&);
 		static abs_fn set_abs_origin = hacks::relative_to_absolute<abs_fn>(memory::PatternScan("client.dll", "E8 ? ? ? ? EB 19 8B 07") + 1);
+
 		set_abs_origin(this, origin());
 
 		auto result = (*(original_fn**)animating())[13](animating(), out, max_bones, mask, time);		// Get original result from vfunc with origin
@@ -323,9 +324,11 @@ public: // entity virtual functions
 
 		return result;
 	}
+
 	weapon_info_t* get_weapon_data() {
 		return interfaces::weapon_system->get_weapon_data(this->item_definition_index());
 	}
+	
 	vec3_t get_hitbox_position_fixed(int hitbox_id) {
 		matrix_t bone_matrix[MAXSTUDIOBONES];
 		vec3_t2 urmother;
@@ -446,8 +449,6 @@ public: // entity virtual functions
 	{
 		return memory::Call<int>(this, 458);
 	}	
-
-
 
 	constexpr int GetWeaponInReload() noexcept
 	{

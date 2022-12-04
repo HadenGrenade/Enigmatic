@@ -143,7 +143,7 @@ void Visuals::esp(std::uintptr_t vguiPanel, bool forceRepaint, bool allowForce) 
 					// screen position of head
 					// we add 11.f here because we want the box ABOVE their head
 					CVector top;
-					if (!WorldToScreen(bones[8].Origin() + CVector{ 0.f, 0.f, 11.f }, top))
+					if (!WorldToScreen(bones[8].Origin1() + CVector{ 0.f, 0.f, 11.f }, top))
 						continue;
 
 					// screen position of feet
@@ -284,9 +284,9 @@ void Visuals::SpreadCrosshair() {
 
 		float recoil_step = screen_h / 90.f;
 
-		CVector aimPunch{ };
+		vec3_t aimPunch{ };
 		globals::localPlayer->GetAimPunch(aimPunch);
-		CVector currentPunch = aimPunch;
+		vec3_t currentPunch = aimPunch;
 		cross_x -= (int)(currentPunch.y * recoil_step);
 		cross_y += (int)(currentPunch.x * recoil_step);
 

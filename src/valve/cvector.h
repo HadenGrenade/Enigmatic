@@ -39,20 +39,7 @@ public:
 		return { x / other.x, y / other.y, z / other.z };
 	}
 
-	constexpr CVector Scale(float factor) const noexcept
-	{
-		return { x * factor, y * factor, z * factor };
-	}
 
-	constexpr auto notNull() const noexcept
-	{
-		return x || y || z;
-	}
-
-	constexpr auto null() const noexcept
-	{
-		return !notNull();
-	}
 	
 	inline CVector clamp(void) {
 		return{

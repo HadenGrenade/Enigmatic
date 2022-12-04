@@ -1,5 +1,4 @@
 #pragma once
-#include "src/valve/cusercmd.h"
 
 class i_input {
 public:
@@ -12,11 +11,5 @@ public:
 	std::byte			pad2[0x2];				// 0xAA
 	vec3_t				camera_offset;			// 0xAC
 	std::byte			pad3[0x38];				// 0xB8
-	CUserCmd* pCommands;				// 0xF0
 
-
-	CUserCmd* get_user_cmd(int slot, int sequence_num) {
-		using fn = CUserCmd * (__thiscall*)(void*, int, int);
-		return (*(fn**)this)[8](this, slot, sequence_num);
-	}
 };

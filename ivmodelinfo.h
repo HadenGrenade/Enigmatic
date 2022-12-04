@@ -4,6 +4,8 @@
 #include "src/util/memory.h"
 #include "src/valve/cvector.h"
 #include "models.h"
+#include "studio.h"
+
 // thx qo0!
 enum EHitboxIndex : int
 {

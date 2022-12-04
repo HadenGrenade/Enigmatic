@@ -128,7 +128,6 @@ public:
 	virtual int		KeyInput(int down, ButtonCode keynum, const char* pszCurrentBinding) = 0;
 	virtual void	StartMessageMode(int iMessageModeType) = 0;
 	virtual void	OverrideMouseInput(float* x, float* y) = 0;
-	virtual bool    CreateMove(float frameTime, CUserCmd* cmd, bool& send_packet);
 
 	virtual void	LevelInit(const char* newmap) = 0;
 	virtual void	LevelShutdown(void) = 0;

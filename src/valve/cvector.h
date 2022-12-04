@@ -8,7 +8,6 @@
 #include <iomanip>
 #include <random>
 
-#include "../../Vector3d.hpp"
 constexpr float Deg2Rad(const float deg) noexcept
 {
 	return deg * (std::numbers::pi_v<float> / 180.f);

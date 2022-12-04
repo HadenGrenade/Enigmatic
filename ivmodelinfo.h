@@ -3,7 +3,7 @@
 #include <cstdint>
 #include "src/util/memory.h"
 #include "src/valve/cvector.h"
-
+#include "models.h"
 // thx qo0!
 enum EHitboxIndex : int
 {
@@ -147,8 +147,8 @@ public:
 		return memory::Call<const char*>(this, 3, model);
 	}
 
-	constexpr CStudioHdr* GetStudioModel(const CModel* model) noexcept
-	{
-		return memory::Call<CStudioHdr*>(this, 32, model);
+	studio_hdr_t* get_studio_model(const model_t* model) {
+		using original_fn = studio_hdr_t * (__thiscall*)(IVModelInfo*, const model_t*);
+		return (*(original_fn**)this)[32](this, model);
 	}
 };

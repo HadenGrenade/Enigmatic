@@ -23,9 +23,9 @@ public:
 		return memory::Call<std::int32_t>(this, 12);
 	}
 
-	constexpr void SetViewAngles(const CVector& viewAngles) noexcept
+	constexpr void SetViewAngles(const vec3_t& viewAngles) noexcept
 	{
-		memory::Call<void, const CVector&>(this, 19, viewAngles);
+		memory::Call<void, const vec3_t&>(this, 19, viewAngles);
 	}
 
 	// returns true if in-game

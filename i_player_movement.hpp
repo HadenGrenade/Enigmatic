@@ -1,5 +1,4 @@
 #pragma once
-#include "vector3d.hpp"
 #include "src/valve/cusercmd.h"
 #include "src/valve/centity.h"
 

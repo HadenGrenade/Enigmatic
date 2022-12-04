@@ -1,6 +1,6 @@
 #pragma once
 // incase you ever need these i pasted them, im using one of them so i figured i'd add them all, there usefull for interfaces... but uh yeah they're upt2d as of 11/8
-/*
+
 #define sig_client_state		"A1 ? ? ? ? 8B 80 ? ? ? ? C3"
 #define sig_directx				"A1 ? ? ? ? 50 8B 08 FF 51 0C"
 #define sig_input				"B9 ? ? ? ? F3 0F 11 04 24 FF 50 10"
@@ -14,6 +14,7 @@
 #define sig_prediction_random_seed	"A3 ? ? ? ? 66 ? ? 86"
 #define sig_viewmatrix				"0F 10 05 ? ? ? ? 8D 85 ? ? ? ? B9"
 #define sig_trace_to_exit			"55 8B EC 83 EC 4C F3 0F 10 75"					// For autowall
+#define sig_is_other_enemy			"8B CE E8 ? ? ? ? 02 C0"					
 
 // Custom for the hooks
 #define sig_key_values_engine					"85 C0 74 ? 51 6A ? 56 8B C8 E8 ? ? ? ? 8B F0"
@@ -31,8 +32,7 @@
 #define sig_update_visibility_all_enttities		"53 56 66 8B 35 ? ? ? ? BB ? ? ? ? 57 90 66 3B F3 74 ? A1"
 
 
-*/
-#define sig_input				"B9 ? ? ? ? F3 0F 11 04 24 FF 50 10"
+
 
 class CEntity;
 namespace globals

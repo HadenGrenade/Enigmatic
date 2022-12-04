@@ -1,10 +1,14 @@
 #pragma once
 #include "../util/memory.h"
 #include "../../netvars.h"
-
+#include "../../models.h"
+#include "../semicore/interfaces.h"
 #include "../../cclientclass.h"
 #include "cvector.h"
 #include "../../cmatrix.h"
+#include "../../studio.h" 
+#include "../../ienginetrace.h"
+#include "../../misc.h"
 class CSPlayer;
 class CEntity;
 class IClientUnknown
@@ -29,6 +33,14 @@ class CModel;
 class CEntity
 {
 public:
+	vec3_t& abs_origin() {
+		using original_fn = vec3_t & (__thiscall*)(void*);
+		return (*(original_fn**)this)[10](this);;
+	}
+	model_t* model() {
+		using original_fn = model_t * (__thiscall*)(void*);
+		return (*(original_fn**)animating())[8](animating());
+	}
 	enum EFlags : std::int32_t
 	{
 		FL_ONGROUND = (1 << 0),
@@ -203,7 +215,12 @@ public: // netvars
 	NETVAR(GetClip, "CBaseCombatWeapon->m_iClip1", int)
 	NETVAR(get_tick_base, "DT_CSPlayer->m_nTickBase", int)
 	NETVAR(fall_velocity, "DT_BasePlayer->m_flFallVelocity", float)
-	NETVAR(shots_fired, "DT_CSPlayer->m_iShotsFired", int)
+	NETVAR(shots_fired, "DT_CSPlayer->m_iShotsFired", int)		
+	NETVAR(has_helmet, "DT_CSPlayer->m_bHasHelmet", bool)
+	NETVAR(armor, "DT_CSPlayer->m_ArmorValue", int)
+	NETVAR(item_definition_index, "DT_BaseAttributableItem->m_iItemDefinitionIndex", short)
+	NETVAR(next_attack, "DT_CSPlayer->m_flNextAttack", float)
+		NETVAR(origin, "DT_BasePlayer->m_vecOrigin", vec3_t);
 
 public: // renderable virtual functions (+0x4)
 	constexpr CModel* GetModel() noexcept
@@ -226,12 +243,23 @@ public: // networkable virtual functions (+0x8)
 	{
 		return memory::Call<bool>(this + 0x8, 9);
 	}
-
+		vec3_t get_aim_punch() {
+		vec3_t ret;
+		using original_fn = void(__thiscall*)(void*, vec3_t*);
+		(*(original_fn**)this)[346](this, &ret);
+		return ret;
+	}
+		void set_view_angles(vec3_t& angles) {
+			using original_fn = void(__thiscall*)(CEntity*, vec3_t&);
+			return (*(original_fn**)this)[19](this, angles);
+		}
 	constexpr std::int32_t GetIndex() noexcept
 	{
 		return memory::Call<std::int32_t>(this + 0x8, 10);
 	}
-
+	void* animating() {
+		return reinterpret_cast<void*>(uintptr_t(this) + 0x4);
+	}
 public: // entity virtual functions
 	constexpr const CVector& GetAbsOrigin() noexcept
 	{
@@ -269,8 +297,108 @@ public: // entity virtual functions
 	{
 		return memory::Call<CEntity*>(this, 268);
 	}
+		
+	
+	bool setup_bones_fixed(matrix_t* out, int max_bones, int mask, float time) {
+		if (!this) return false;
+		using original_fn = bool(__thiscall*)(void*, matrix_t*, int, int, float);
 
-	constexpr void GetEyePosition(CVector& eyePosition) noexcept
+		// Fix bone matrix. First backup render and abs_origina
+		int* render = reinterpret_cast<int*>(this + 0x274);
+		int render_backup = *render;
+
+		vec3_t actual_abs_origin = abs_origin();
+
+		*render = 0;
+
+		using abs_fn = void(__thiscall*)(CEntity*, const vec3_t&);
+		static abs_fn set_abs_origin = hacks::relative_to_absolute<abs_fn>(memory::PatternScan("client.dll", "E8 ? ? ? ? EB 19 8B 07") + 1);
+		set_abs_origin(this, origin());
+
+		auto result = (*(original_fn**)animating())[13](animating(), out, max_bones, mask, time);		// Get original result from vfunc with origin
+
+		// Restore old abs_origin and render
+		set_abs_origin(this, actual_abs_origin);
+		*render = render_backup;
+
+		return result;
+	}
+	weapon_info_t* get_weapon_data() {
+		return interfaces::weapon_system->get_weapon_data(this->item_definition_index());
+	}
+	vec3_t get_hitbox_position_fixed(int hitbox_id) {
+		matrix_t bone_matrix[MAXSTUDIOBONES];
+		vec3_t2 urmother;
+
+		if (setup_bones_fixed(bone_matrix, MAXSTUDIOBONES, BONE_USED_BY_HITBOX, 0.0f)) {
+			auto studio_model = interfaces::modelInfo->get_studio_model(model());
+
+			if (studio_model) {
+				auto hitbox = studio_model->hitbox_set(0)->hitbox(hitbox_id);
+
+				if (hitbox) { 
+					auto min = vec3_t{}, max = vec3_t{};
+					urmother.transform_vector(hitbox->mins, bone_matrix[hitbox->bone], min);
+					urmother.transform_vector(hitbox->maxs, bone_matrix[hitbox->bone], max);
+
+					return vec3_t((min.x + max.x) * 0.5f, (min.y + max.y) * 0.5f, (min.z + max.z) * 0.5f);
+				}
+			}
+		}
+		return vec3_t{};
+	}
+
+	bool is_knife() {
+		switch (this->item_definition_index()) {
+		case WEAPON_KNIFE:
+		case WEAPON_KNIFE_T:
+		case WEAPON_KNIFEGG:
+		case WEAPON_BAYONET:
+		case WEAPON_KNIFE_BUTTERFLY:
+		case WEAPON_KNIFE_FALCHION:
+		case WEAPON_KNIFE_FLIP:
+		case WEAPON_KNIFE_GUT:
+		case WEAPON_KNIFE_KARAMBIT:
+		case WEAPON_KNIFE_M9_BAYONET:
+		case WEAPON_KNIFE_PUSH:
+		case WEAPON_KNIFE_TACTICAL:
+		case WEAPON_KNIFE_SURVIVAL_BOWIE:
+		case WEAPON_KNIFE_GYPSY_JACKKNIFE:
+		case WEAPON_KNIFE_STILETTO:
+		case WEAPON_KNIFE_WIDOWMAKER:
+		case WEAPON_KNIFE_SKELETON:
+		case WEAPON_KNIFE_URSUS:
+		case WEAPON_KNIFE_CSS:
+			return true;
+		default:
+			return false;
+		}
+	}
+
+	bool is_grenade() {
+		switch (this->item_definition_index()) {
+		case WEAPON_FLASHBANG:
+		case WEAPON_HEGRENADE:
+		case WEAPON_SMOKEGRENADE:
+		case WEAPON_MOLOTOV:
+		case WEAPON_INCGRENADE:
+		case WEAPON_DECOY:
+			return true;
+		default:
+			return false;
+		}
+	}
+	NETVAR(next_primary_attack, "DT_BaseCombatWeapon->m_flNextPrimaryAttack", float)
+		NETVAR(next_secondary_attack, "DT_BaseCombatWeapon->m_flNextSecondaryAttack", float)
+		NETVAR(clip1_count, "DT_BaseCombatWeapon->m_iClip1", int)
+		NETVAR(clip2_count, "DT_BaseCombatWeapon->m_iClip2", int)
+	bool is_non_aim() {
+		return this->is_bomb() || this->is_knife() || this->is_grenade() == 0;
+	}
+	bool is_bomb() {
+		return this->item_definition_index() == WEAPON_C4;
+	}
+	constexpr void GetEyePosition(vec3_t& eyePosition) noexcept
 	{
 		memory::Call<void>(this, 285, std::ref(eyePosition));
 	}
@@ -279,8 +407,22 @@ public: // entity virtual functions
 	{
 		return memory::Call<CEntity*>(this, 295);
 	}
+	bool can_see_player_pos(CEntity* player, const vec3_t& pos) {
+		CTraceFilter filter;					// trace_filter derived from i_trace_filter
+		filter.skipEntity = this;						// Add the origin player_t to skip filter
 
-	constexpr void GetAimPunch(CVector& aimPunch) noexcept
+		auto start = eye_angles();				// Get eye pos from origin player_t
+		auto dir = (pos - start).normalized();	// idk
+
+		CRay ray;
+		ray.initialize(start, pos);				// Initialize ray like this
+
+		CTrace tr;
+		interfaces::engineTrace->TraceRay(ray, MASK_SHOT | CONTENTS_GRATE, filter, tr);
+
+		return tr.entity == player || tr.fraction > 0.97f;	// We found the entity and the fraction is long enough to not collide with shit
+	}
+	constexpr void GetAimPunch(vec3_t& aimPunch) noexcept
 	{
 		memory::Call<void>(this, 346, std::ref(aimPunch));
 	}
@@ -305,15 +447,7 @@ public: // entity virtual functions
 		return memory::Call<int>(this, 458);
 	}	
 
-	constexpr int GetWeaponNextPrimaryAttack() noexcept
-	{
-		return memory::Call<int>(this, 459);
-	}
 
-	constexpr int GetWeaponNextSecondaryAttack() noexcept
-	{
-		return memory::Call<int>(this, 460);
-	}
 
 	constexpr int GetWeaponInReload() noexcept
 	{

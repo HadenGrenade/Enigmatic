@@ -6,7 +6,7 @@ void interfaces::Setup() noexcept
 {
 	// capture the interfaces
 
-	
+	surface_props_physics   = Capture<physics_surface_props>("vphysics.dll", "VPhysicsSurfaceProps001");
 	client				 	= Capture<IBaseClientDLL>("client.dll", "VClient018");
 	entityList			    = Capture<ClientEntityList>("client.dll", "VClientEntityList003");
 	clientMode		     	= **reinterpret_cast<IClientModeShared***>((*reinterpret_cast<unsigned int**>(client))[10] + 5);
@@ -24,6 +24,7 @@ void interfaces::Setup() noexcept
 	input				    =*reinterpret_cast<i_input**>(memory::PatternScan("client.dll", sig_input) + 1);
 	prediction				= Capture<player_prediction>("client.dll", "VClientPrediction001");
 	cvar					= Capture<Cvar>("vstdlib.dll", "VEngineCvar007");
+	weapon_system           = *reinterpret_cast<i_weapon_system**>(memory::PatternScan("client.dll", sig_weapon_data) + 2);
 
 	// get the exported KeyValuesSystem function
 	if (const HINSTANCE handle = GetModuleHandle("vstdlib.dll"))

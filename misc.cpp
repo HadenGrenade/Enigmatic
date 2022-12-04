@@ -46,7 +46,7 @@ Vector hacks::getVelocity() noexcept
 	return globals::localPlayer->velocity();
 }
 
-void hacks::autostrafe(CUserCmd* cmd, CVector& currentViewAngles) noexcept
+void hacks::autostrafe(CUserCmd* cmd, vec3_t& currentViewAngles) noexcept
 {
 	if (!v::misc.autoStrafe)
 		return;

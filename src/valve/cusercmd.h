@@ -1,6 +1,5 @@
 #pragma once
-#include "cvector.h"
-
+#include "../../misc.h"
 class CUserCmd
 {
 public:
@@ -37,7 +36,7 @@ public:
     void* vmt;
     std::int32_t commandNumber;
     std::int32_t tickCount;
-    CVector viewAngles;
+    vec3_t viewAngles;
     CVector aimDirection;
     float forwardMove;
     float sideMove;

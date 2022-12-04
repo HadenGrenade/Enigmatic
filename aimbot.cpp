@@ -1,6 +1,7 @@
 #include "aimbot.h"
 #include "misc.h"
-
+#include "Vector3d.h"
+#include "autowall.h"
 #include "src/semicore/globals.h"
 #include "src/semicore/interfaces.h"
 #include "src/valve/cusercmd.h"
@@ -53,7 +54,7 @@ void hacks::RunAimbot(CUserCmd* cmd) noexcept
 		return;
 	}
 
-	CVector bestAngle{ };
+	vec3_t bestAngle{ };
 	float bestFov = v::aim.fov;
 	for (int i = 1; i <= interfaces::globals->maxClients; ++i)
 	{
@@ -77,11 +78,11 @@ void hacks::RunAimbot(CUserCmd* cmd) noexcept
 			continue;
 
 		// our eye position
-		CVector localEyePosition;
+		vec3_t localEyePosition;
 		globals::localPlayer->GetEyePosition(localEyePosition);
 
 		// our aim punch
-		CVector aimPunch{ };
+		vec3_t aimPunch{ };
 
 		switch (weaponType)
 		{
@@ -91,21 +92,25 @@ void hacks::RunAimbot(CUserCmd* cmd) noexcept
 			globals::localPlayer->GetAimPunch(aimPunch);
 		}
 			CTrace trace;
-			interfaces::engineTrace->TraceRay(
-				CRay{ localEyePosition, bones[v::aim.bone].Origin() },
-				MASK_SHOT, // this is what stops it from autowalling, so if u wanna add an autowall feel free but im not doing that shit rn, i wanna smash my head on the desk already
-				CTraceFilter{ globals::localPlayer }, // filter out local player  
-				trace
-			);
+
+			//
+			//THE AIMBOT WONT WORK CUZ I CROSSED THIS SHIT OUT, I HAD TO REDO THE WAY CRAY WAS CREATED SO IT MESSSED THIS PORTION UP, RAGEBOT>LEGITBOT SO IDGAF
+
+			//interfaces::engineTrace->TraceRay(
+				//CRay{ localEyePosition, bones[v::aim.bone].Origin() },
+				//MASK_SHOT, // this is what stops it from autowalling, so if u wanna add an autowall feel free but im not doing that shit rn, i wanna smash my head on the desk already
+				//CTraceFilter{ globals::localPlayer }, // filter out local player  
+				//trace
+			//);
 
 			if (!trace.entity || trace.fraction < 0.97f)
 				return;
 
 			
 		
-		CVector enemyAngle
+		vec3_t enemyAngle
 		{
-			(bones[v::aim.bone].Origin() - localEyePosition).ToAngle() - (cmd->viewAngles + aimPunch)
+			(bones[v::aim.bone].Origin1() - localEyePosition).to_angle() - (cmd->viewAngles + aimPunch)
 		};
 
 		if (const float fov = std::hypot(enemyAngle.x, enemyAngle.y); fov < bestFov)
@@ -159,7 +164,7 @@ void hacks::RecoilControl(CUserCmd* cmd)
 		return;
 	}
 
-	CVector aimPunch{ };
+	vec3_t aimPunch{ };
 	switch (weaponType)
 	{
 	case CEntity::WEAPONTYPE_RIFLE:
@@ -170,20 +175,20 @@ void hacks::RecoilControl(CUserCmd* cmd)
 
 	if (v::aim.rcs)
 	{
-		static CVector lastAimPunch{ };
+		static vec3_t lastAimPunch{ };
 	
 			if (cmd->buttons & CUserCmd::IN_ATTACK && aimPunch.notNull())
 			{
-				CVector currentPunch = aimPunch;
+				vec3_t currentPunch = aimPunch;
 
 					cmd->viewAngles.y -= currentPunch.y * 2;
 					cmd->viewAngles.x -= currentPunch.x * 2;
-					lastAimPunch = CVector{ };
+					lastAimPunch = vec3_t{ };
 				
 			}
 		else
 		{
-			lastAimPunch = CVector{ };
+			lastAimPunch = vec3_t{ };
 		}
 	}
 

@@ -1,7 +1,730 @@
-﻿  gui.cpp
-  Generating code
-  1 of 2725 functions (<0.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    25 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  internal menu.vcxproj -> C:\Users\Pysik\Desktop\enigmatic\build\grenadeware.dll
+﻿  Scanning sources for module dependencies...
+  models.h
+  Compiling...
+  models.h
+  aimbot.cpp
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(6,32): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(7,1): error C3064: 'int32_t': must be a simple type or resolve to one
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,18): error C3646: 'commandNumber': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,18): error C3646: 'tickCount': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(39,12): error C3646: 'viewAngles': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(39,22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(40,13): error C3646: 'aimDirection': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(40,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,18): error C3646: 'buttons': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,18): error C3646: 'weaponSelect': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,18): error C3646: 'weaponSubType': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,18): error C3646: 'randomSeed': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,28): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(52,13): error C3646: 'headAngles': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(52,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(53,13): error C3646: 'headOffset': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(53,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C2143: syntax error: missing ';' before '*'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,55): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,41): error C2039: 'relative_to_absolute': is not a member of 'hacks'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\aimbot.h(4): message : see declaration of 'hacks'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,47): error C2039: 'get_studio_model': is not a member of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(129): message : see declaration of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(336,1): error C3536: 'studio_model': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(339,1): error C3536: 'hitbox': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(341,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(342,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\aimbot.cpp(19,13): error C2039: 'buttons': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\aimbot.cpp(113,73): error C2039: 'viewAngles': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\aimbot.cpp(126,7): error C2039: 'viewAngles': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\aimbot.cpp(126,25): error C2039: 'viewAngles': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\aimbot.cpp(126,47): error C3779: 'vec3_t::Scale': a function that returns 'auto' cannot be used before it is defined
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(127): message : see declaration of 'vec3_t::Scale'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\aimbot.cpp(180,13): error C2039: 'buttons': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\aimbot.cpp(180,54): error C3779: 'vec3_t::notNull': a function that returns 'auto' cannot be used before it is defined
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(128): message : see declaration of 'vec3_t::notNull'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\aimbot.cpp(184,11): error C2039: 'viewAngles': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\aimbot.cpp(185,11): error C2039: 'viewAngles': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+  animations.cpp
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(6,32): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(7,1): error C3064: 'int32_t': must be a simple type or resolve to one
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,18): error C3646: 'commandNumber': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,18): error C3646: 'tickCount': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(39,12): error C3646: 'viewAngles': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(39,22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(40,13): error C3646: 'aimDirection': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(40,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,18): error C3646: 'buttons': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,18): error C3646: 'weaponSelect': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,18): error C3646: 'weaponSubType': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,18): error C3646: 'randomSeed': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,28): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(52,13): error C3646: 'headAngles': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(52,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(53,13): error C3646: 'headOffset': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(53,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C2143: syntax error: missing ';' before '*'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,55): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,34): error C2653: 'hacks': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,47): error C2039: 'get_studio_model': is not a member of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(129): message : see declaration of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(336,1): error C3536: 'studio_model': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(339,1): error C3536: 'hitbox': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(341,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(342,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+  antiaim.cpp
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(6,32): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(7,1): error C3064: 'int32_t': must be a simple type or resolve to one
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,18): error C3646: 'commandNumber': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,18): error C3646: 'tickCount': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(39,12): error C3646: 'viewAngles': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(39,22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(40,13): error C3646: 'aimDirection': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(40,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,18): error C3646: 'buttons': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,18): error C3646: 'weaponSelect': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,18): error C3646: 'weaponSubType': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,18): error C3646: 'randomSeed': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,28): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(52,13): error C3646: 'headAngles': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(52,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(53,13): error C3646: 'headOffset': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(53,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C2143: syntax error: missing ';' before '*'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,55): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,41): error C2039: 'relative_to_absolute': is not a member of 'hacks'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\aimbot.h(4): message : see declaration of 'hacks'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,47): error C2039: 'get_studio_model': is not a member of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(129): message : see declaration of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(336,1): error C3536: 'studio_model': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(339,1): error C3536: 'hitbox': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(341,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(342,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\antiaim.cpp(22,7): error C2039: 'viewAngles': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\antiaim.cpp(52,7): error C2039: 'viewAngles': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\antiaim.cpp(54,7): error C2039: 'viewAngles': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\antiaim.cpp(60,12): error C2039: 'buttons': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\antiaim.cpp(61,25): error C2039: 'tickCount': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\antiaim.cpp(64,25): error C2039: 'tickCount': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+  autowall.cpp
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(6,32): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(7,1): error C3064: 'int32_t': must be a simple type or resolve to one
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,18): error C3646: 'commandNumber': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,18): error C3646: 'tickCount': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(39,12): error C3646: 'viewAngles': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(39,22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(40,13): error C3646: 'aimDirection': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(40,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,18): error C3646: 'buttons': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,18): error C3646: 'weaponSelect': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,18): error C3646: 'weaponSubType': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,18): error C3646: 'randomSeed': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,28): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(52,13): error C3646: 'headAngles': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(52,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(53,13): error C3646: 'headOffset': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(53,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C2143: syntax error: missing ';' before '*'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,55): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,41): error C2039: 'relative_to_absolute': is not a member of 'hacks'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\aimbot.h(4): message : see declaration of 'hacks'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,47): error C2039: 'get_studio_model': is not a member of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(129): message : see declaration of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(336,1): error C3536: 'studio_model': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(339,1): error C3536: 'hitbox': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(341,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(342,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\autowall.cpp(71,1): warning C4305: 'return': truncation from 'float' to 'bool'
+  cooleffects.cpp
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(327,10): error C2653: 'interfaces': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(327,22): error C2065: 'weapon_system': undeclared identifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,24): error C2653: 'interfaces': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,36): error C2065: 'modelInfo': undeclared identifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(336,1): error C3536: 'studio_model': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(339,1): error C3536: 'hitbox': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(341,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(342,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(421,3): error C2653: 'interfaces': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(421,15): error C2065: 'engineTrace': undeclared identifier
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winbase.h(9531,5): warning C5105: macro expansion producing 'defined' has undefined behavior
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\fx.inl(51,1): warning C4005: 'min': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\minwindef.h(197): message : see previous definition of 'min'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\cooleffects.cpp(59,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\cooleffects.cpp(59,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\cooleffects.cpp(61,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\cooleffects.cpp(61,17): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  dopostscreenspaceeffects.cpp
+  drawmodelexecute.cpp
+  engine_prediction.cpp
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(6,32): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(7,1): error C3064: 'int32_t': must be a simple type or resolve to one
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,18): error C3646: 'commandNumber': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,18): error C3646: 'tickCount': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(39,12): error C3646: 'viewAngles': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(39,22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(40,13): error C3646: 'aimDirection': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(40,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,18): error C3646: 'buttons': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,18): error C3646: 'weaponSelect': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,18): error C3646: 'weaponSubType': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,18): error C3646: 'randomSeed': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,28): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(52,13): error C3646: 'headAngles': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(52,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(53,13): error C3646: 'headOffset': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(53,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C2143: syntax error: missing ';' before '*'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,55): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,41): error C2039: 'relative_to_absolute': is not a member of 'hacks'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\aimbot.h(4): message : see declaration of 'hacks'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,47): error C2039: 'get_studio_model': is not a member of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(129): message : see declaration of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(336,1): error C3536: 'studio_model': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(339,1): error C3536: 'hitbox': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(341,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(342,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+  imgui.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winbase.h(9531,5): warning C5105: macro expansion producing 'defined' has undefined behavior
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_dx9.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winbase.h(9531,5): warning C5105: macro expansion producing 'defined' has undefined behavior
+  imgui_impl_win32.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winbase.h(9531,5): warning C5105: macro expansion producing 'defined' has undefined behavior
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  fakelag.cpp
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(6,32): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(7,1): error C3064: 'int32_t': must be a simple type or resolve to one
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,18): error C3646: 'commandNumber': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,18): error C3646: 'tickCount': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(39,12): error C3646: 'viewAngles': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(39,22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(40,13): error C3646: 'aimDirection': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(40,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,18): error C3646: 'buttons': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,18): error C3646: 'weaponSelect': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,18): error C3646: 'weaponSubType': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,18): error C3646: 'randomSeed': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,28): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(52,13): error C3646: 'headAngles': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(52,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(53,13): error C3646: 'headOffset': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(53,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C2143: syntax error: missing ';' before '*'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,55): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,41): error C2039: 'relative_to_absolute': is not a member of 'hacks'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\aimbot.h(4): message : see declaration of 'hacks'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,47): error C2039: 'get_studio_model': is not a member of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(129): message : see declaration of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(336,1): error C3536: 'studio_model': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(339,1): error C3536: 'hitbox': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(341,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(342,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+  globals.cpp
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(327,10): error C2653: 'interfaces': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(327,22): error C2065: 'weapon_system': undeclared identifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,24): error C2653: 'interfaces': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,36): error C2065: 'modelInfo': undeclared identifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(336,1): error C3536: 'studio_model': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(339,1): error C3536: 'hitbox': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(341,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(342,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(421,3): error C2653: 'interfaces': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(421,15): error C2065: 'engineTrace': undeclared identifier
+  memes.cpp
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(6,32): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(7,1): error C3064: 'int32_t': must be a simple type or resolve to one
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,18): error C3646: 'commandNumber': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,18): error C3646: 'tickCount': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(39,12): error C3646: 'viewAngles': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(39,22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(40,13): error C3646: 'aimDirection': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(40,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,18): error C3646: 'buttons': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,18): error C3646: 'weaponSelect': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,18): error C3646: 'weaponSubType': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,18): error C3646: 'randomSeed': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,28): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(52,13): error C3646: 'headAngles': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(52,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(53,13): error C3646: 'headOffset': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(53,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C2143: syntax error: missing ';' before '*'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,55): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,34): error C2653: 'hacks': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,47): error C2039: 'get_studio_model': is not a member of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(129): message : see declaration of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(336,1): error C3536: 'studio_model': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(339,1): error C3536: 'hitbox': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(341,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(342,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winbase.h(9531,5): warning C5105: macro expansion producing 'defined' has undefined behavior
+  memory.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winbase.h(9531,5): warning C5105: macro expansion producing 'defined' has undefined behavior
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(327,10): error C2653: 'interfaces': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(327,22): error C2065: 'weapon_system': undeclared identifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,24): error C2653: 'interfaces': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,36): error C2065: 'modelInfo': undeclared identifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(336,1): error C3536: 'studio_model': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(339,1): error C3536: 'hitbox': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(341,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(342,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(421,3): error C2653: 'interfaces': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(421,15): error C2065: 'engineTrace': undeclared identifier
+  misc.cpp
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(6,32): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(7,1): error C3064: 'int32_t': must be a simple type or resolve to one
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,18): error C3646: 'commandNumber': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,18): error C3646: 'tickCount': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(39,12): error C3646: 'viewAngles': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(39,22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(40,13): error C3646: 'aimDirection': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(40,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,18): error C3646: 'buttons': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,18): error C3646: 'weaponSelect': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,18): error C3646: 'weaponSubType': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,18): error C3646: 'randomSeed': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,28): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(52,13): error C3646: 'headAngles': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(52,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(53,13): error C3646: 'headOffset': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(53,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C2143: syntax error: missing ';' before '*'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,55): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,34): error C2653: 'hacks': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,47): error C2039: 'get_studio_model': is not a member of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(129): message : see declaration of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(336,1): error C3536: 'studio_model': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(339,1): error C3536: 'hitbox': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(341,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(342,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.cpp(20,9): error C2039: 'buttons': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.cpp(60,25): error C2039: 'buttons': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.cpp(60,13): error C2737: 'back': const object must be initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.cpp(61,28): error C2039: 'buttons': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.cpp(61,13): error C2737: 'forward': const object must be initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.cpp(62,26): error C2039: 'buttons': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.cpp(62,13): error C2737: 'right': const object must be initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.cpp(63,25): error C2039: 'buttons': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.cpp(63,13): error C2737: 'left': const object must be initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.cpp(112,11): error C2039: 'buttons': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.cpp(119,11): error C2039: 'buttons': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.cpp(128,21): error C2039: 'viewAngles': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.cpp(145,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.cpp(188,29): error C2039: 'buttons': is not a member of 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\misc.h(11): message : see declaration of 'CUserCmd'
+  Compiling...
+  netvars.cpp
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(327,10): error C2653: 'interfaces': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(327,22): error C2065: 'weapon_system': undeclared identifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,24): error C2653: 'interfaces': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,36): error C2065: 'modelInfo': undeclared identifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(336,1): error C3536: 'studio_model': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(339,1): error C3536: 'hitbox': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(341,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(342,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(421,3): error C2653: 'interfaces': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(421,15): error C2065: 'engineTrace': undeclared identifier
+  rageNigger.cpp
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(6,32): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(7,1): error C3064: 'int32_t': must be a simple type or resolve to one
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,18): error C3646: 'commandNumber': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,18): error C3646: 'tickCount': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(39,12): error C3646: 'viewAngles': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(39,22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(40,13): error C3646: 'aimDirection': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(40,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,18): error C3646: 'buttons': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,18): error C3646: 'weaponSelect': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,18): error C3646: 'weaponSubType': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,18): error C3646: 'randomSeed': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,28): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(52,13): error C3646: 'headAngles': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(52,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(53,13): error C3646: 'headOffset': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(53,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C2143: syntax error: missing ';' before '*'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,55): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,34): error C2653: 'hacks': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,47): error C2039: 'get_studio_model': is not a member of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(129): message : see declaration of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(336,1): error C3536: 'studio_model': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(339,1): error C3536: 'hitbox': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(341,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(342,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\rageNigger.cpp(8,1): fatal  error C1083: Cannot open include file: 'studio.hpp': No such file or directory
+  main.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winbase.h(9531,5): warning C5105: macro expansion producing 'defined' has undefined behavior
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C2143: syntax error: missing ';' before '*'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,55): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\clientmode.h(131,46): error C2061: syntax error: identifier 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\i_input.h(15,10): error C2143: syntax error: missing ';' before '*'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\i_input.h(15,10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\i_input.h(15,21): error C2238: unexpected token(s) preceding ';'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\i_input.h(18,10): error C2143: syntax error: missing ';' before '*'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\i_input.h(18,10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\i_input.h(18,53): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\i_player_movement.hpp(96,44): error C2061: syntax error: identifier 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\i_player_movement.hpp(97,43): error C2061: syntax error: identifier 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\i_player_movement.hpp(98,44): error C2061: syntax error: identifier 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,34): error C2653: 'hacks': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,47): error C2039: 'get_studio_model': is not a member of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(129): message : see declaration of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(336,1): error C3536: 'studio_model': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(339,1): error C3536: 'hitbox': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(341,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(342,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+  gui.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winbase.h(9531,5): warning C5105: macro expansion producing 'defined' has undefined behavior
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(6,32): error C2039: 'int32_t': is not a member of 'std'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stddef.h(23): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(7,1): error C3064: 'int32_t': must be a simple type or resolve to one
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stddef.h(23): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,18): error C3646: 'commandNumber': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(37,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stddef.h(23): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,18): error C3646: 'tickCount': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(38,27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(39,12): error C3646: 'viewAngles': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(39,22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(40,13): error C3646: 'aimDirection': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(40,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stddef.h(23): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,18): error C3646: 'buttons': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(44,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stddef.h(23): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,18): error C3646: 'weaponSelect': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(46,30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stddef.h(23): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,18): error C3646: 'weaponSubType': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(47,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,10): error C2039: 'int32_t': is not a member of 'std'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stddef.h(23): message : see declaration of 'std'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,18): error C3646: 'randomSeed': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(48,28): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(52,13): error C3646: 'headAngles': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(52,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(53,13): error C3646: 'headOffset': unknown override specifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\cusercmd.h(53,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C2143: syntax error: missing ';' before '*'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,55): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,34): error C2653: 'hacks': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,47): error C2039: 'get_studio_model': is not a member of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(129): message : see declaration of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(336,1): error C3536: 'studio_model': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(339,1): error C3536: 'hitbox': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(341,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(342,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+  hooks.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winbase.h(9531,5): warning C5105: macro expansion producing 'defined' has undefined behavior
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C2143: syntax error: missing ';' before '*'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(150,55): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\clientmode.h(131,46): error C2061: syntax error: identifier 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\i_input.h(15,10): error C2143: syntax error: missing ';' before '*'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\i_input.h(15,10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\i_input.h(15,21): error C2238: unexpected token(s) preceding ';'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\i_input.h(18,10): error C2143: syntax error: missing ';' before '*'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\i_input.h(18,10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\i_input.h(18,53): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\i_player_movement.hpp(96,44): error C2061: syntax error: identifier 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\i_player_movement.hpp(97,43): error C2061: syntax error: identifier 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\i_player_movement.hpp(98,44): error C2061: syntax error: identifier 'CUserCmd'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,34): error C2653: 'hacks': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,47): error C2039: 'get_studio_model': is not a member of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\ivmodelinfo.h(129): message : see declaration of 'IVModelInfo'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(336,1): error C3536: 'studio_model': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(339,1): error C3536: 'hitbox': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(341,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(342,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\hooks.cpp(51,3): warning C4390: ';': empty controlled statement found; is this the intent?
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\hooks.cpp(56,50): warning C4390: ';': empty controlled statement found; is this the intent?
+  interfaces.cpp
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(327,10): error C2653: 'interfaces': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(327,22): error C2065: 'weapon_system': undeclared identifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,24): error C2653: 'interfaces': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,36): error C2065: 'modelInfo': undeclared identifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(336,1): error C3536: 'studio_model': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(339,1): error C3536: 'hitbox': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(341,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(342,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(421,3): error C2653: 'interfaces': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(421,15): error C2065: 'engineTrace': undeclared identifier
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winbase.h(9531,5): warning C5105: macro expansion producing 'defined' has undefined behavior
+  Vector3d.cpp
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.cpp(52,35): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  visuals.cpp
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(327,10): error C2653: 'interfaces': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(327,22): error C2065: 'weapon_system': undeclared identifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,24): error C2653: 'interfaces': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(334,36): error C2065: 'modelInfo': undeclared identifier
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(336,1): error C3536: 'studio_model': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(339,1): error C3536: 'hitbox': cannot be used before it is initialized
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(341,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(342,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(421,3): error C2653: 'interfaces': is not a class or namespace name
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(421,15): error C2065: 'engineTrace': undeclared identifier
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winbase.h(9531,5): warning C5105: macro expansion producing 'defined' has undefined behavior
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(146,34): error C2039: 'Origin': is not a member of 'CMatrix3x4'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\cmatrix.h(3): message : see declaration of 'CMatrix3x4'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(166,71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(166,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(171,86): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(171,61): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(172,86): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(172,61): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(183,85): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(183,61): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(185,71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(185,60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(186,98): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(186,62): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(203,61): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(288,45): error C2664: 'void CEntity::GetAimPunch(vec3_t &) noexcept': cannot convert argument 1 from 'CVector' to 'vec3_t &'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\src\valve\centity.h(425,17): message : see declaration of 'CEntity::GetAimPunch'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(313,51): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\leo\source\repos\CS-GO-Cheat\enigmatic\visuals.cpp(315,50): warning C4305: 'argument': truncation from 'double' to 'float'

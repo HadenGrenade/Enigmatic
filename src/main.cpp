@@ -6,7 +6,7 @@
 
 #include "hooks.h"
 #include "semicore/interfaces.h"
-
+#include "../Vector3d.h"
 // setup function
 void Setup(const HMODULE instance)
 {

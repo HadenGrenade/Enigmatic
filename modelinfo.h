@@ -2,6 +2,7 @@
 #include "definitions.h"
 
 #include "cmatrix.h"
+#include <cvector.h>
 
 struct Model
 {
@@ -11,8 +12,8 @@ struct Model
 	int			serverCount;	//0x010C
 	int			type;			//0x0110
 	int			flags;			//0x0114
-	Vector		mins;		//0x0118
-	Vector		maxs;		//0x0124
+	CVector		mins;		//0x0118
+	CVector		maxs;		//0x0124
 	float		radius;		//0x0130
 	std::byte	pad1[0x1C];		//0x0134
 };
@@ -21,10 +22,10 @@ struct StudioBbox
 {
 	int bone;
 	int group;
-	Vector bbMin;
-	Vector bbMax;
+	CVector bbMin;
+	CVector bbMax;
 	int hitboxNameIndex;
-	Vector offsetOrientation;
+	CVector offsetOrientation;
 	float capsuleRadius;
 	int	unused[4];
 

@@ -2,8 +2,8 @@
 #include "iglowmanger.h"
 #include "src/hooks.h"
 #include "misc.h"
-#include <string>
 #include "src/hooks.h"
+#include <string>
 int x, y;
 
 static bool WorldToScreen(const CVector& point, CVector& screen) noexcept

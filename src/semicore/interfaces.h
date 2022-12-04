@@ -8,6 +8,7 @@
 #include "../../istudiorender.h"
 #include "../valve/ivengineclient.h"
 #include "../../ivpanel.h"
+#include "../../i_physics_surface_props.hpp"
 #include "../../ivmodelinfo.h"
 #include "../../ivdebugoverlay.h"
 #include "../../iglowmanger.h"
@@ -17,8 +18,9 @@
 #include "../../ienginetrace.h"
 #include "../../iclientmodeshared.h"
 #include "../../ibaseclientdll.h"
-#include "../../i_input.hpp"
+#include "../../i_input.h"
 #include "../../i_player_movement.hpp"
+#include "../../i_weapon_system.hpp"
 
 // learn more about interfaces -> https://www.youtube.com/watch?v=C0wGdwnaArA
 namespace interfaces
@@ -48,6 +50,8 @@ namespace interfaces
 	inline IVPanel* panel = nullptr;
 	inline player_prediction* prediction;
 	inline Cvar* cvar;
+	inline physics_surface_props* surface_props_physics;
+	inline i_weapon_system* weapon_system;
 
 	// other
 	inline void* keyValuesSystem = nullptr;

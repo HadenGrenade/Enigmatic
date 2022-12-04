@@ -2,7 +2,6 @@
 #include "src/valve/cvector.h"
 #include "cmatrix.h"
 #include "src/util/memory.h"
-
 #define CONTENTS_EMPTY 0
 #define CONTENTS_SOLID 0x1
 #define CONTENTS_WINDOW 0x2
@@ -79,7 +78,15 @@
 #define MASK_SPLITAREAPORTAL (CONTENTS_WATER|CONTENTS_SLIME)
 #define MASK_CURRENT (CONTENTS_CURRENT_0|CONTENTS_CURRENT_90|CONTENTS_CURRENT_180|CONTENTS_CURRENT_270|CONTENTS_CURRENT_UP|CONTENTS_CURRENT_DOWN)
 #define MASK_DEADSOLID (CONTENTS_SOLID|CONTENTS_PLAYERCLIP|CONTENTS_WINDOW|CONTENTS_GRATE)
+class __declspec(align(16))VectorAligned : public vec3_t {
+public:
+	VectorAligned& operator=(const vec3_t& vOther) {
+		init(vOther.x, vOther.y, vOther.z);
+		return *this;
+	}
 
+	float w;
+};
 class CEntity;
 class ITraceFilter
 {
@@ -99,7 +106,6 @@ public:
 class CTraceFilter : public ITraceFilter
 {
 public:
-	CTraceFilter(CEntity* entity) noexcept : skipEntity(entity) { }
 
 	bool ShouldHitEntity(CEntity* entity, std::int32_t contentsMask) override
 	{
@@ -110,31 +116,56 @@ public:
 	{
 		return TRACE_EVERYTHING;
 	}
-
-private:
-	const CEntity* skipEntity;
+	CTraceFilter() {};
+	CTraceFilter(CEntity* ent) {
+		this->skipEntity = ent;
+	}
+	const void* skipEntity;
 };
 
-class CRay
+struct CRay
 {
 public:
-	constexpr CRay(const CVector& start, const CVector& end) noexcept :
-		start(start), delta(end - start)
-	{
-		isSwept = delta.x || delta.y || delta.z;
-	}
-
-	CVector start;
+	vec3_t start;
 	float pad0{ };
-	CVector delta;
+	vec3_t delta;
 	float pad1{ };
-	CVector startOffset{ };
+	vec3_t startOffset{ };
 	float pad2{ };
-	CVector extents{ };
+	vec3_t extents{ };
 	float pad3{ };
 	const CMatrix3x4* worldAxisTransform{ nullptr };
 	bool isRay{ true };
 	bool isSwept;
+
+	void initialize(const vec3_t& startt, const vec3_t& end) {
+		delta = end - start;
+
+		isSwept = (delta.length_sqr() != 0);
+
+		extents.x = extents.y = extents.z = 0.0f;
+		isRay = true;
+
+		startOffset.x = startOffset.y = startOffset.z = 0.0f;
+
+		start = startt;
+	}
+
+	void initialize(vec3_t& vecStart, vec3_t& vecEnd, vec3_t min, vec3_t max) {
+		delta = vecEnd - vecStart;
+
+		isSwept = (delta.length_sqr() != 0);
+
+		extents.x = (max.x - min.x);
+		extents.y = (max.y - min.y);
+		extents.z = (max.z - min.z);
+		isRay = false;
+
+		startOffset.x = startOffset.y = startOffset.z = 0.0f;
+
+		start = vecStart + ((max + min) * 0.5f);
+	}
+private:
 };
 
 class CPlane
@@ -158,8 +189,8 @@ public:
 class CTrace
 {
 public:
-	CVector startPos;
-	CVector endPos;
+	vec3_t startPos;
+	vec3_t endPos;
 	CPlane plane;
 
 	float fraction;

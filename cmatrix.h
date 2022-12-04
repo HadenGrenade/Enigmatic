@@ -1,6 +1,5 @@
 #pragma once
-
-
+#include "Vector3d.h"
 class CMatrix3x4
 {
 public:
@@ -9,7 +8,7 @@ public:
 		return data[index];
 	}
 
-	constexpr CVector Origin() noexcept
+	 vec3_t Origin1() noexcept
 	{
 		return { data[0][3], data[1][3], data[2][3] };
 	}

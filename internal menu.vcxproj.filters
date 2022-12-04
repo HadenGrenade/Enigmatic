@@ -215,13 +215,7 @@
     <ClInclude Include="appsystem.h">
       <Filter>misc\valve</Filter>
     </ClInclude>
-    <ClInclude Include="Vector3d.hpp">
-      <Filter>misc\valve</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector3d.h">
-      <Filter>misc\valve</Filter>
-    </ClInclude>
-    <ClInclude Include="i_input.hpp">
+    <ClInclude Include="i_input.h">
       <Filter>misc\valve</Filter>
     </ClInclude>
     <ClInclude Include="fnv.hpp">
@@ -229,6 +223,24 @@
     </ClInclude>
     <ClInclude Include="i_player_movement.hpp">
       <Filter>misc\valve</Filter>
+    </ClInclude>
+    <ClInclude Include="autowall.h">
+      <Filter>main\core\features</Filter>
+    </ClInclude>
+    <ClInclude Include="studio.h">
+      <Filter>misc\valve</Filter>
+    </ClInclude>
+    <ClInclude Include="i_physics_surface_props.hpp">
+      <Filter>misc\valve</Filter>
+    </ClInclude>
+    <ClInclude Include="weaponinfo.h">
+      <Filter>misc\valve</Filter>
+    </ClInclude>
+    <ClInclude Include="i_weapon_system.hpp">
+      <Filter>misc\valve</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3d.h">
+      <Filter>misc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -321,6 +333,18 @@
     </ClCompile>
     <ClCompile Include="fakelag.cpp">
       <Filter>main\core\features</Filter>
+    </ClCompile>
+    <ClCompile Include="autowall.cpp">
+      <Filter>main\core\features</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3d.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="rageNigger.cpp">
+      <Filter>main\core\features</Filter>
+    </ClCompile>
+    <ClCompile Include="models.h">
+      <Filter>misc\valve</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

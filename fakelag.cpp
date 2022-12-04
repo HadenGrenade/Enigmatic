@@ -4,7 +4,7 @@
 #include "src/semicore/globals.h"
 #include "src/semicore/interfaces.h"
 #include "src/valve/cusercmd.h"
-#include "Vector3d.hpp"
+#include "Vector3d.h"
 
 //ok so i made the actual code but not the hook cuz I couldn't figure out how you setup hooks
 //you basically just have to update net latency in frameStageNotify hook, simple enough, you'll figure it out :)

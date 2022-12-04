@@ -1,7 +1,13 @@
 #pragma once
 #include "src/valve/cusercmd.h"
+#include "i_physics_surface_props.hpp" 
+#include "ienginetrace.h"
+#include "weaponinfo.h"
+#include "src/valve/centity.h"
+#include "autowall.h"
 #include <array>
 #include <map>
+#include "src/semicore/globals.h"
 class CUserCmd;
 namespace hacks
 {
@@ -14,7 +20,7 @@ namespace hacks
 	
 	void runAntiaim(CUserCmd* cmd, bool& send_packet);
 
-	void autostrafe(CUserCmd* cmd, CVector& currentViewAngles) noexcept;
+	void autostrafe(CUserCmd* cmd, vec3_t& currentViewAngles) noexcept;
 
 	void fastStop(CUserCmd* cmd) noexcept;
 
@@ -31,6 +37,24 @@ namespace hacks
 	void RunAimbot(CUserCmd* cmd) noexcept;
 
 	void run_fl(bool& send_packet) noexcept;
+	
+	//RageBot
+	void run_Ragebot(CUserCmd* cmd);
+
+
+	void auto_revolver(CUserCmd* cmd);
+	bool can_fire(CEntity* target);
+	bool aimbot_weapon_check(bool check_scope);
+	bool is_enemy(CEntity* player) noexcept;
+
+	float get_damage_multiplier(int hit_group, float hs_multiplier);
+	bool is_armored(int hit_group, bool helmet);
+	bool trace_to_exit(CTrace& enter_trace, vec3_t& start, const vec3_t& direction, vec3_t& end, CTrace& exit_trace);
+	static bool handle_bullet_penetration(surface_data* enter_surface_data, CTrace& enter_trace, const vec3_t& direction, vec3_t& start, float penetration, float& damage);
+	autowall_data_t handle_walls(CEntity* local_player, CEntity* entity, const vec3_t& destination, const weapon_info_t* weapon_data, bool enabled_hitbox);
+
+	template <typename T>
+	static constexpr auto relative_to_absolute(uint8_t* address);
 }
 
 namespace memes
@@ -117,6 +141,39 @@ namespace v {
 		int bone = 8;
 		bool legitaim = true;
 		bool rcs = false;
+		
+		 float aimbot_fov = 20.f;
+
+		 float aimbot_smoothing = 0.f;
+		 bool target_friends = false;
+		 bool non_rifle_aimpunch = true;
+		 bool aimbot_noscope = true;
+		 bool autorevolver = false;
+		 int hitboxes = 1;
+		 float min_damage = 60.f;
+		  bool autofire = false;
+
+		  bool ragebot= false;
+		 bool bodyaim_if_lethal = false;
+		 bool priorize_lethal_targets = false;		// If we can kill a someone inside our fov, go for it even if it's not the closest one
+		 int autowall = 0;
+		
+
 };
 	inline auto aim = Aim{};
+}
+template <typename T>
+static constexpr auto hacks::relative_to_absolute(uint8_t* address) {
+return (T)(address + 4 + *reinterpret_cast<std::int32_t*>(address));
+}
+
+
+// Checks if its enemy from localplayer
+bool hacks::is_enemy(CEntity* player) noexcept {
+	if (!globals::localPlayer || !player) return false;
+
+	using fn = bool(__thiscall*)(CEntity*, CEntity*);
+	static fn isOtherEnemy = relative_to_absolute<fn>(memory::PatternScan("client.dll", sig_is_other_enemy) + 3);
+
+	isOtherEnemy(globals::localPlayer, player);
 }

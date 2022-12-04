@@ -10,12 +10,13 @@
 #include "../ext/imgui/imgui_impl_dx9.h"
 
 #include "util/memory.h"
-#include "semicore/interfaces.h"
+#include "semicore/ainterfaces.h"
 #include "../misc.h"
 #include "../features.h"
 
 #include "../istudiorender.h"
 #include "../ispatialquery.h"
+
 
 bool message = false;
 

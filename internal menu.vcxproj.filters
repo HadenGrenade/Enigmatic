@@ -179,7 +179,7 @@
     <ClInclude Include="src\hooks.h">
       <Filter>main\core\stupid</Filter>
     </ClInclude>
-    <ClInclude Include="src\semicore\interfaces.h">
+    <ClInclude Include="src\semicore\ainterfaces.h">
       <Filter>main\core\stupid</Filter>
     </ClInclude>
     <ClInclude Include="netvars.h">
@@ -202,9 +202,6 @@
     </ClInclude>
     <ClInclude Include="aimbot.h">
       <Filter>main\core</Filter>
-    </ClInclude>
-    <ClInclude Include="antiaim.h">
-      <Filter>main\core\features</Filter>
     </ClInclude>
     <ClInclude Include="modelinfo.h">
       <Filter>misc\valve</Filter>
@@ -230,13 +227,13 @@
     <ClInclude Include="studio.h">
       <Filter>misc\valve</Filter>
     </ClInclude>
-    <ClInclude Include="i_physics_surface_props.hpp">
+    <ClInclude Include="i_physics_surface_props.h">
       <Filter>misc\valve</Filter>
     </ClInclude>
     <ClInclude Include="weaponinfo.h">
       <Filter>misc\valve</Filter>
     </ClInclude>
-    <ClInclude Include="i_weapon_system.hpp">
+    <ClInclude Include="i_weapon_system.h">
       <Filter>misc\valve</Filter>
     </ClInclude>
     <ClInclude Include="Vector3d.h">
@@ -295,7 +292,7 @@
     <ClCompile Include="src\hooks.cpp">
       <Filter>main\core\stupid</Filter>
     </ClCompile>
-    <ClCompile Include="src\semicore\interfaces.cpp">
+    <ClCompile Include="src\semicore\ainterfaces.cpp">
       <Filter>main\core\stupid</Filter>
     </ClCompile>
     <ClCompile Include="netvars.cpp">
@@ -344,6 +341,9 @@
       <Filter>main\core\features</Filter>
     </ClCompile>
     <ClCompile Include="models.h">
+      <Filter>misc\valve</Filter>
+    </ClCompile>
+    <ClCompile Include="centity.cpp">
       <Filter>misc\valve</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,12 +1,12 @@
 #pragma once
 #include "gui.h"
 #include "valve/cusercmd.h"
-#include "../iclientmodeshared.h"
 #include "../ivpanel.h"
 #include "../clientmode.h"
 
 #include "../istudiorender.h"
 #include "../ispatialquery.h"
+
 
 namespace hooks
 {

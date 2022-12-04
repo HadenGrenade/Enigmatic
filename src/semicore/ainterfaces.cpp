@@ -1,4 +1,4 @@
-#include "interfaces.h"
+#include "ainterfaces.h"
 #include "../util/memory.h"
 #define WIN32_LEAN_AND_MEAN
 #include <Windows.h>
@@ -9,7 +9,7 @@ void interfaces::Setup() noexcept
 	surface_props_physics   = Capture<physics_surface_props>("vphysics.dll", "VPhysicsSurfaceProps001");
 	client				 	= Capture<IBaseClientDLL>("client.dll", "VClient018");
 	entityList			    = Capture<ClientEntityList>("client.dll", "VClientEntityList003");
-	clientMode		     	= **reinterpret_cast<IClientModeShared***>((*reinterpret_cast<unsigned int**>(client))[10] + 5);
+	clientMode			    = **reinterpret_cast<IClientModeShared***>((*reinterpret_cast<unsigned int**>(client))[10] + 5);
 	engineTrace		     	= Capture<IEngineTrace>("engine.dll", "EngineTraceClient004");
 	engineVGui			    = Capture<IEngineVGui>("engine.dll", "VEngineVGui001");
 	globals					= **reinterpret_cast<IGlobalVars***>((*reinterpret_cast<uintptr_t**>(client))[11] + 10);

@@ -2,7 +2,7 @@
 #define WIN32_LEAN_AND_MEAN
 #include <Windows.h>
 #include <vector>
-#include "src/semicore/interfaces.h"
+#include "src/semicore/ainterfaces.h"
 void memory::Setup() noexcept
 {
     allocKeyValuesClient = PatternScan("client.dll", "FF 52 04 85 C0 74 0C 56") + 3;

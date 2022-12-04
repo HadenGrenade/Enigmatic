@@ -1,6 +1,6 @@
 #include "src/semicore/globals.h"
 
-#include "src/semicore/interfaces.h"
+#include "src/semicore/ainterfaces.h"
 
 void globals::UpdateLocalPlayer() noexcept
 {

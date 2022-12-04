@@ -1,5 +1,6 @@
 #pragma once
 #include "Vector3d.h"
+#include "src/valve/cvector.h"
 class CMatrix3x4
 {
 public:

@@ -4,7 +4,7 @@
 // access global variables
 
 // access interfaces
-#include "src/semicore/interfaces.h"
+#include "src/semicore/ainterfaces.h"
 #include "src/semicore/globals.h"
 
 
@@ -200,4 +200,15 @@ void hacks::HiddenCvars() noexcept //https://chng.it/MQbQhn44Jk
 	}
 }
 
+
+
+// Checks if its enemy from localplayer
+bool hacks::is_enemy(CEntity* player) noexcept {
+	if (!globals::localPlayer || !player) return false;
+
+	using fn = bool(__thiscall*)(CEntity*, CEntity*);
+	static fn isOtherEnemy = relative_to_absolute<fn>(memory::PatternScan("client.dll", sig_is_other_enemy) + 3);
+
+	isOtherEnemy(globals::localPlayer, player);
+}
 

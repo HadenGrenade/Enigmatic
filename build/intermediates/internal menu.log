@@ -1,130 +1,36 @@
 ﻿  Scanning sources for module dependencies...
   aimbot.cpp
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,34): error C2653: 'hacks': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
   animations.cpp
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,34): error C2653: 'hacks': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
   antiaim.cpp
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,34): error C2653: 'hacks': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
   autowall.cpp
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,34): error C2653: 'hacks': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
-C:\Users\Pysik\Desktop\enigmatic\autowall.cpp(71,1): warning C4305: 'return': truncation from 'float' to 'bool'
+  centity.cpp
   cooleffects.cpp
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(329,10): error C2653: 'interfaces': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(329,22): error C2065: 'weapon_system': undeclared identifier
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(337,24): error C2653: 'interfaces': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(337,36): error C2065: 'modelInfo': undeclared identifier
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(339,1): error C3536: 'studio_model': cannot be used before it is initialized
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(342,1): error C3536: 'hitbox': cannot be used before it is initialized
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(344,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
-C:\Users\Pysik\Desktop\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(345,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
-C:\Users\Pysik\Desktop\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(424,3): error C2653: 'interfaces': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(424,15): error C2065: 'engineTrace': undeclared identifier
-C:\Users\Pysik\Desktop\enigmatic\fx.inl(51,1): warning C4005: 'min': macro redefinition
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\minwindef.h(197): message : see previous definition of 'min'
+C:\Users\Pysik\Desktop\enigmatic\autowall.cpp(71,1): warning C4305: 'return': truncation from 'float' to 'bool'
+  engine_prediction.cpp
+  fakelag.cpp
+  globals.cpp
+  memes.cpp
+  memory.cpp
+C:\Users\Pysik\Desktop\enigmatic\fx.inl(51,1): warning C4005: 'min': macro redefinition (compiling source file cooleffects.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\minwindef.h(197): message : see previous definition of 'min' (compiling source file cooleffects.cpp)
 C:\Users\Pysik\Desktop\enigmatic\cooleffects.cpp(59,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\Pysik\Desktop\enigmatic\cooleffects.cpp(59,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\Pysik\Desktop\enigmatic\cooleffects.cpp(61,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\Pysik\Desktop\enigmatic\cooleffects.cpp(61,17): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  engine_prediction.cpp
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,34): error C2653: 'hacks': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
-  fakelag.cpp
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,34): error C2653: 'hacks': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
-  globals.cpp
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(329,10): error C2653: 'interfaces': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(329,22): error C2065: 'weapon_system': undeclared identifier
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(337,24): error C2653: 'interfaces': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(337,36): error C2065: 'modelInfo': undeclared identifier
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(339,1): error C3536: 'studio_model': cannot be used before it is initialized
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(342,1): error C3536: 'hitbox': cannot be used before it is initialized
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(344,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
-C:\Users\Pysik\Desktop\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(345,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
-C:\Users\Pysik\Desktop\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(424,3): error C2653: 'interfaces': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(424,15): error C2065: 'engineTrace': undeclared identifier
-  memes.cpp
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,34): error C2653: 'hacks': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
-  memory.cpp
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(329,10): error C2653: 'interfaces': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(329,22): error C2065: 'weapon_system': undeclared identifier
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(337,24): error C2653: 'interfaces': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(337,36): error C2065: 'modelInfo': undeclared identifier
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(339,1): error C3536: 'studio_model': cannot be used before it is initialized
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(342,1): error C3536: 'hitbox': cannot be used before it is initialized
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(344,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
-C:\Users\Pysik\Desktop\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(345,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
-C:\Users\Pysik\Desktop\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(424,3): error C2653: 'interfaces': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(424,15): error C2065: 'engineTrace': undeclared identifier
   misc.cpp
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,34): error C2653: 'hacks': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
-C:\Users\Pysik\Desktop\enigmatic\misc.cpp(145,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   netvars.cpp
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(329,10): error C2653: 'interfaces': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(329,22): error C2065: 'weapon_system': undeclared identifier
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(337,24): error C2653: 'interfaces': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(337,36): error C2065: 'modelInfo': undeclared identifier
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(339,1): error C3536: 'studio_model': cannot be used before it is initialized
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(342,1): error C3536: 'hitbox': cannot be used before it is initialized
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(344,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
-C:\Users\Pysik\Desktop\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(345,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
-C:\Users\Pysik\Desktop\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(424,3): error C2653: 'interfaces': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(424,15): error C2065: 'engineTrace': undeclared identifier
   rageNigger.cpp
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,34): error C2653: 'hacks': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
+  main.cpp
+  hooks.cpp
+C:\Users\Pysik\Desktop\enigmatic\misc.cpp(145,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  ainterfaces.cpp
+  visuals.cpp
 C:\Users\Pysik\Desktop\enigmatic\rageNigger.cpp(140,48): warning C4244: 'initializing': conversion from 'int32_t' to 'float', possible loss of data
 C:\Users\Pysik\Desktop\enigmatic\rageNigger.cpp(140,29): warning C4244: 'initializing': conversion from 'int32_t' to 'const float', possible loss of data
-  main.cpp
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,34): error C2653: 'hacks': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
-  gui.cpp
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,34): error C2653: 'hacks': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
-  hooks.cpp
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,34): error C2653: 'hacks': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(315,62): error C2275: 'abs_fn': expected an expression instead of a type
-C:\Users\Pysik\Desktop\enigmatic\src\hooks.cpp(51,3): warning C4390: ';': empty controlled statement found; is this the intent?
-C:\Users\Pysik\Desktop\enigmatic\src\hooks.cpp(56,50): warning C4390: ';': empty controlled statement found; is this the intent?
-  interfaces.cpp
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(329,10): error C2653: 'interfaces': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(329,22): error C2065: 'weapon_system': undeclared identifier
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(337,24): error C2653: 'interfaces': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(337,36): error C2065: 'modelInfo': undeclared identifier
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(339,1): error C3536: 'studio_model': cannot be used before it is initialized
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(342,1): error C3536: 'hitbox': cannot be used before it is initialized
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(344,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
-C:\Users\Pysik\Desktop\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(345,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
-C:\Users\Pysik\Desktop\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(424,3): error C2653: 'interfaces': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(424,15): error C2065: 'engineTrace': undeclared identifier
-  visuals.cpp
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(329,10): error C2653: 'interfaces': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(329,22): error C2065: 'weapon_system': undeclared identifier
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(337,24): error C2653: 'interfaces': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(337,36): error C2065: 'modelInfo': undeclared identifier
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(339,1): error C3536: 'studio_model': cannot be used before it is initialized
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(342,1): error C3536: 'hitbox': cannot be used before it is initialized
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(344,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
-C:\Users\Pysik\Desktop\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(345,1): error C2660: 'vec3_t2::transform_vector': function does not take 2 arguments
-C:\Users\Pysik\Desktop\enigmatic\Vector3d.h(202,7): message : see declaration of 'vec3_t2::transform_vector'
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(424,3): error C2653: 'interfaces': is not a class or namespace name
-C:\Users\Pysik\Desktop\enigmatic\src\valve\centity.h(424,15): error C2065: 'engineTrace': undeclared identifier
+C:\Users\Pysik\Desktop\enigmatic\iclientmodeshared.h(12,28): error C2061: syntax error: identifier 'HudChat' (compiling source file src\main.cpp)
+C:\Users\Pysik\Desktop\enigmatic\iclientmodeshared.h(12,28): error C2061: syntax error: identifier 'HudChat' (compiling source file src\hooks.cpp)
+C:\Users\Pysik\Desktop\enigmatic\src\hooks.cpp(52,3): warning C4390: ';': empty controlled statement found; is this the intent?
+C:\Users\Pysik\Desktop\enigmatic\src\hooks.cpp(57,50): warning C4390: ';': empty controlled statement found; is this the intent?
 C:\Users\Pysik\Desktop\enigmatic\visuals.cpp(166,71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\Pysik\Desktop\enigmatic\visuals.cpp(166,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\Pysik\Desktop\enigmatic\visuals.cpp(171,86): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data

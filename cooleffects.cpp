@@ -19,7 +19,7 @@
 // 0.22 - use InvisibleButton instead of Dummy to capture inputs
 // 0.21 - fix mouse y position
 // 0.20 - added mouse buttons, added math operators
-#include "src/semicore/interfaces.h"
+#include "src/semicore/ainterfaces.h"
 #include "src/gui.h"
 #include <math.h>
 #include "ext/imgui/imgui.h"

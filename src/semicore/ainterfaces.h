@@ -8,7 +8,7 @@
 #include "../../istudiorender.h"
 #include "../valve/ivengineclient.h"
 #include "../../ivpanel.h"
-#include "../../i_physics_surface_props.hpp"
+#include "../../i_physics_surface_props.h"
 #include "../../ivmodelinfo.h"
 #include "../../ivdebugoverlay.h"
 #include "../../iglowmanger.h"
@@ -20,7 +20,7 @@
 #include "../../ibaseclientdll.h"
 #include "../../i_input.h"
 #include "../../i_player_movement.h"
-#include "../../i_weapon_system.hpp"
+#include "../../i_weapon_system.h"
 
 // learn more about interfaces -> https://www.youtube.com/watch?v=C0wGdwnaArA
 namespace interfaces

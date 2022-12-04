@@ -4,7 +4,7 @@
 #include "src/valve/cvector.h"
 #include "src/valve/cusercmd.h"
 #include "ivpanel.h"
-#include "src/valve/centity.h"
+#include "src/valve/centity.h" 
 
 class ViewSetup
 {
@@ -164,7 +164,7 @@ public:
 
 	virtual void	DoPostScreenSpaceEffects(const ViewSetup* pSetup) = 0;
 
-	virtual void	UpdateCameraManUIState(int iType, int nOptionalParam, uint64_t xuid) = 0;
+	virtual void	UpdateCameraManUIState(int iType, int nOptionalParam, std::uint64_t xuid) = 0;
 	virtual void	ScoreboardOff(void) = 0;
 	virtual void	GraphPageChanged(void) = 0;
 

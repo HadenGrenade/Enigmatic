@@ -5,7 +5,7 @@
 #include <cstdint>
 
 #include "hooks.h"
-#include "semicore/interfaces.h"
+#include "semicore/ainterfaces.h"
 #include "../Vector3d.h"
 // setup function
 void Setup(const HMODULE instance)

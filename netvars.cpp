@@ -1,5 +1,5 @@
 #include "netvars.h"
-#include "src/semicore/interfaces.h"
+#include "src/semicore/ainterfaces.h"
 #include <format>
 #include "hash.h"
 

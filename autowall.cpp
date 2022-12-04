@@ -2,7 +2,7 @@
 #include "misc.h"
 #include "istudiorender.h"
 #include "src/semicore/globals.h"
-#include "src/semicore/interfaces.h"
+#include "src/semicore/ainterfaces.h"
 #include "src/valve/cusercmd.h"
 #include "studio.h"
 #include "autowall.h"

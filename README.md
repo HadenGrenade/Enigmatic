@@ -1,3 +1,5 @@
+an all around actually good cheat thats "self made." its got a nice menu that we made too.
+
 [![Forks](https://img.shields.io/github/forks/Cr7mbl3/xesa.svg?style=for-the-badge)](https://github.com/HadenGrenade/CS-GO-Cheat/network/members)
 [![Stargazers](https://img.shields.io/github/stars/Cr7mbl3/xesa.svg?style=for-the-badge)](https://github.com/HadenGrenade/CS-GO-Cheat/stargazers)
 [![Issues](https://img.shields.io/github/issues/Cr7mbl3/xesa.svg?style=for-the-badge)](https://github.com/HadenGrenade/CS-GO-Cheat/issues)
